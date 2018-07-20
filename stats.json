@@ -1,12 +1,12 @@
 {
   "assetsByChunkName": {
     "path---the-day-after": [
-      "path---the-day-after-4b5d74351f18735a9ffa.js",
-      "path---the-day-after-4b5d74351f18735a9ffa.js.map"
+      "path---the-day-after-2c488c93995e6386bcc6.js",
+      "path---the-day-after-2c488c93995e6386bcc6.js.map"
     ],
     "path---tags-blog": [
-      "path---tags-blog-efa5fabf885f0571f305.js",
-      "path---tags-blog-efa5fabf885f0571f305.js.map"
+      "path---tags-blog-2612e28ac95c01e6f872.js",
+      "path---tags-blog-2612e28ac95c01e6f872.js.map"
     ],
     "component---src-pages-index-js": [
       "component---src-pages-index-js-807e2d13b7a562d4e1d9.js",
@@ -53,12 +53,12 @@
       "path---page-2-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---happy-halloween": [
-      "path---happy-halloween-72a16dde688b2b7ad120.js",
-      "path---happy-halloween-72a16dde688b2b7ad120.js.map"
+      "path---happy-halloween-24208e4922ab4ac114b3.js",
+      "path---happy-halloween-24208e4922ab4ac114b3.js.map"
     ],
     "path---index": [
-      "path---index-c9e0bda25d319ce65af1.js",
-      "path---index-c9e0bda25d319ce65af1.js.map"
+      "path---index-2730979128b21a5d5bf9.js",
+      "path---index-2730979128b21a5d5bf9.js.map"
     ],
     "component---src-pages-404-js": [
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js",
@@ -89,9 +89,9 @@
       "component---src-pages-page-2-js-075954cd9c4544c7dcd8.js.map"
     ],
     "app": [
-      "app-d2c45c6067215bfd7f80.js",
+      "app-8289572dccd4dd0430ec.js",
       "build-js-styles.css",
-      "app-d2c45c6067215bfd7f80.js.map",
+      "app-8289572dccd4dd0430ec.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
