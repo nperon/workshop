@@ -7,27 +7,24 @@ const IndexPage = ({data}) => {
     <div>
       {posts.map(({node: post}) => {
         const { frontmatter } = post
-
         return (
           <div>
-            <h2>
+            <h2 style={{fontSize:'1.4em', marginBottom:'0.2em', marginTop:'0.8em'}}>
               <Link to={frontmatter.path}>
                 {frontmatter.title}
               </Link>
+              <span style={{fontSize:'0.6em',}}>&nbsp;&mdash;&nbsp;{frontmatter.date}</span>
             </h2>
-            <p>{frontmatter.date}</p>
-            <p>{frontmatter.excerpt}</p>
-            <ul>
-              {post.frontmatter.tags.map(tag => {
-                return (
-                  <li>
-                    <Link to={`/tags/${tag}`}>
-                      {tag}
-                    </Link>
-                  </li>
-                )
-              })}
-            </ul>
+            <p style={{fontSize:'1.em', marginBottom:'0.4em', marginTop:'0.4em'}}>{frontmatter.excerpt}</p>
+            {post.frontmatter.tags.map(tag => {
+              return (
+                <span>
+                  <Link to={`/tags/${tag}`}>
+                    {tag}
+                  </Link>&nbsp;&nbsp;
+                </span>
+              )
+            })}
           </div>
         )
       })}
