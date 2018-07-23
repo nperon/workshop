@@ -9,11 +9,11 @@ const IndexPage = ({data}) => {
         const { frontmatter } = post
         return (
           <div>
-            <h2 style={{fontSize:'1.4em', marginBottom:'0.2em', marginTop:'0.8em'}}>
+            <h2 style={{fontSize:'1em', marginBottom:'0.2em', marginTop:'0.8em'}}>
               <Link to={frontmatter.path}>
                 {frontmatter.title}
               </Link>
-              <span style={{fontSize:'0.6em',}}>&nbsp;&mdash;&nbsp;{frontmatter.date}</span>
+              <span style={{fontSize:'1em',}}>&nbsp;&mdash;&nbsp;{frontmatter.date}</span>
             </h2>
             <p style={{fontSize:'1.em', marginBottom:'0.4em', marginTop:'0.4em'}}>{frontmatter.excerpt}</p>
             {post.frontmatter.tags.map(tag => {
