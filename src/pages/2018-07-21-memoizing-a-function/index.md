@@ -3,7 +3,7 @@ path: "/memoization"
 date: "2018-07-21T18:49:39.175Z"
 title: "Memoizing a function in es6"
 tags: ['javascript', 'es6', 'functional programming', memoization]
-excerpt: "Function memoization implemented in a short snippet thanks to convenient functional programming features of javascript"
+excerpt: "Function memoization implemented in a short snippet with some convenient functional programming features of javascript"
 ---
 
 ```javascript
