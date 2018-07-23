@@ -1,0 +1,2 @@
+webpackJsonp([17976388717192],{319:function(o,a){o.exports={pathContext:{posts:[{html:'<p><a href="https://www.codewars.com/dashboard">Codewars</a></p>',id:"/home/nperon/Documents/tutorials/egghead/build-a-blog/my-blog/src/pages/2018-07-23-bookmarks/index.md absPath of file >>> MarkdownRemark",frontmatter:{date:"2017-07-23T21:34:19.235Z",path:"/bookmarks",title:"Bookmarks",excerpt:"Some bookmarks",tags:["bookmarks","blog"]}}],tagName:"blog"}}}});
+//# sourceMappingURL=path---tags-blog-5567de55ea7be8be0df6.js.map
