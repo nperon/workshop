@@ -1,28 +1,28 @@
 {
   "assetsByChunkName": {
     "path---memoization": [
-      "path---memoization-b2614dc0e4d74f4fd7e1.js",
-      "path---memoization-b2614dc0e4d74f4fd7e1.js.map"
+      "path---memoization-9c3a1a3a17a0e2bdc186.js",
+      "path---memoization-9c3a1a3a17a0e2bdc186.js.map"
     ],
     "path---tags-blog": [
-      "path---tags-blog-e26a6c187a699d7126c1.js",
-      "path---tags-blog-e26a6c187a699d7126c1.js.map"
+      "path---tags-blog-2730df3296c3fb2134d4.js",
+      "path---tags-blog-2730df3296c3fb2134d4.js.map"
     ],
     "path---tags-es-6": [
-      "path---tags-es-6-e7db266906bc316be452.js",
-      "path---tags-es-6-e7db266906bc316be452.js.map"
+      "path---tags-es-6-187b6d6d87c619fe56a1.js",
+      "path---tags-es-6-187b6d6d87c619fe56a1.js.map"
     ],
     "component---src-pages-index-js": [
       "component---src-pages-index-js-7187fc4f87660bafea99.js",
       "component---src-pages-index-js-7187fc4f87660bafea99.js.map"
     ],
     "path---bookmarks": [
-      "path---bookmarks-27e080f8411cad1c2399.js",
-      "path---bookmarks-27e080f8411cad1c2399.js.map"
+      "path---bookmarks-ba4d15b42c22df8d8628.js",
+      "path---bookmarks-ba4d15b42c22df8d8628.js.map"
     ],
     "path---tags-markdown": [
-      "path---tags-markdown-4ec2d3efb357456dba24.js",
-      "path---tags-markdown-4ec2d3efb357456dba24.js.map"
+      "path---tags-markdown-0b11f72d24a6ed2da9f3.js",
+      "path---tags-markdown-0b11f72d24a6ed2da9f3.js.map"
     ],
     "component---src-templates-tags-js": [
       "component---src-templates-tags-js-f9a8a6f4dec9d1a40211.js",
@@ -37,36 +37,36 @@
       "path----557518bd178906f8d58a.js.map"
     ],
     "path---markdown": [
-      "path---markdown-b84afd18c5afed3696cb.js",
-      "path---markdown-b84afd18c5afed3696cb.js.map"
+      "path---markdown-0efe081df59b38bd45cd.js",
+      "path---markdown-0efe081df59b38bd45cd.js.map"
     ],
     "path---tags-javascript": [
-      "path---tags-javascript-36dd7bb5d0ce11ab9f49.js",
-      "path---tags-javascript-36dd7bb5d0ce11ab9f49.js.map"
+      "path---tags-javascript-44e3252405bb9884556e.js",
+      "path---tags-javascript-44e3252405bb9884556e.js.map"
     ],
     "component---src-templates-blog-post-js": [
       "component---src-templates-blog-post-js-0f31742f60cbb08c5dd6.js",
       "component---src-templates-blog-post-js-0f31742f60cbb08c5dd6.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-3f89954ec008f6791874.js",
-      "component---src-layouts-index-js-3f89954ec008f6791874.js.map"
+      "component---src-layouts-index-js-4c80954735a32a42b799.js",
+      "component---src-layouts-index-js-4c80954735a32a42b799.js.map"
     ],
     "path---page-2": [
       "path---page-2-a0e39f21c11f6a62c5ab.js",
       "path---page-2-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---index": [
-      "path---index-44ae520a9c4d7a3be5a4.js",
-      "path---index-44ae520a9c4d7a3be5a4.js.map"
+      "path---index-909aaaee210f08fcea18.js",
+      "path---index-909aaaee210f08fcea18.js.map"
     ],
     "component---src-pages-404-js": [
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js",
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js.map"
     ],
     "path---tags-bookmarks": [
-      "path---tags-bookmarks-a8e8e2f1b5b04fd8d768.js",
-      "path---tags-bookmarks-a8e8e2f1b5b04fd8d768.js.map"
+      "path---tags-bookmarks-613e5c48a7396a2cce04.js",
+      "path---tags-bookmarks-613e5c48a7396a2cce04.js.map"
     ],
     "commons": [
       "commons-79baf21cb474f27d4109.js",
@@ -85,22 +85,18 @@
       "component---src-pages-page-2-js-075954cd9c4544c7dcd8.js.map"
     ],
     "app": [
-      "app-09db26c99d982b39b2c6.js",
+      "app-a0db892097afdcbaba4d.js",
       "build-js-styles.css",
-      "app-09db26c99d982b39b2c6.js.map",
+      "app-a0db892097afdcbaba4d.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
       "path---404-a0e39f21c11f6a62c5ab.js",
       "path---404-a0e39f21c11f6a62c5ab.js.map"
     ],
-    "path---tags-memoization": [
-      "path---tags-memoization-ab59b73c523197895582.js",
-      "path---tags-memoization-ab59b73c523197895582.js.map"
-    ],
     "path---tags-functional-programming": [
-      "path---tags-functional-programming-57a43b7e3f4ad6bbc6ba.js",
-      "path---tags-functional-programming-57a43b7e3f4ad6bbc6ba.js.map"
+      "path---tags-functional-programming-3c1d465c0a1d87c40b82.js",
+      "path---tags-functional-programming-3c1d465c0a1d87c40b82.js.map"
     ]
   }
 }
