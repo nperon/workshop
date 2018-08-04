@@ -18,6 +18,8 @@ excerpt: "Some bookmarks"
 
 [regexp](https://javascript.info/regexp-introduction)
 
+[lodash](https://lodash.com/)
+
 [lodash documentation](https://lodash.com/docs/4.17.10)
 
 [lodash wiki](https://en.wikipedia.org/wiki/Lodash)
