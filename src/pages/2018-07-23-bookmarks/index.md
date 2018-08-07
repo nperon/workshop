@@ -27,3 +27,5 @@ excerpt: "Some bookmarks"
 [lodash-fp documentation](https://github.com/lodash/lodash/wiki/FP-Guide)
 
 [Functional programming with lodash-fp](https://blog.codeminer42.com/functional-programming-with-lodash-fp-8fe0619b3024)
+
+[Public REST APIs](https://github.com/toddmotto/public-apis/blob/master/README.md)
