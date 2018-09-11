@@ -35,3 +35,5 @@ excerpt: "Some bookmarks"
 [Angular CLI](https://github.com/angular/angular-cli)
 
 [d3](https://d3js.org/)
+
+[How (and why) to use D3 with React](https://hackernoon.com/how-and-why-to-use-d3-with-react-d239eb1ea274)
