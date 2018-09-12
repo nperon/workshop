@@ -36,6 +36,9 @@ excerpt: "Some bookmarks"
 
 [d3](https://d3js.org/)
 
+[Bringing Together React, D3, And Their Ecosystem](https://www.smashingmagazine.com/2018/02/react-d3-ecosystem)
+
+[if-and-when-to-use-d3-js-with-react](https://medium.com/front-end-hacking/if-and-when-to-use-d3-js-with-react-639a651c6257)
+
 [How (and why) to use D3 with React](https://hackernoon.com/how-and-why-to-use-d3-with-react-d239eb1ea274)
 
-[Bringing Together React, D3, And Their Ecosystem](https://www.smashingmagazine.com/2018/02/react-d3-ecosystem)
