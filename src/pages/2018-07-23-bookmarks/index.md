@@ -37,3 +37,5 @@ excerpt: "Some bookmarks"
 [d3](https://d3js.org/)
 
 [How (and why) to use D3 with React](https://hackernoon.com/how-and-why-to-use-d3-with-react-d239eb1ea274)
+
+[Bringing Together React, D3, And Their Ecosystem](https://www.smashingmagazine.com/2018/02/react-d3-ecosystem)
