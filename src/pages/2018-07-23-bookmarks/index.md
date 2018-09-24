@@ -42,3 +42,4 @@ excerpt: "Some bookmarks"
 
 [How (and why) to use D3 with React](https://hackernoon.com/how-and-why-to-use-d3-with-react-d239eb1ea274)
 
+[react-d3-introduction](https://github.com/larkintuckerllc/hello-d3/tree/master/react-d3-introduction)
