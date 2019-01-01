@@ -9,3 +9,4 @@ Example code for lesson 7 of Taylor Bell's course, [Build a Blog with React and 
 ```
 npm install && gatsby develop
 ```
+
