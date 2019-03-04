@@ -24,5 +24,5 @@ excerpt: "Documentation on React Native"
 
 ### Navigation
 
-[react-native-documentation](https://github.com/wix/react-native-navigation)
+[React Native Navigation](https://github.com/wix/react-native-navigation)
 
