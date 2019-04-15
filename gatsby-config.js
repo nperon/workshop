@@ -1,7 +1,7 @@
 module.exports = {
-  pathPrefix: '/blog',
+  pathPrefix: '/workshop',
   siteMetadata: {
-    title: `Nicolas's blog`,
+    title: `Nicolas's workshop`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -31,7 +31,7 @@ const Header = () => (
             textDecoration: 'none',
           }}
         >
-          Nicolas's blog
+          Nicolas's workshop
         </Link>
       </h1>
     </div>
@@ -41,7 +41,7 @@ const Header = () => (
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Nicolas's blog"
+      title="Nicolas's worshop"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },

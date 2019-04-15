@@ -2,7 +2,7 @@
 path: "/bookmarks"
 date: "2018-07-23T21:34:19.235Z"
 title: "Bookmarks"
-tags: ['bookmarks', 'blog']
+tags: ['bookmarks']
 excerpt: "Some bookmarks"
 ---
 
