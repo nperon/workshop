@@ -1,2 +1,0 @@
-webpackJsonp([0xc600633d21ae],{325:function(e,t){e.exports={pathContext:{posts:[{html:'<p>Course completed via @udemy:</p>\n<p><a href="http://ude.my/UC-LTEODNLK">Ionic 4 Crash Course</a></p>',id:"/home/nperon/Documents/blog/src/pages/2019-01-01-cv/index.md absPath of file >>> MarkdownRemark",frontmatter:{date:"2019-01-01T22:09:20.235Z",path:"/cv",title:"Nicolas Peron",excerpt:"My CV",tags:["cv","work"]}}],tagName:"cv"}}}});
-//# sourceMappingURL=path---tags-cv-7961cd6e269acde9bbdf.js.map
