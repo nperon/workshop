@@ -18,3 +18,4 @@ excerpt: "My CV"
 
 [ via @udemy: Ionic 4 Crash Course](http://ude.my/UC-LTEODNLK)
 
+[ via @udemy: Redux Saga (with React and Redux): Fast-track intro course](https://www.udemy.com/certificate/UC-3BOGQ0KF/)
