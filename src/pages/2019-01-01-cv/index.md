@@ -14,7 +14,11 @@ excerpt: "My CV"
 
 [github](https://github.com/nperon)
 
-### Trainings / Online courses completed
+[linkedin](https://www.linkedin.com/in/nicolas-peron-52b250140/)
+
+[facebook](https://www.facebook.com/profile.php?id=100012153432065)
+
+### Trainings / Completed online courses
 
 [ via @udemy: Ionic 4 Crash Course](http://ude.my/UC-LTEODNLK)
 
