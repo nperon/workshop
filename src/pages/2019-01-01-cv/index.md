@@ -18,6 +18,8 @@ excerpt: "My CV"
 
 [facebook](https://www.facebook.com/profile.php?id=100012153432065)
 
+[twitter](https://twitter.com/NicolasPeron5)
+
 ### Trainings / Completed online courses
 
 [ via @udemy: Ionic 4 Crash Course](http://ude.my/UC-LTEODNLK)
@@ -25,3 +27,5 @@ excerpt: "My CV"
 [ via @udemy: Redux Saga (with React and Redux): Fast-track intro course](https://www.udemy.com/certificate/UC-3BOGQ0KF/)
 
 [ via @udemy: Up and Runninng with PostgreSQL 11](https://www.udemy.com/certificate/UC-WVGZWOCD/)
+
+[ via @udemy: The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert](https://www.udemy.com/certificate/UC-4TKNLZQ4/)
