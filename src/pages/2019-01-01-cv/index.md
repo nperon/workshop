@@ -29,3 +29,5 @@ excerpt: "My CV"
 [ via @udemy: Up and Runninng with PostgreSQL 11](https://www.udemy.com/certificate/UC-WVGZWOCD/)
 
 [ via @udemy: The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert](https://www.udemy.com/certificate/UC-4TKNLZQ4/)
+
+[ via @udemy: Asynchronous JavaScript: Promises, Callbacks, Async Await](https://www.udemy.com/certificate/UC-ITXKXIZ7/)
