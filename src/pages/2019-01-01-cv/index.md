@@ -31,3 +31,5 @@ excerpt: "My CV"
 [ via @udemy: The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert](https://www.udemy.com/certificate/UC-4TKNLZQ4/)
 
 [ via @udemy: Asynchronous JavaScript: Promises, Callbacks, Async Await](https://www.udemy.com/certificate/UC-ITXKXIZ7/)
+
+[ via @udemy: Jenkins for Professionals](https://www.udemy.com/certificate/UC-81NFLFR5/)
