@@ -33,3 +33,5 @@ excerpt: "My CV"
 [ via @udemy: Asynchronous JavaScript: Promises, Callbacks, Async Await](https://www.udemy.com/certificate/UC-ITXKXIZ7/)
 
 [ via @udemy: Jenkins for Professionals](https://www.udemy.com/certificate/UC-81NFLFR5/)
+
+[ via @udemy: JavaScript Cookie Tester web application](https://www.udemy.com/certificate/UC-52TXS07R/)
