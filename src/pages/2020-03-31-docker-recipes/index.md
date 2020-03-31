@@ -18,17 +18,13 @@ Then create locally the container associated with the mongo docker image:
 docker run -p 27017:27017 -d mongo
 ```
 
-The resulting mongo db container is then displayed by executing another time 
-```bash
-docker ps
-```
-Information on the running container like the following is displayed:
+Executing another time ```docker ps``` results in information on the created container like the following being displayed:
 ```
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                      NAMES
 2c6a61aba41b        mongo               "docker-entrypoint.s…"   3 minutes ago       Up 3 minutes        0.0.0.0:27017->27017/tcp   clever_dubinsky
 ```
 
-Connection to the database at url localhost:27017 can be open using for instance the robo-3t nosql database editor. 
+Connection to the database at url localhost:27017 can be opened using for instance the robo-3t nosql database editor. 
 Finally, the container when not needed anymore can be stopped with:
 ```
 docker stop 2c6a61aba41b
