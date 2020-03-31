@@ -41,8 +41,8 @@
       "path---cv-863afc010978372d36b7.js.map"
     ],
     "path---tags": [
-      "path---tags-4f2b9d60d70b7588ce79.js",
-      "path---tags-4f2b9d60d70b7588ce79.js.map"
+      "path---tags-ea28b6abf1c13c175bfa.js",
+      "path---tags-ea28b6abf1c13c175bfa.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -73,8 +73,8 @@
       "path---page-2-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---index": [
-      "path---index-824f46283593db91921b.js",
-      "path---index-824f46283593db91921b.js.map"
+      "path---index-4d9d68597013759bc3e4.js",
+      "path---index-4d9d68597013759bc3e4.js.map"
     ],
     "component---src-pages-404-js": [
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js",
@@ -92,6 +92,10 @@
       "commons-99efdf1a76a6a156fb09.js",
       "commons-99efdf1a76a6a156fb09.js.map"
     ],
+    "path---docker": [
+      "path---docker-813423f02d277d3b1daa.js",
+      "path---docker-813423f02d277d3b1daa.js.map"
+    ],
     "path---404-html": [
       "path---404-html-a0e39f21c11f6a62c5ab.js",
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
@@ -99,6 +103,10 @@
     "path---tags-mobile-app": [
       "path---tags-mobile-app-07e5fe6cd9931a229511.js",
       "path---tags-mobile-app-07e5fe6cd9931a229511.js.map"
+    ],
+    "path---tags-docker": [
+      "path---tags-docker-573e059e39d6847352c7.js",
+      "path---tags-docker-573e059e39d6847352c7.js.map"
     ],
     "component---src-templates-all-tags-js": [
       "component---src-templates-all-tags-js-a109e949baa4beb6ccfa.js",
@@ -108,18 +116,26 @@
       "path---tags-css-5f3beea34cbf755cfc25.js",
       "path---tags-css-5f3beea34cbf755cfc25.js.map"
     ],
+    "path---tags-devops": [
+      "path---tags-devops-d843f7977f6ac5b20988.js",
+      "path---tags-devops-d843f7977f6ac5b20988.js.map"
+    ],
     "path---tags-cv": [
       "path---tags-cv-d105c95662549c6e369f.js",
       "path---tags-cv-d105c95662549c6e369f.js.map"
+    ],
+    "path---tags-container": [
+      "path---tags-container-4adcd66a18ba0d2c1787.js",
+      "path---tags-container-4adcd66a18ba0d2c1787.js.map"
     ],
     "component---src-pages-page-2-js": [
       "component---src-pages-page-2-js-075954cd9c4544c7dcd8.js",
       "component---src-pages-page-2-js-075954cd9c4544c7dcd8.js.map"
     ],
     "app": [
-      "app-af5a84c02ba9bef8a2dd.js",
+      "app-d397abcf7c0763ee5deb.js",
       "build-js-styles.css",
-      "app-af5a84c02ba9bef8a2dd.js.map",
+      "app-d397abcf7c0763ee5deb.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
