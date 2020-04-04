@@ -37,3 +37,5 @@ excerpt: "My CV"
 [ via @udemy: JavaScript Cookie Tester web application](https://www.udemy.com/certificate/UC-52TXS07R/)
 
 [ via @udemy: Object Oriented PHP & MVC](https://www.udemy.com/certificate/UC-D1K1BCTL/)
+
+[ via @udemy: Hands-On Spring Security 5.x](https://www.udemy.com/certificate/UC-b54a41ff-a687-4fcb-9a0c-e60e1f4ac1f3/)
