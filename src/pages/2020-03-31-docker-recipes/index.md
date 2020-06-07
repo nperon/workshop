@@ -29,3 +29,23 @@ Finally, the container when not needed anymore can be stopped with:
 ```
 docker stop 2c6a61aba41b
 ```
+
+### Create a container with a PostgreSQL database with given the database name and the user credentials
+
+Let us assume we need to connect to a database called course_data in a PostgreSQL SGBD with the following credentials: the user is postgres and the password is password. The command line to launch a docker container with such a database is:
+
+```bash
+docker run --name postgresdb -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=password -e POSTGRES_DB=course_data -d -p 5432:5432 postgres
+```
+
+Terminal access to the database prompt is obtained by first accessing the container shell:
+
+```bash
+docker container exec -it postgresdb bash
+```
+
+Then the postgre prompt of user 'postgres' may then be accessed with:
+
+```bash
+psql course_data postgres
+```
