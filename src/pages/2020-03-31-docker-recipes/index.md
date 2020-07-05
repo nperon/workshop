@@ -1,6 +1,6 @@
 ---
 path: "/docker"
-date: "2019-03-05T22:35:12.235Z"
+date: "2020-03-31T16:09:12.235Z"
 title: "Docker Recipes"
 tags: ['docker', 'container', 'devops']
 excerpt: "Some Docker Recipes"
