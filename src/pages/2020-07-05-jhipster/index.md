@@ -35,8 +35,16 @@ code .
 npm install
 ```
 
+The application can be started with the dev profile either with: 
+
 ```
 mvn spring-boot:run
+```
+
+or with:
+
+```
+./mvnw
 ```
 
 ```
@@ -51,8 +59,13 @@ gedit src/main/resources/entities.jh
 jhipster import-jdl src/main/resources/entities.jh
 ```
 
+To package the application as a “production” JAR in the target directory, type:
 
-### Leveraging available Jhipster options
+```
+./mvnw -Pprod clean verify
+```
+
+### Leveraging docker according to the selected Jhipster options
 
 A number of possible options in using Jhipster are described in the README.md file of the project folder.
 
