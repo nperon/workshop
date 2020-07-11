@@ -97,7 +97,7 @@ If you chose OAuth 2.0 as your authentication, Keycloak is used as the default i
 docker-compose -f src/main/docker/keycloak.yml up
 ```
 
-starts up Keycloak automatically.
+starts up Keycloak automatically. A number of other docker-compose scripts can be availabla in the ```src/main/docker/``` directory, depending on the options set initially while generating the app. For instance it could well be that a ```mysql.yml``` docker-compose script is available to run a container with a mysql database required in dev mode. All of these docker-compose scripts can be run following the same ```docker-compose``` command pattern as stated above.
 
 ### Jhipster Marketplace modules of interest
 
