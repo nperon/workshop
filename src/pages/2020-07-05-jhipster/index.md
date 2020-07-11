@@ -59,6 +59,9 @@ gedit src/main/resources/entities.jh
 jhipster import-jdl src/main/resources/entities.jh
 ```
 
+Sample jdl scrips are available for instance in the [jdl-samples jhipster project on github](https://github.com/jhipster/jdl-samples).
+
+
 To package the application as a “production” JAR in the target directory, type:
 
 ```
