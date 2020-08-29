@@ -270,4 +270,6 @@ curl -XGET 127.0.0.1:9200/series/_search?pretty -d '{
 
 ### Flattened Datatype
 
+Commands are given are url [https://media.sundog-soft.com/es/flattened.txt](https://media.sundog-soft.com/es/flattened.txt).
+
 
