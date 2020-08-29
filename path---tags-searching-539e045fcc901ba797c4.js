@@ -1,0 +1,2 @@
+webpackJsonp([27451989507627],{394:function(t,e){t.exports={pathContext:{posts:[{html:"<h3>Starting</h3>",id:"/home/nperon/Documents/workshop/src/pages/2020-08-29-ELK-2/index.md absPath of file >>> MarkdownRemark",frontmatter:{date:"2020-08-29T22:47:32.235Z",path:"/elk",title:"Searching with Elasticsearch",excerpt:"",tags:["Elastic Search","searching"]}}],tagName:"searching"}}}});
+//# sourceMappingURL=path---tags-searching-539e045fcc901ba797c4.js.map
