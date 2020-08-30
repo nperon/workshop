@@ -1,5 +1,5 @@
 ---
-path: "/elk"
+path: "/elk-mapping"
 date: "2020-08-28T00:39:17.235Z"
 title: "Mapping and Indexing Data into Elastic Search"
 tags: ['Elastic Search', 'Logstash', 'mapping', 'indexing']
