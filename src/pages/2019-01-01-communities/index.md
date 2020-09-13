@@ -1,9 +1,9 @@
 ---
-path: "/cv"
+path: "/communities"
 date: "2019-01-01T22:09:20.235Z"
-title: "Nicolas's CV"
-tags: ['cv', 'work']
-excerpt: "My CV"
+title: "Nicolas's communities"
+tags: ['communities', 'social web', 'page']
+excerpt: "My Communities"
 ---
 
 ### Communities
@@ -39,7 +39,3 @@ excerpt: "My CV"
 [ via @udemy: Object Oriented PHP & MVC](https://www.udemy.com/certificate/UC-D1K1BCTL/)
 
 [ via @udemy: Hands-On Spring Security 5.x](https://www.udemy.com/certificate/UC-b54a41ff-a687-4fcb-9a0c-e60e1f4ac1f3/)
-
-### Online apps / sites
-
-[ Bouquin Shop ](https://bouquinshop.com)

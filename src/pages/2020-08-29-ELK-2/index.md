@@ -216,3 +216,19 @@ curl -XPUT 127.0.0.1:9200/movies -d '
 curl -XPUT 127.0.0.1:9200/_bulk --data-binary @movies.json
 ```
 
+### Search as you type
+
+```bash
+curl -XGET 127.0.0.1:9200/movies/_search?pretty -d '
+{
+	"query": {
+		"match_phrase_prefix": {
+			"title": {
+				"query": "star tr",
+				"slop": 10
+			}
+		}
+	}
+}'
+```
+
