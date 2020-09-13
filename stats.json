@@ -8,10 +8,6 @@
       "path---tags-es-6-4f5f0b6ac0ff1f61a74b.js",
       "path---tags-es-6-4f5f0b6ac0ff1f61a74b.js.map"
     ],
-    "path---tags-communities": [
-      "path---tags-communities-9776f2ccec2c39ac74fc.js",
-      "path---tags-communities-9776f2ccec2c39ac74fc.js.map"
-    ],
     "path---elk-mapping": [
       "path---elk-mapping-d8e9e4432b6ad035e4c5.js",
       "path---elk-mapping-d8e9e4432b6ad035e4c5.js.map"
@@ -31,10 +27,6 @@
     "component---src-pages-index-js": [
       "component---src-pages-index-js-7187fc4f87660bafea99.js",
       "component---src-pages-index-js-7187fc4f87660bafea99.js.map"
-    ],
-    "path---tags-page": [
-      "path---tags-page-67334ee606982dfd806d.js",
-      "path---tags-page-67334ee606982dfd806d.js.map"
     ],
     "path---bookmarks": [
       "path---bookmarks-bfd15e0a0b03fe274151.js",
@@ -57,8 +49,8 @@
       "path---tags-bootstrap-1ee61f121ca02d154d1f.js.map"
     ],
     "path---tags": [
-      "path---tags-539425957d11b358c866.js",
-      "path---tags-539425957d11b358c866.js.map"
+      "path---tags-e1cf949ef1c116397c94.js",
+      "path---tags-e1cf949ef1c116397c94.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -96,13 +88,9 @@
       "path---page-2-a0e39f21c11f6a62c5ab.js",
       "path---page-2-a0e39f21c11f6a62c5ab.js.map"
     ],
-    "path---tags-social-web": [
-      "path---tags-social-web-e02599648d5b55c4d536.js",
-      "path---tags-social-web-e02599648d5b55c4d536.js.map"
-    ],
     "path---index": [
-      "path---index-c314efc6df472603f54d.js",
-      "path---index-c314efc6df472603f54d.js.map"
+      "path---index-937cdb8af9104e6d2661.js",
+      "path---index-937cdb8af9104e6d2661.js.map"
     ],
     "component---src-pages-404-js": [
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js",
@@ -157,9 +145,9 @@
       "component---src-pages-page-2-js-075954cd9c4544c7dcd8.js.map"
     ],
     "app": [
-      "app-8760c845690ae0a06f00.js",
+      "app-2b0230d8a700126c52c7.js",
       "build-js-styles.css",
-      "app-8760c845690ae0a06f00.js.map",
+      "app-2b0230d8a700126c52c7.js.map",
       "build-js-styles.css.map"
     ],
     "path---tags-elastic-search": [
@@ -185,10 +173,6 @@
     "path---tags-functional-programming": [
       "path---tags-functional-programming-67dff38ee6e2b3a87030.js",
       "path---tags-functional-programming-67dff38ee6e2b3a87030.js.map"
-    ],
-    "path---communities": [
-      "path---communities-9d350f64df70ea109b68.js",
-      "path---communities-9d350f64df70ea109b68.js.map"
     ],
     "path---react-native": [
       "path---react-native-c9b4ddae356e6d4b2b28.js",
