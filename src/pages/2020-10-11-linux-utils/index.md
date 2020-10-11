@@ -11,7 +11,7 @@ excerpt: ""
 Vi command for eliminating all occurences of colon ":" is the following:
 
 ```
-:1,$s/:/ /g
+:1,$s/://g
 ```
 
 Here is the vi command for replacing all occurences of "alod" with "new":
