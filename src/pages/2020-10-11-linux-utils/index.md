@@ -30,25 +30,25 @@ Vi command for searching string "xyz":
 
 File search:
 
-```
+```bash
 find ./fvsa/ -name "pvsve*"
 ```
 
 ### Memory usage with watch
 
-```
+```bash
 watch -n 5 free -m
 ```
 
 ### Modify filenames with rename
 
 Delete 4 first characters in all file names in dir:
-```
+```bash
 rename 's/.{4}(.*)/$1/' *
 ```
 
 Delete 5 last characters in all file names in dir:
-```
+```bash
 rename 's/(.*).{5}/$1/' *
 ```
 
@@ -56,43 +56,51 @@ rename 's/(.*).{5}/$1/' *
 
 Display total number of files in 'folder':
 
-```
+```bash
 ls folder | wc -l
 ```
 
 ### Disk usage
 
-```
+```bash
 sudo ncdu -rx /
 ```
 
-```
+```bash
 sudo du -shc /*
 ```
 
+Displaying size occupied by Documents directory:
+
+```bash
+cd ~
+sudo du -sh Documents
+```
+
+
 ### Managing JDKs on Debian
 
-```
+```bash
 update-java-alternatives -l
 ```
 
-```
+```bash
 sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
 ```
 
 Or in a more interactive way:
 
-```
+```bash
 update-alternatives --config java
 ```
 
 ### Managing screens 
 
-```
+```bash
 xrandr
 ```
 
-```
+```bash
 xrandr --addmode HDMI-1 2560x1080
 ```
 
