@@ -13,7 +13,7 @@ Use the Certbot ACME client documented in the [certbot pages](https://certbot.ef
 ### Decoding and evaluating a TLS certificate
 
 - paste the certificate contained in the ```cert.pem``` file found somewhere under the 
-```/etc/letsencryot``` directory into the form provided 
+```/etc/letsencrypt``` directory into the form provided 
 in the [SSLHopper pages](https://www.sslshopper.com/certificate-decoder.html).
 The same test can be done with the ```chain.pem``` or with 
 the ```fullchain.pem``` file.
