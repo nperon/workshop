@@ -10,7 +10,7 @@ excerpt: ""
 
 Use the Certbot ACME client documented in the [certbot pages](https://certbot.eff.org).
 
-### Decoding and evaluating a TLS certificate
+### Decoding and evaluating the generated TLS certificate
 
 - paste the certificate contained in the ```cert.pem``` file found somewhere under the 
 ```/etc/letsencrypt``` directory into the form provided 
