@@ -8,7 +8,7 @@ excerpt: ""
 
 ### Getting a letsencrypt certificate on a host with shell access
 
-Use the Certbot ACME client documented in the [certbot pages](https:/certbot.eff.org).
+Use the Certbot ACME client documented in the [certbot pages](https://certbot.eff.org).
 
 ### Decoding and evaluating a TLS certificate
 
