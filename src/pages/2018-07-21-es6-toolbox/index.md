@@ -1,10 +1,16 @@
 ---
-path: "/memoization"
+path: "/es6-toolbox"
 date: "2018-07-21T18:49:39.175Z"
-title: "Memoizing a function in es6"
-tags: ['javascript', 'es6', 'functional programming', memoization]
-excerpt: "Function memoization implemented in a short snippet with some convenient functional programming features of javascript"
+title: "ES6 toolbox"
+tags: ['javascript', 'es6', 'toolbox', 'utils', 'functional programming', 'memoization']
+excerpt: ""
 ---
+
+
+
+## Memoization
+
+In the following snippet, function memoization is implemented with some convenient functional programming features of javascript.
 
 ```javascript
 const memoize = (fn) => {
@@ -44,8 +50,8 @@ function fib(num) {
 }
 ```
 
-In the following slightly different version of memoize,
-arguments of the function, which operate as the cache keys, 
+The following is a slightly different version of memoize.
+Arguments of the function, which operate as the cache keys, 
 are stringified: 
 
 ```javascript
