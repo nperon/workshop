@@ -6,6 +6,28 @@ tags: ['javascript', 'es6', 'toolbox', 'utils', 'functional programming', 'memoi
 excerpt: ""
 ---
 
+## JSON stringify improved
+
+The following is a function which stringifies an object to the required level.
+
+```javascript
+function stringify(val, depth, replacer, space) {
+    depth = isNaN(+depth) ? 1 : depth;
+    function _build(key, val, depth, o, a) {
+        return !val || typeof val != 'object' ? val : (a=Array.isArray(val), JSON.stringify(val, function(k,v){ if (a || depth > 0) { if (replacer) v=replacer(k,v); if (!k) return (a=Array.isArray(v),val=v); !o && (o=a?[]:{}); o[k] = _build(k, v, a?depth:depth-1); } }), o||(a?[]:{}));
+    }
+    return JSON.stringify(_build('', val, depth), null, space);
+}
+```
+
+The stringification level is the second argument of the function:
+
+```javascript
+const value={a:[12,2,{y:3,z:{q:1}}],s:'!',o:{x:1,o2:{y:1}}};
+console.log(stringify(value, 0, null, 2));
+console.log(stringify(value, 1, null, 2));
+console.log(stringify(value, 2, null, 2));
+```
 
 
 ## Memoization
