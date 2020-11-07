@@ -1,6 +1,6 @@
 ---
 path: "/es6-toolbox"
-date: "2018-07-21T18:49:39.175Z"
+date: "2020-11-07T17:46:11.271Z"
 title: "ES6 toolbox"
 tags: ['javascript', 'es6', 'toolbox', 'utils', 'functional programming', 'memoization']
 excerpt: ""
