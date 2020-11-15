@@ -8,7 +8,7 @@ excerpt: ""
 
 ### OAuth 2.0 in Spring Security 5
 
-The legacy [Spring Security OAuth Project](https://github.com/spring-projects/spring-security-oauth)includes support for implementating all of the three roles involved in OAuth: Client, Resource Server and Authorization Server. However, that project is now deprecated and to be maintained only for a limited time 
+The legacy [Spring Security OAuth Project](https://github.com/spring-projects/spring-security-oauth includes support for implementing all of the three roles involved in OAuth: Client, Resource Server and Authorization Server. However, that project is now deprecated and to be maintained only for a limited time 
 until not later than may 2022. 
 
 The new OAuth 2 project (https://github.com/spring-projects-experimental/spring-authorization-server) 
