@@ -1,5 +1,9 @@
 {
   "assetsByChunkName": {
+    "path---tags-kafka": [
+      "path---tags-kafka-ae86b3a50625c8411b14.js",
+      "path---tags-kafka-ae86b3a50625c8411b14.js.map"
+    ],
     "path---tags-es-6": [
       "path---tags-es-6-a8fe3970e362a635956e.js",
       "path---tags-es-6-a8fe3970e362a635956e.js.map"
@@ -40,6 +44,10 @@
       "path---tags-markdown-b1f05118e5b2d3aa3947.js",
       "path---tags-markdown-b1f05118e5b2d3aa3947.js.map"
     ],
+    "path---kafka": [
+      "path---kafka-c6c06d50a3c4625967f7.js",
+      "path---kafka-c6c06d50a3c4625967f7.js.map"
+    ],
     "component---src-templates-tags-js": [
       "component---src-templates-tags-js-f9a8a6f4dec9d1a40211.js",
       "component---src-templates-tags-js-f9a8a6f4dec9d1a40211.js.map"
@@ -53,8 +61,8 @@
       "path---tags-bootstrap-5c7648fc885082680d70.js.map"
     ],
     "path---tags": [
-      "path---tags-64e4630614e038455199.js",
-      "path---tags-64e4630614e038455199.js.map"
+      "path---tags-ef677ef4638d836b8d8e.js",
+      "path---tags-ef677ef4638d836b8d8e.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -85,8 +93,8 @@
       "path---tags-rename-a931ea26e92cca14b324.js.map"
     ],
     "path---tags-spring-5": [
-      "path---tags-spring-5-e11fb04f0ac70c6bdf11.js",
-      "path---tags-spring-5-e11fb04f0ac70c6bdf11.js.map"
+      "path---tags-spring-5-eb4ea435cf657815f86b.js",
+      "path---tags-spring-5-eb4ea435cf657815f86b.js.map"
     ],
     "path---tags-aggregations": [
       "path---tags-aggregations-f9f37321e6281c496bc4.js",
@@ -101,8 +109,8 @@
       "component---src-templates-blog-post-js-46e2ca802238dc3d0766.js.map"
     ],
     "path---tags-spring-boot": [
-      "path---tags-spring-boot-62453e76522f51e76aef.js",
-      "path---tags-spring-boot-62453e76522f51e76aef.js.map"
+      "path---tags-spring-boot-98ca25c3e2640040404a.js",
+      "path---tags-spring-boot-98ca25c3e2640040404a.js.map"
     ],
     "component---src-layouts-index-js": [
       "component---src-layouts-index-js-de1cdc9943ac9e2a0247.js",
@@ -121,12 +129,16 @@
       "path---page-2-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---index": [
-      "path---index-103fee5e0f685ffbd259.js",
-      "path---index-103fee5e0f685ffbd259.js.map"
+      "path---index-ef2bf7c6204c7e8ec185.js",
+      "path---index-ef2bf7c6204c7e8ec185.js.map"
     ],
     "path---tags-vi": [
       "path---tags-vi-ec08d9897bdecdd458dc.js",
       "path---tags-vi-ec08d9897bdecdd458dc.js.map"
+    ],
+    "path---tags-java": [
+      "path---tags-java-78ea8f1c514bce17fc72.js",
+      "path---tags-java-78ea8f1c514bce17fc72.js.map"
     ],
     "component---src-pages-404-js": [
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js",
@@ -189,9 +201,9 @@
       "path---tags-find-47ee135cd09a9f1e2943.js.map"
     ],
     "app": [
-      "app-d5053d1c4aa7ee1d1484.js",
+      "app-2ed7d891518123600c6e.js",
       "build-js-styles.css",
-      "app-d5053d1c4aa7ee1d1484.js.map",
+      "app-2ed7d891518123600c6e.js.map",
       "build-js-styles.css.map"
     ],
     "path---tags-o-auth-2-0": [
