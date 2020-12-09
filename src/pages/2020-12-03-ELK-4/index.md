@@ -60,36 +60,37 @@ POST _reindex
 ### Creating a sample index from dev tools console:
 
 ```
-DELETE /usersdata
+DELETE /bankdata
 ```
 
 ```
-PUT /usersdata/user/1
+PUT /bankdata
+POST /bankdata/1
 { "age": 42, "balance": 12000 }
-PUT /usersdata/user/2
+POST /bankdata/2
 { "age": 28, "balance": 7000 }
-PUT /usersdata/user/3
+POST /bankdata/3
 { "age": 51, "balance": 2300 }
-PUT /usersdata/user/4
+POST /bankdata/4
 { "age": 15, "balance": 450 }
-PUT /usersdata/user/5
+POST /bankdata/5
 { "age": 33 }
-PUT /usersdata/user/6
+POST /bankdata/6
 { "age": 32 }
-PUT /usersdata/user/7
+POST /bankdata/7
 { "age": 27 }
-PUT /usersdata/user/8
+POST /bankdata/8
 { "age": 79 }
-PUT /usersdata/user/9
+POST /bankdata/9
 { "age": 43, balance: null }
 ```
 
 ```
-GET /usersdata
+GET /bankdata
 ```
 
 ```
-GET /usersdata/_search
+GET /bankdata/_search
 {
 	"query": {
 		"match_all": {}
