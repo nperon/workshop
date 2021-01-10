@@ -34,6 +34,14 @@ File search:
 find ./fvsa/ -name "pvsve*"
 ```
 
+### grep
+
+Search string 'yourDir' in dir yourdir:
+
+```bash
+grep -nr 'yourString*' yourdir
+```
+
 ### Memory usage with watch
 
 ```bash
