@@ -19,14 +19,14 @@ curl --location --request POST 'http://localhost:9080/auth/realms/master/protoco
 curl --location --request POST 'http://localhost:9080/auth/admin/realms/okp4kvrealm/users' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer ' \
---data-raw '{"firstName":"Sergey","lastName":"Kargopolov", "email":"test@test.com", "enabled":"true", "username":"app-user"}'
+--data-raw '{"firstName":"John","lastName":"Doe", "email":"test@test.com", "enabled":"true", "username":"app-user"}'
 
 ### REST API Call to Create a new role for the realm
 
-curl -X POST "http://localhost:9080/auth/admin/realms/okp4kvrealm/roles" \
+curl -X POST "http://localhost:9080/auth/admin/realms/okp4kvrealm/roles" 
  -H "Content-Type: application/json" \
  -H "Authorization: Bearer " \
- -d '{"name": "serguei_role"}'
+ -d '{"name": "john_doe_role"}'
 
 ### REST API call to Get realm-level role mappings [SAT]
 
