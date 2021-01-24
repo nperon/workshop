@@ -50,26 +50,17 @@ curl --location --request GET 'http://localhost:9080/auth/admin/realms/okp4kvrea
  
 response received was: [{"id":"245ee79e-2098-4119-8642-01b8a6c46174","name":"admin","composite":false,"clientRole":false,"containerId":"kibana"}]
 
-### Get role mappings
-
-```bash
-curl --location --request GET 'http://localhost:9080/auth/admin/realms/okp4kvrealm/users/2c9707a2-6157-4021-9c69-76bf87073bf5/role-mappings' \
- --header "Authorization: Bearer " | json_pp
-```
-
-
 ### REST API call to add a new role to user with id 2c9707a2-6157-4021-9c69-76bf87073bf5
 
 ```bash
 curl --location --request POST 'http://localhost:9080/auth/admin/realms/okp4kvrealm/users/2c9707a2-6157-4021-9c69-76bf87073bf5/role-mappings/realm' -v \
  --header 'Content-Type: application/json' \
  --header "Authorization: Bearer " \
- --header '[{
-        "name": "admin",
-        "description": "bla bla bla",
+ --data-raw '[{
+        "id": "b9e89099-75c0-43f4-8100-2804a14d2399",
+        "name": "all_access",
         "composite": false,
         "clientRole": false,
         "containerId": "kibana"
 }]'
 ```
-
