@@ -6,6 +6,14 @@ tags: ['Linux', 'utils', 'bash', 'vi', 'find', 'grep', 'rename']
 excerpt: ""
 ---
 
+### Miscelaneous bash tips
+
+The following command displays the status code from the last command:
+
+```bash
+echo $?
+```
+
 ### vi
 
 Vi command for eliminating all occurences of colon ":" is the following:
@@ -41,6 +49,17 @@ Search string 'yourDir' in dir yourdir:
 ```bash
 grep -nr 'yourString*' yourdir
 ```
+
+### sed
+
+Sed is a stream editor for filtering and transforming text.
+
+```bash
+sed -i 's/word1/word2/g' inputfile
+```
+
+The ```-i``` option requests editing in place. 
+```s``` stands for substitute. ```g``` stands for global replacement.
 
 ### Memory usage with watch
 
