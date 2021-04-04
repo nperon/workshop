@@ -98,6 +98,26 @@ GET /bankdata/_search
 }
 ```
 
+### Updating a given field in an index
+
+```
+POST agrial_portefeuille/_update_by_query
+{
+  "script": {
+    "lang": "painless",
+    "source": """
+   try {
+        String fieldName = 'nom_conseille_pv';
+        String value = ctx._source[fieldName];
+        ctx._source[fieldName] = value.replace(" ","_");
+      }
+      catch(Exception e) {
+      }
+    """
+  }
+}
+```
+
 ### Painless language scripts
 
 ```
