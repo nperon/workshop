@@ -54,4 +54,4 @@ excerpt: "My Communities"
 
 [ via @udemy: Hands-On Spring Security 5.x](https://www.udemy.com/certificate/UC-b54a41ff-a687-4fcb-9a0c-e60e1f4ac1f3/)
 
-[ via @udemy: GitLab CI: Pipelines, CI/CD and DevOps for Beginners](GitLab CI: Pipelines, CI/CD and DevOps for Beginners)
+[ via @udemy: GitLab CI: Pipelines, CI/CD and DevOps for Beginners](https://www.udemy.com/certificate/UC-ae1c9ef3-81c1-46fc-8145-d98464afc81f/)
