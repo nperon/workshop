@@ -131,3 +131,11 @@ xrandr
 xrandr --addmode HDMI-1 2560x1080
 ```
 
+### Serving static content using http-server
+
+The following command starts http-server and serves all of the static 
+content (e.g. geojson files) available in the current directory:
+
+```bash
+http-server --cors='*' -p 5252
+```
