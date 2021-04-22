@@ -104,7 +104,6 @@ cd ~
 sudo du -sh Documents
 ```
 
-
 ### Managing JDKs on Debian
 
 ```bash
@@ -138,4 +137,14 @@ content (e.g. geojson files) available in the current directory:
 
 ```bash
 http-server --cors='*' -p 5252
+```
+
+### Generating random passwords
+
+Install pwgen package and run the following command to 
+get a randow password with 12 characters including one special 
+character at least:
+
+```bash
+pwgen 12 1 -y
 ```
