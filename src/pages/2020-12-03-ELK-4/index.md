@@ -118,6 +118,25 @@ POST agrial_portefeuille/_update_by_query
 }
 ```
 
+### Template for indexing a field as a geo_shape
+
+```
+PUT _template/geotemplate_geoshape_dpt
+{ "index_patterns": [
+  "index_pattern_title"
+  ],
+  "settings": {},
+    "mappings": {
+      "properties": {
+        "wkt" :{
+          "type": "geo_shape"
+        }
+      }
+    },
+    "aliases": {}
+}
+```
+
 ### Painless language scripts
 
 ```
