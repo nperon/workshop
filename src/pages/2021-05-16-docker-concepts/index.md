@@ -76,3 +76,46 @@ docker container run --rm --network dude centos curl -s search:9200
 
 ## Images
 
+```bash
+docker history nginx:latest
+docker image inspect nginx:latest
+
+docker image tag nginx nperon/nginx
+docker login
+cat ~/.docker/config.json
+docker logout
+```
+
+```bash
+cd dockerfile-sample-1/
+
+docker build -t nperon/nodeapp .
+docker container run --rm --publish 80:3000 --detach nperon/nodeapp
+docker push nperon/nodeapp
+```
+
+## Using Prune to Keep Your Docker System Clean
+
+Command to see space usage:
+
+```bash
+docker system df
+```
+
+Command to clean up just dangling images:
+
+```bash
+docker image prune
+```
+
+Command to clean up everything: 
+
+```bash
+docker system prune
+```
+
+Command to remove all unused images: 
+
+```bash
+docker image prune -a
+```
