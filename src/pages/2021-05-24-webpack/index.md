@@ -41,7 +41,11 @@ npm install @babel/core babel-loader @babel/preset-env @babel/plugin-proposal-cl
 
 ## A config file example
 
-```bash
+The following is an example of a webpack.config.js content followed with 
+the corresponding index.html file. Additionaly, a file named ```./src/index.js``` is 
+expected as the entry point of the app.
+
+```js
 const path = require('path');
 
 module.exports = {
@@ -93,4 +97,19 @@ module.exports = {
         ]
     }
 }
+```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./dist/bundle.js"></script>
+</body>
+</html>
 ```
