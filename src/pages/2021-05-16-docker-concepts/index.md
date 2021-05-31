@@ -119,3 +119,28 @@ Command to remove all unused images:
 ```bash
 docker image prune -a
 ```
+
+## Persistent Data: Data Volumes
+
+```bash
+docker container run --detach --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=True mysql
+
+docker container run --detach --name mysql3 -e MYSQL_ALLOW_EMPTY_PASSWORD=True -v mysql-db:/var/lib/mysql mysql
+```
+
+```bash
+docker container run --detach --name psql -v psql-data:/var/lib/postgresql/data postgres:9.6.1
+docker container logs -f psql
+```
+
+## Persistent Data: Bind Mounting
+
+```bash
+cd dockerfile-sample-2
+docker container run -d --name nginx -p 80:80 -v $(pwd):/usr/share/nginx/html nginx
+```
+
+```bash
+cd bindmount-sample-1
+docker run -p 80:4000 -v $(pwd):/site bretfisher/jekyll-serve
+```
