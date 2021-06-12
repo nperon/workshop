@@ -120,6 +120,18 @@ Command to remove all unused images:
 docker image prune -a
 ```
 
+Command to delete all containers: 
+
+```bash
+docker rm -f $(docker ps -a -q)
+```
+
+Command to delete all volumes: 
+
+```bash
+docker volume rm $(docker volume ls -q)
+```
+
 ## Persistent Data: Data Volumes
 
 ```bash
