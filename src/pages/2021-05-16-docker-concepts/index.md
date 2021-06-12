@@ -144,3 +144,24 @@ docker container run -d --name nginx -p 80:80 -v $(pwd):/usr/share/nginx/html ng
 cd bindmount-sample-1
 docker run -p 80:4000 -v $(pwd):/site bretfisher/jekyll-serve
 ```
+
+## docker-compose
+
+### Structure of docker-compose yml
+
+```yml
+version: '3.2'  # if no version is specified then v1 is assumed. Recommend v2 minimum
+
+services:  # containers. same as docker run
+  servicename: # a friendly name. this is also DNS name inside network
+    image: # Optional if you use build:
+    command: # Optional, replace the default CMD specified by the image
+    environment: # Optional, same as -e in docker run
+    volumes: # Optional, same as -v in docker run
+  servicename2:
+
+volumes: # Optional, same as docker volume create
+
+networks: # Optional, same as docker network create
+```
+
