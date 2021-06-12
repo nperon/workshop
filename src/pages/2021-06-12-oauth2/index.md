@@ -5,3 +5,8 @@ title: "OAuth2"
 tags: ["OAuth 2"]
 excerpt: ""
 ---
+
+## Links
+
+[RFC 6749 - OAuth 2.0 - October 2012](https://datatracker.ietf.org/doc/html/rfc6749)
+
