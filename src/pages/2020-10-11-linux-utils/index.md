@@ -148,3 +148,13 @@ character at least:
 ```bash
 pwgen 12 1 -y
 ```
+
+### Managing permissions
+
+Command to state that owner and group of directory mydir have full permission 
+to access the directory and its content such as read, write and execute whereas 
+others will have read and execute permission:
+
+```bash
+chmod -R 775 mydir
+```
