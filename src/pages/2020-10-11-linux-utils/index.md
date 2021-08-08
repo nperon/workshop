@@ -158,3 +158,16 @@ others will have read and execute permission:
 ```bash
 chmod -R 775 mydir
 ```
+
+### Probing system on service management tool
+
+The following command can be use to check whether the service 
+management tool is ```service``` or ```systemctl```:
+
+```bash
+ps --no-headers -o comm 1
+```
+
+A ```systemd``` result indicates that systemd (systemctl) is the service management tool, while
+```init``` indicates that it is System V Init (service).
+
