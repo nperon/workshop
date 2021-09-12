@@ -129,4 +129,67 @@ rpop users
 rpop users
 rpop users
 llen users
+lrange users 0 -1
+lpush users 4
+keys *
+lpop users
+lpop users
+lpop users
+keys *
+llen users
+lpop users
+keys *
 ```
+
+### Set
+
+A redis set is an unordered collection of unique items (string)
+similar to a Java set.
+
+#### Use cases
+
+- maintain currently logged in users  
+- maintain blacklisted IP address / users  
+- set intersection  
+
+#### Basic commands
+
+```
+sadd users 1 2 3
+sadd users 4
+sadd users 5
+scard users
+smembers users
+sadd users 4.5
+sadd users 10
+smembers users
+sadd users 1
+smembers users
+sismember users 5
+sismember users 100
+srem users 100
+srem users 5
+sismember users 5
+smembers users
+spop users
+spop users
+scard users
+```
+
+#### Set intersection and union
+
+```
+flushdb
+sadd skill:java 1 2 3 4
+sadd skill:js 2 3 4
+sadd skill:aws 4 5 6
+sinter skill:java skill:js skill:aws
+sunion skill:java skill js
+sadd candidate:criminal 4 5 6
+sdiff skill:java candidate:criminal
+```
+
+```
+sinterstore java-js skill:java skill:js
+```
+
