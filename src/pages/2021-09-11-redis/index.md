@@ -191,5 +191,8 @@ sdiff skill:java candidate:criminal
 
 ```
 sinterstore java-js skill:java skill:js
+keys *
+scard java-js
+smembers java-js
 ```
 
