@@ -140,5 +140,5 @@ PUT _template/geotemplate_geoshape_dpt
 ### Painless language scripts
 
 ```
-(((ctx?._source["SURF_PARC"]?:0)?:0)/((ctx?._source["Bovin"]?:1)?:1)?:1)
+(((ctx?._source["MY_PARAMETER"]?:0)?:0)/((ctx?._source["OtherVariable"]?:1)?:1)?:1)
 ```
