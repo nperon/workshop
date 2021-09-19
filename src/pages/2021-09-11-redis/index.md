@@ -9,7 +9,16 @@ excerpt: ""
 ## Links
 
 - [Cheat sheet](https://cheatography.com/tasjaevan/cheat-sheets/redis/)  
-- [Redis commands](https://cheatography.com/tasjaevan/cheat-sheets/redis/)  
+- [Redis commands](https://cheatography.com/tasjaevan/cheat-sheets/redis/)
+
+## Redis configuration
+
+[Documentation on configuration](https://redis.io/topics/notifications#configuration)
+
+Command to get the expired events from Redis:
+```
+config set notify-keyspace-events AKE
+```
 
 ## Redis cli commands
 
