@@ -77,8 +77,8 @@
       "path---tags-bootstrap-a257d1ac49c4485fbe23.js.map"
     ],
     "path---tags": [
-      "path---tags-3c1fd0be3420cc2fe1cf.js",
-      "path---tags-3c1fd0be3420cc2fe1cf.js.map"
+      "path---tags-c1ad91077e6f82dab4ad.js",
+      "path---tags-c1ad91077e6f82dab4ad.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -115,6 +115,10 @@
     "path---keycloak": [
       "path---keycloak-2cf448d2fdb8c8d351e5.js",
       "path---keycloak-2cf448d2fdb8c8d351e5.js.map"
+    ],
+    "path---traefik": [
+      "path---traefik-0e5ea0a08fd4852372e9.js",
+      "path---traefik-0e5ea0a08fd4852372e9.js.map"
     ],
     "path---tags-spring-5": [
       "path---tags-spring-5-3f2ce41d0f420ce1e21d.js",
@@ -165,12 +169,16 @@
       "path---redis-88d7e5c36904f7c19de0.js.map"
     ],
     "path---index": [
-      "path---index-e024cae5081c10759cde.js",
-      "path---index-e024cae5081c10759cde.js.map"
+      "path---index-f6027b8a0d3f74f6dd52.js",
+      "path---index-f6027b8a0d3f74f6dd52.js.map"
     ],
     "path---tags-networks": [
       "path---tags-networks-3f5f33be09e5ff73b15b.js",
       "path---tags-networks-3f5f33be09e5ff73b15b.js.map"
+    ],
+    "path---tags-traefik": [
+      "path---tags-traefik-35e548842336ba3791a6.js",
+      "path---tags-traefik-35e548842336ba3791a6.js.map"
     ],
     "path---tags-vi": [
       "path---tags-vi-9c4ffdfe4c52395a3274.js",
@@ -253,9 +261,9 @@
       "path---tags-find-a953c22b40343a8bae05.js.map"
     ],
     "app": [
-      "app-73af08c58c0316e31b5d.js",
+      "app-e893cffa5ce922215b87.js",
       "build-js-styles.css",
-      "app-73af08c58c0316e31b5d.js.map",
+      "app-e893cffa5ce922215b87.js.map",
       "build-js-styles.css.map"
     ],
     "path---elk-useful-queries": [
