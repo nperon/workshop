@@ -41,7 +41,7 @@ The service automatically gets a server per instance of the container,
 and the router automatically gets a rule defined by defaultRule (if 
 no rule for it was defined in labels).
 
-More label examples:
+More examples of router configuration with labels:
 - ```traefik.http.routers.<router_name>.rule```:  
 ```traefik.http.routers.myrouter.rule=Host(`example.com`)```  
 - ```traefik.http.routers.<router_name>.entrypoints```:  
@@ -50,6 +50,33 @@ More label examples:
 ```traefik.http.routers.myrouter.service=myservice```  
 - ```traefik.http.routers.<router_name>.tls```:  
 ```traefik.http.routers.myrouter.tls=true```  
+
+# Services: Configure how to reach the Application
+
+- Each service has its own Load Balancer. 
+- Load Balancers can load balance requests between multiple instances of your application
+- The target of the Load Balancer is an instance of an application and is called a Server.  
+- A Service can be assigned to one of more Routers.
+
+Examples of Service configuration with labels:
+
+- ```traefik.http.services.<service_name>.loadbalancer.server.port```:  
+```traefik.http.services.myservice.loadbalancer.server.port=8080```
+- ```traefik.http.services.<service_name>.loadbalancer.passhostheader```:  
+```traefik.http.services.myservice.loadbalancer.server.passhostheader=true```
+- ```traefik.http.services.<service_name>.loadbalancer.healthcheck.path```:  
+```traefik.http.services.myservice.loadbalancer.server.healthcheck.path=/foo```
+- ```traefik.http.services.<service_name>.loadbalancer.healthcheck.port```:  
+```traefik.http.services.myservice.loadbalancer.healthcheck.port=42```
+
+Docker specific options:
+- ```traefik.enable```  
+tells Traefik to override the exposedbyDefault setting for this particular container
+- ```traefik.docker.network``` 
+overrides the default network used by Traefik
+
+
+
 
 
 
