@@ -75,11 +75,6 @@ tells Traefik to override the exposedbyDefault setting for this particular conta
 - ```traefik.docker.network``` 
 overrides the default network used by Traefik
 
+# HTTPS / TLS / Let's Encrypt
 
-
-
-
-
-
-
-
+[DNS providers traefik can handle](https://docs.traefik.io/v2.3/https/acme/#providers
