@@ -4,6 +4,10 @@
       "path---tags-o-auth-2-af1b2399511f0bca184f.js",
       "path---tags-o-auth-2-af1b2399511f0bca184f.js.map"
     ],
+    "path---project-reactor": [
+      "path---project-reactor-5a6e2fe2e1c405c260d3.js",
+      "path---project-reactor-5a6e2fe2e1c405c260d3.js.map"
+    ],
     "path---tags-kafka": [
       "path---tags-kafka-cd8fb62a874138931cfa.js",
       "path---tags-kafka-cd8fb62a874138931cfa.js.map"
@@ -76,9 +80,13 @@
       "path---tags-bootstrap-a257d1ac49c4485fbe23.js",
       "path---tags-bootstrap-a257d1ac49c4485fbe23.js.map"
     ],
+    "path---kubernetes": [
+      "path---kubernetes-d6c063808dce401ad18d.js",
+      "path---kubernetes-d6c063808dce401ad18d.js.map"
+    ],
     "path---tags": [
-      "path---tags-c1ad91077e6f82dab4ad.js",
-      "path---tags-c1ad91077e6f82dab4ad.js.map"
+      "path---tags-169c85fa63ef622ff80e.js",
+      "path---tags-169c85fa63ef622ff80e.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -95,6 +103,10 @@
     "path---tags-javascript": [
       "path---tags-javascript-99b2437fc43ee6c157eb.js",
       "path---tags-javascript-99b2437fc43ee6c157eb.js.map"
+    ],
+    "path---mogo": [
+      "path---mogo-3a5851453eab95b57a5b.js",
+      "path---mogo-3a5851453eab95b57a5b.js.map"
     ],
     "path---oauth-2": [
       "path---oauth-2-ca16a5f661c841529233.js",
@@ -119,6 +131,10 @@
     "path---traefik": [
       "path---traefik-3b064909429f5bfaa9df.js",
       "path---traefik-3b064909429f5bfaa9df.js.map"
+    ],
+    "path---tags-cloud": [
+      "path---tags-cloud-a1a7bc9881ff6f9d5438.js",
+      "path---tags-cloud-a1a7bc9881ff6f9d5438.js.map"
     ],
     "path---tags-spring-5": [
       "path---tags-spring-5-3f2ce41d0f420ce1e21d.js",
@@ -148,6 +164,10 @@
       "path---tags-linux-f2203377f5c2b42de615.js",
       "path---tags-linux-f2203377f5c2b42de615.js.map"
     ],
+    "path---tags-mongo": [
+      "path---tags-mongo-a139c536806b2fc22502.js",
+      "path---tags-mongo-a139c536806b2fc22502.js.map"
+    ],
     "path---tags-utils": [
       "path---tags-utils-e879ebefb157ef40c8c5.js",
       "path---tags-utils-e879ebefb157ef40c8c5.js.map"
@@ -169,8 +189,8 @@
       "path---redis-88d7e5c36904f7c19de0.js.map"
     ],
     "path---index": [
-      "path---index-f6027b8a0d3f74f6dd52.js",
-      "path---index-f6027b8a0d3f74f6dd52.js.map"
+      "path---index-7e4fa4b6b15b3ac9b973.js",
+      "path---index-7e4fa4b6b15b3ac9b973.js.map"
     ],
     "path---tags-networks": [
       "path---tags-networks-3f5f33be09e5ff73b15b.js",
@@ -185,8 +205,8 @@
       "path---tags-vi-9c4ffdfe4c52395a3274.js.map"
     ],
     "path---tags-java": [
-      "path---tags-java-70ad3ae306b4fa042e2c.js",
-      "path---tags-java-70ad3ae306b4fa042e2c.js.map"
+      "path---tags-java-7378ddb13bb30a6de1b6.js",
+      "path---tags-java-7378ddb13bb30a6de1b6.js.map"
     ],
     "component---src-pages-404-js": [
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js",
@@ -228,6 +248,10 @@
       "path---oauth-2-in-spring-boot-0cf8ee627c645db7f9db.js",
       "path---oauth-2-in-spring-boot-0cf8ee627c645db7f9db.js.map"
     ],
+    "path---tags-kubernetes": [
+      "path---tags-kubernetes-7fa360e7cc5005be7618.js",
+      "path---tags-kubernetes-7fa360e7cc5005be7618.js.map"
+    ],
     "path---tags-docker": [
       "path---tags-docker-fc8969186072cc46119e.js",
       "path---tags-docker-fc8969186072cc46119e.js.map"
@@ -240,9 +264,13 @@
       "path---tags-css-ef50c12d989c8f9e16a2.js",
       "path---tags-css-ef50c12d989c8f9e16a2.js.map"
     ],
+    "path---tags-project-reactor": [
+      "path---tags-project-reactor-47315309a789dd9b65a0.js",
+      "path---tags-project-reactor-47315309a789dd9b65a0.js.map"
+    ],
     "path---tags-devops": [
-      "path---tags-devops-2b7bc02bb73cfcdc67e9.js",
-      "path---tags-devops-2b7bc02bb73cfcdc67e9.js.map"
+      "path---tags-devops-4523dd43cd123539c8dc.js",
+      "path---tags-devops-4523dd43cd123539c8dc.js.map"
     ],
     "path---tags-keycloak": [
       "path---tags-keycloak-cb23cfedfe7b41e374c6.js",
@@ -261,9 +289,9 @@
       "path---tags-find-a953c22b40343a8bae05.js.map"
     ],
     "app": [
-      "app-e893cffa5ce922215b87.js",
+      "app-83b6fb190103cdcb4da5.js",
       "build-js-styles.css",
-      "app-e893cffa5ce922215b87.js.map",
+      "app-83b6fb190103cdcb4da5.js.map",
       "build-js-styles.css.map"
     ],
     "path---elk-useful-queries": [
@@ -325,6 +353,10 @@
     "path---tags-queries": [
       "path---tags-queries-9bc64356af39a94e36e2.js",
       "path---tags-queries-9bc64356af39a94e36e2.js.map"
+    ],
+    "path---tags-no-sql": [
+      "path---tags-no-sql-a27eb0ed754a36f7f7b2.js",
+      "path---tags-no-sql-a27eb0ed754a36f7f7b2.js.map"
     ],
     "path---tags-mapping": [
       "path---tags-mapping-e70079e7e0e2b87743c8.js",
