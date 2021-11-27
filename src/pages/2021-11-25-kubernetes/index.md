@@ -17,17 +17,34 @@ excerpt: ""
 
 ## Links
 
-Kubernetes in a browser:  
+<!-- Kubernetes in a browser:  
 
 try [http://play-with-k8s.com](http://play-with-k8s.com)
-or [katacoda.com](katacoda.com) in browser
+or [katacoda.com](katacoda.com) in browser -->
 
-Local install:  
+# Local install
 
-- use snap for install on linux 
-- control the microK8s service via microk8s. commands
-- kubectl accessible wia microk8s.kubectl
-- add an alias to your shell (.bash_profile): 
-    - alias kubectl=microk8s.kubectl
-    
+Follow documentation on [this page](https://minikube.sigs.k8s.io/docs/start/) to install minikube locally.
+
+You can then check your minikube status with: 
+
+```bash
+minikube status
+```
+
+Install now kubectl following documentation on [this page](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/). 
+
+The [Optional kubectl configurations and plugins](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#optional-kubectl-configurations-and-plugins) can be skipped in a first stage.
+
+Configuration can be verified with:
+
+```bash
+kubectl cluster-info
+```
+
+You can find out the location of your kubectl executable with:
+
+```bash
+which kubectl
+```
 
