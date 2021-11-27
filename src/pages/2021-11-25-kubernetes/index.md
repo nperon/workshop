@@ -119,7 +119,22 @@ followed with:
 kubectl apply -f service.yaml
 ```
 
-To display namespace execute:
+To display services execute:
+
+```bash
+kubectl get services
+```
+
+The following command is an interesting one to run now:
+
+```bash
+minikube service nginx-service
+```
+
+since it displays the url of the nginx-service and opens the latter 
+service in your default browser.
+
+To display namespaces execute:
 
 ```bash
 kubectl get namespaces
@@ -137,8 +152,29 @@ To display deployments currently running execute:
 kubectl get deployments
 ```
 
-To find a service's IP execute:
+## Minikube example 
 
 ```bash
-kubectl get service --all-namespaces
+kubectl create deployment hello-node --image=k8s.gcr.io/echoserver:1.4
 ```
+
+```bash
+kubectl expose deployment hello-minikube --type=NodePort --port=8080
+```
+
+```bash
+minikube service hello-minikube
+```
+
+```bash
+minikube stop
+```
+
+The minikube vm can optionally be completely reset with:
+
+```bash
+minikube delete
+```
+
+After this, Minikube will start from scratch the next time it is started.
+
