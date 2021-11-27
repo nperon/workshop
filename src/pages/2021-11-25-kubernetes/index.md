@@ -15,9 +15,14 @@ excerpt: ""
 - each kubelet can have a kube-proxy controlling its networking
 - control plane aka the "master": set of containers that manage the cluster. Includes api server, scheduler, controller manager, etcd, core DNS and more
 
-## Links
+A possible local Kubernetes environment could be composed of the following applications: 
+- minikube: a local cluster which can be installed and run on your machine. 
+- kubectl: the interface to interact with the cluster
+- k9s: a CLI to monitor and manage your local kubernetes clusters
 
-<!-- Kubernetes in a browser:  
+<!-- ## Links
+
+Kubernetes in a browser:  
 
 try [http://play-with-k8s.com](http://play-with-k8s.com)
 or [katacoda.com](katacoda.com) in browser -->
@@ -47,4 +52,13 @@ You can find out the location of your kubectl executable with:
 ```bash
 which kubectl
 ```
+
+Download the ```k9s_Linux_x86_64.tar.gz``` archive available on
+[this page](https://github.com/derailed/k9s/releases) from the k9s github.
+Once it is extracted, just execute k9s with:
+
+```bash
+./k9s
+```
+
 
