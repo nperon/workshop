@@ -61,4 +61,84 @@ Once it is extracted, just execute k9s with:
 ./k9s
 ```
 
+## Starting a cluster with an nginx container
 
+Create a file called ```deployment.yaml``` with the following content:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.21.4
+        ports:
+        - containerPort: 80
+```
+
+Create another file called ```service.yaml``` with the following content:
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+  labels:
+    app: nginx
+spec:
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
+```
+
+Cluster can now be started with:
+
+```bash
+kubectl apply -f deployment.yaml
+```
+
+followed with:
+
+```bash
+kubectl apply -f service.yaml
+```
+
+To display namespace execute:
+
+```bash
+kubectl get namespaces
+```
+
+To find out the namespace where pods have been created you can run this command:
+
+```bash
+kubectl get pods --all-namespaces
+```
+
+To display deployments currently running execute:
+
+```bash
+kubectl get deployments
+```
+
+To find a service's IP execute:
+
+```bash
+kubectl get service --all-namespaces
+```
