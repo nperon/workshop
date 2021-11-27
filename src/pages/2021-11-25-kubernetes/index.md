@@ -152,6 +152,19 @@ To display deployments currently running execute:
 kubectl get deployments
 ```
 
+To delete a service first display all of your services with:
+
+```bash
+kubectl get service -o wide
+```
+
+You can now pick the one you wish to delete from the displayed list 
+--- for instance nginx-service --- and then delete it with:
+
+```bash
+kubectl delete service nginx-service
+```
+
 ## Minikube example 
 
 ```bash
