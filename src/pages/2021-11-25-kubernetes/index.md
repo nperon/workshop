@@ -198,3 +198,83 @@ minikube delete
 
 After this, Minikube will start from scratch the next time it is started.
 
+## Pod commands
+
+```kubectl get pod```  
+get information about all running pods  
+
+```kubectl describe pod <pod>```  
+describe one pod  
+
+```kubectl expose pod <pod> --port=444 --name=frontend```  
+expose the port of a pod (creates a new service)  
+
+```kubectl port-forward <pod> 8080```  
+port forward the exposed pod port to your local machine  
+
+```kubectl attach <podname> -i```  
+attach to the pod  
+
+```kubectl exec <pod> -- command```  
+execute a command on the pod  
+
+```kubectl label pods <pod> mylabel=awesome```  
+add a new label to a pod  
+
+```kubectl run -i --tty busybox --imagine=busybox --restart=Never -- sh```  
+run a shell in a pod
+
+## Pod example
+
+With the following example of a pod description 
+in a file called ```helloworld.yml```,
+
+```bash
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodehelloworld.example.com
+  labels:
+    app: helloworld
+spec:
+  containers:
+  - name: k8s-demo
+    image: wardviaene/k8s-demo
+    ports:
+    - name: nodejs-port
+      containerPort: 3000
+```
+
+The pod can be created with:
+
+```bash
+kubectl create -f helloworld.yml
+```
+
+Then, local port 8081 can be forwarded to port 3000 of the pod with:
+
+```bash
+kubectl port-forward nodehelloworld.example.com 8081:3000
+```
+
+Or else we can create a service of type NodePort to expose the pod with:
+
+```bash
+kubectl expose pod nodehelloworld.example.com --type=NodePort --name nodehelloworld-service
+```
+
+The end point to that service from the local machine can be displayed with:
+
+```bash
+minikube service nodehelloworld-service --url
+```
+
+IP addresses of services within the cluster are different. They can be accessed with:
+
+```bash
+kubectl get service
+```
+
+
+
+
