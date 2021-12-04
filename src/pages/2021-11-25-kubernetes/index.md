@@ -227,7 +227,7 @@ run a shell in a pod
 With the following example of a pod description 
 in a file called ```helloworld.yml```,
 
-```bash
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:
