@@ -171,3 +171,12 @@ ps --no-headers -o comm 1
 A ```systemd``` result indicates that systemd (systemctl) is the service management tool, while
 ```init``` indicates that it is System V Init (service).
 
+### Managing DNS
+
+```bash
+sudo apt install bind9-host
+```
+
+```bash
+host -t NS google.com
+```
