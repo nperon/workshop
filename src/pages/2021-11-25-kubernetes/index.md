@@ -198,7 +198,7 @@ minikube delete
 
 After this, Minikube will start from scratch the next time it is started.
 
-## Pod commands
+## Pod commands together with a proper example to apply them:
 
 ```kubectl get pod```  
 get information about all running pods  
@@ -222,9 +222,7 @@ execute a command on the pod
 add a new label to a pod  
 
 ```kubectl run -i --tty busybox --imagine=busybox --restart=Never -- sh```  
-run a shell in a pod
-
-## Example
+run a shell in a pod  
 
 With the following example of a pod description 
 in a file called ```helloworld.yml```,
