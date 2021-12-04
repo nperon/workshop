@@ -78,3 +78,14 @@ overrides the default network used by Traefik
 # HTTPS / TLS / Let's Encrypt
 
 [DNS providers traefik can handle](https://docs.traefik.io/v2.3/https/acme/#providers
+
+Three ways for traefik to proceed with certificates:  
+- default certificate  
+- user defined  
+- automated: Traefik uses Let's Encrypt  
+
+Three ways for Let's Encrypt to validate you control the domain name with challenges:  
+- HTTP challenge
+- DNS challenge
+- TLS challenge
+
