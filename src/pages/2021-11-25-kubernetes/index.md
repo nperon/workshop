@@ -61,6 +61,118 @@ Once it is extracted, just execute k9s with:
 ./k9s
 ```
 
+## Pod commands together with a proper example to apply them:
+
+```kubectl get pod```  
+get information about all running pods  
+
+```kubectl describe pod <pod>```  
+describe one pod  
+
+```kubectl expose pod <pod> --port=444 --name=frontend```  
+expose the port of a pod (creates a new service)  
+
+```kubectl port-forward <pod> 8080```  
+port forward the exposed pod port to your local machine  
+
+```kubectl attach <podname> -i```  
+attach to the pod  
+
+```kubectl exec <pod> -- command```  
+execute a command on the pod  
+
+```kubectl label pods <pod> mylabel=awesome```  
+add a new label to a pod  
+
+```kubectl run -i --tty busybox --imagine=busybox --restart=Never -- sh```  
+run a shell in a pod  
+
+With the following example of a pod description 
+in a file called ```helloworld.yml```,
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodehelloworld.example.com
+  labels:
+    app: helloworld
+spec:
+  containers:
+  - name: k8s-demo
+    image: wardviaene/k8s-demo
+    ports:
+    - name: nodejs-port
+      containerPort: 3000
+```
+
+The pod can be created with:
+
+```bash
+kubectl create -f helloworld.yml
+```
+
+Then, local port 8081 can be forwarded to port 3000 of the pod with:
+
+```bash
+kubectl port-forward nodehelloworld.example.com 8081:3000
+```
+
+Or else we can create a service of type NodePort to expose the pod with:
+
+```bash
+kubectl expose pod nodehelloworld.example.com --type=NodePort --name nodehelloworld-service
+```
+
+The end point to that service from the local machine can be displayed with:
+
+```bash
+minikube service nodehelloworld-service --url
+```
+
+IP addresses of services within the cluster are different. They can be accessed with:
+
+```bash
+kubectl get service
+```
+
+It is possible to attach to the pod and watch the possible logs with:
+
+```bash
+kubectl attach nodehelloworld.example.com
+```
+
+To execute a command like ```ls /app``` run the following line:
+
+```bash
+kubectl exec nodehelloworld.example.com -- ls /app
+```
+
+It is instructive to run the two following commands now:
+
+```bash
+kubectl exec nodehelloworld.example.com -- touch /app/test.txt
+kubectl exec nodehelloworld.example.com -- ls /app
+```
+
+A description of the pod can be displayed with:
+
+```bash
+kubectl describe service nodehelloworld-service
+```
+
+Launch another pod based on the busybox image with:
+
+```bash
+kubectl run -i --tty busybox --image=busybox --restart=Never -- sh
+```
+Let us assume that the endpoint of our nodehelloworld-service displayed in its description was 172.17.0.2:3000. Then, commands can be executed in the shell of our busybox like:
+
+```bash
+ls
+telnet 172.17.0.2 3000
+```
+
 ## Starting a cluster with an nginx container
 
 Create a file called ```deployment.yaml``` with the following content:
@@ -197,116 +309,4 @@ minikube delete
 ```
 
 After this, Minikube will start from scratch the next time it is started.
-
-## Pod commands together with a proper example to apply them:
-
-```kubectl get pod```  
-get information about all running pods  
-
-```kubectl describe pod <pod>```  
-describe one pod  
-
-```kubectl expose pod <pod> --port=444 --name=frontend```  
-expose the port of a pod (creates a new service)  
-
-```kubectl port-forward <pod> 8080```  
-port forward the exposed pod port to your local machine  
-
-```kubectl attach <podname> -i```  
-attach to the pod  
-
-```kubectl exec <pod> -- command```  
-execute a command on the pod  
-
-```kubectl label pods <pod> mylabel=awesome```  
-add a new label to a pod  
-
-```kubectl run -i --tty busybox --imagine=busybox --restart=Never -- sh```  
-run a shell in a pod  
-
-With the following example of a pod description 
-in a file called ```helloworld.yml```,
-
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: nodehelloworld.example.com
-  labels:
-    app: helloworld
-spec:
-  containers:
-  - name: k8s-demo
-    image: wardviaene/k8s-demo
-    ports:
-    - name: nodejs-port
-      containerPort: 3000
-```
-
-The pod can be created with:
-
-```bash
-kubectl create -f helloworld.yml
-```
-
-Then, local port 8081 can be forwarded to port 3000 of the pod with:
-
-```bash
-kubectl port-forward nodehelloworld.example.com 8081:3000
-```
-
-Or else we can create a service of type NodePort to expose the pod with:
-
-```bash
-kubectl expose pod nodehelloworld.example.com --type=NodePort --name nodehelloworld-service
-```
-
-The end point to that service from the local machine can be displayed with:
-
-```bash
-minikube service nodehelloworld-service --url
-```
-
-IP addresses of services within the cluster are different. They can be accessed with:
-
-```bash
-kubectl get service
-```
-
-It is possible to attach to the pod and watch the possible logs with:
-
-```bash
-kubectl attach nodehelloworld.example.com
-```
-
-To execute a command like ```ls /app``` run the following line:
-
-```bash
-kubectl exec nodehelloworld.example.com -- ls /app
-```
-
-It is instructive to run the two following commands now:
-
-```bash
-kubectl exec nodehelloworld.example.com -- touch /app/test.txt
-kubectl exec nodehelloworld.example.com -- ls /app
-```
-
-A description of the pod can be displayed with:
-
-```bash
-kubectl describe service nodehelloworld-service
-```
-
-Launch another pod based on the busybox image with:
-
-```bash
-kubectl run -i --tty busybox --image=busybox --restart=Never -- sh
-```
-Let us assume that the endpoint of our nodehelloworld-service displayed in its description was 172.17.0.2:3000. Then, commands can be executed in the shell of our busybox like:
-
-```bash
-ls
-telnet 172.17.0.2 3000
-```
 
