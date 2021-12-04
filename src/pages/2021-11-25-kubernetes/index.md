@@ -224,7 +224,7 @@ add a new label to a pod
 ```kubectl run -i --tty busybox --imagine=busybox --restart=Never -- sh```  
 run a shell in a pod
 
-## Pod example
+## Example
 
 With the following example of a pod description 
 in a file called ```helloworld.yml```,
@@ -275,6 +275,40 @@ IP addresses of services within the cluster are different. They can be accessed 
 kubectl get service
 ```
 
+It is possible to attach to the pod and watch the possible logs with:
 
+```bash
+kubectl attach nodehelloworld.example.com
+```
 
+To execute a command like ```ls /app``` run the following line:
+
+```bash
+kubectl exec nodehelloworld.example.com -- ls /app
+```
+
+It is instructive to run the two following commands now:
+
+```bash
+kubectl exec nodehelloworld.example.com -- touch /app/test.txt
+kubectl exec nodehelloworld.example.com -- ls /app
+```
+
+A description of the pod can be displayed with:
+
+```bash
+kubectl describe service nodehelloworld-service
+```
+
+Launch another pod based on the busybox image with:
+
+```bash
+kubectl run -i --tty busybox --image=busybox --restart=Never -- sh
+```
+Let us assume that the endpoint of our nodehelloworld-service displayed in its description was 172.17.0.2:3000. Then, commands can be executed in the shell of our busybox like:
+
+```bash
+ls
+telnet 172.17.0.2 3000
+```
 
