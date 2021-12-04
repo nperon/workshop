@@ -146,6 +146,13 @@ To find out the namespace where pods have been created you can run this command:
 kubectl get pods --all-namespaces
 ```
 
+To stop one of the pods displayed whose name is for instance ```hello-minikube-6ddfcc9757-h4ctx```
+execute the following command:
+
+```bash
+kubectl delete -n default pod hello-minikube-6ddfcc9757-h4ctx
+```
+
 To display deployments currently running execute:
 
 ```bash
