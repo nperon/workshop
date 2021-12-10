@@ -77,7 +77,7 @@ overrides the default network used by Traefik
 
 # HTTPS / TLS / Let's Encrypt
 
-[DNS providers traefik can handle](https://docs.traefik.io/v2.3/https/acme/#providers
+[DNS providers which traefik can handle](https://docs.traefik.io/v2.3/https/acme/#providers)
 
 Three ways for traefik to proceed with certificates:  
 - default certificate  
