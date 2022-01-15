@@ -14,6 +14,14 @@ The following command displays the status code from the last command:
 echo $?
 ```
 
+In the following command, output of a echo command is directed to 
+standard input so that a second command viz more manages it like a file:
+
+```bash
+echo 'toto' | more -
+```
+
+
 ### vi
 
 Vi command for eliminating all occurences of colon ":" is the following:
@@ -61,10 +69,18 @@ sed -i 's/word1/word2/g' inputfile
 The ```-i``` option requests editing in place. 
 ```s``` stands for substitute. ```g``` stands for global replacement.
 
-### Memory usage with watch
+### A few tips with watch:
+
+Memory usage:
 
 ```bash
 watch -n 5 free -m
+```
+
+Realtime clock in a term:
+
+```bash
+watch -n 1 date
 ```
 
 ### Modify filenames with rename
