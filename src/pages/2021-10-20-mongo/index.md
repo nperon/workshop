@@ -207,16 +207,10 @@ db.employes.updateMany({$and:[{"adresse.ville":{$nin:["Paris","Toulouse","Bordea
 - miscelaneous:
 ```node
 db.employes.find({tel:{$exists:true}},{}).forEach(function(t){db.employes.updateMany({_id:t._id},{$push:{telephone:t.tel},$unset:{tel:1}});});
-
 db.employes.find({prime:{$exists:0}}).count();
-
 db.employes.find({prime:{$exists:0}}).forEach(function(doc){var length = doc.adresse.ville.length; var newPrime = 100*length; db.employes.update({_id: doc._id},{$inc:{prime: newPrime}});});
-
 db.employes.find({prime:{$exists:0}}).count();
-
 db.employes.find().forEach(function(p){var email=p.nom+'.'+p.prenom+'@formation.fr';if(p.telephone){var email=p.prenom+'.'+p.nom+'@formation.fr';db.employes.updateMany({_id:p._id},{$set:{mail:email}})}});
-
 db.employes.aggregate({$group:{_id:'$prenom',ancienneteCum:{$sum:'$anciennete'}}},{$sort:{_id:1}});
-
 ObjectId("511d0aa0181b16509ae5f7f7");
 ```
