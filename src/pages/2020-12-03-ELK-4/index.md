@@ -101,7 +101,7 @@ GET /bankdata/_search
 ### Updating a given field in an index
 
 ```
-POST agrial_portefeuille/_update_by_query
+POST lanturlu_portefeuille/_update_by_query
 {
   "script": {
     "lang": "painless",
