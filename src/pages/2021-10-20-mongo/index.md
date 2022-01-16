@@ -8,8 +8,34 @@ excerpt: ""
 
 ## Links
 
-## Example
+- [installing and starting mongodb locally](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
+- [some tips on configuration](https://linuxize.com/post/how-to-install-mongodb-on-ubuntu-18-04/)
 
+## Starting server and shell
+
+Start mongodb server with:
+
+```bash
+sudo service mongod start
+```
+
+```bash
+sudo service mongod status
+```
+
+To verify whether the installation has completed successfully, connect to the MongoDB database server using the mongo tool and print the connection status with:
+
+```bash
+mongo --eval 'db.runCommand({ connectionStatus: 1 })'
+```
+
+Shell can now be started with:
+
+```bash
+mongo
+```
+
+## Example
 
 ```node
 db.createCollection('employes');
@@ -111,38 +137,75 @@ db.employes.insert({nom:'Alan',prenom:'Joe',anciennete:10});
 db.employes.save({nom:'Wick',prenom:'John',prime:150});
 ```
 
-- display employees whose firstname is David:
+- display employees whose firstnames are David:
 
 ```node
 db.employes.find({prenom:'David'});
 ```
 
-- display employees whose firstname either starts or ends with letter D:
+- display employees whose firstnames either start with a D or end with a d:
 
 ```node
-db.employes.find({prenom:/~D.*|.*D$/});
+db.employes.find({prenom:/D.*|.*d$/});
 ```
+
+- employees whose firstnames both start and end with a vowel:
 
 ```node
 db.employes.find({prenom:/^[AEIOUY].*[aeiouy]$/});
+```
+
+- employees with firstnames starting and ending with the same letter:
+
+```node
 db.employes.find().forEach(function(p){let pre = p.prenom.toLowerCase();if(pre.substr(0,1)==pre.substr(pre.length-1,1)){print(pre);}});
-db.employes.find();
+```
+
+- display employees whose anciennete is larger than 10 years:
+```node
 db.employes.find({anciennete:{$gt:10}},{_id:0,nom:1,prenom:1});
+```
+
+- display name and address of employees whose street is known:
+```node
 db.employes.find({'adresse.rue':{$exists:true}},{nom:1,adresse:1});
 db.employes.find({'adresse.rue':{$exists:true}},{nom:1,adresse:1}).limit(2).pretty();
 db.employes.find({'adresse.rue':{$exists:true}},{nom:1,adresse:1,_id:0}).limit(2).pretty();
+```
+
+- increase of 200 the prime of employees already having a prime
+```node
 db.employes.updateMany({prime:{$exists:true}},{$inc:{prime:200}});
+```
+
+- list the first three among employees sorted in a decreasing way by seniority:
+```node
 db.employes.find({anciennete:{$exists:true}},{_id:0}).sort({anciennete:-1}).limit(3).pretty();
+```
+
+- display empoyees from Toulouse with their seniority:
+```node
 db.employes.find({'adresse.ville':'Toulouse'},{nom:1,prenom:1,anciennete:1,_id:0}).pretty();
+```
 
+- More ```find``` queries:
+```node
 db.employes.find({$and:[{prenom:/^M/},{$or:[{'adresse.ville':'Foix'},{'adresse.ville':'Bordeaux'}]}]});
-
 db.employes.find({$and:[{prenom:/^M/},{$or:[{'adresse.ville':'Foix'},{'adresse.ville':'Bordeaux'}]}]}).pretty();
+```
 
+- Update operation on an employee's address:
+```node
 db.employes.update({prenom: 'Dominique', nom:'Mani'},{$set:{'adresse.numero':20,'adresse.ville':'Marseille','adresse.codepostal':'13015'},$unset:{'adresse.rue':1}});
+```
 
+- Add prime to employees from Toulouse and Bordeaux without primes:
+```node
 db.employes.updateMany({$and:[{"adresse.ville":{$nin:["Paris","Toulouse","Bordeaux"]}},{prime:{$exists:false}}]},{$set:{prime:1500}});
+```
 
+- miscelaneous:
+```node
 db.employes.find({tel:{$exists:true}},{}).forEach(function(t){db.employes.updateMany({_id:t._id},{$push:{telephone:t.tel},$unset:{tel:1}});});
 
 db.employes.find({prime:{$exists:0}}).count();
