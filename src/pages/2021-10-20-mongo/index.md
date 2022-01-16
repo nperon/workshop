@@ -1,5 +1,5 @@
 ---
-path: "/mogo"
+path: "/mongo"
 date: "2021-10-20T10:14:00.823Z"
 title: "Mongo"
 tags: ["NoSQL", "mongo"]
