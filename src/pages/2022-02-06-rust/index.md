@@ -27,7 +27,7 @@ To build the project in the ```target/release``` directory intended for prod, ju
 cargo run --release
 ```
 
-A good tip to improve the code with idiomatic rust coding hints/warning is to run:
+A good tip to improve the code with idiomatic rust coding hints/warnings is to run:
 
 ```bash
 cargo clippy
