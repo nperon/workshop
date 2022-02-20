@@ -32,3 +32,32 @@ A good tip to improve the code with idiomatic rust coding hints/warnings is to r
 ```bash
 cargo clippy
 ```
+
+## Structs and Traits
+
+```rust
+struct RedFox {
+    enemy: bool,
+    life: u32,
+}
+
+trait Noisy {
+    fn get_noise(&self) -> &str;
+}
+
+impl Noisy for RedFox {
+    fn get_noise(&self) -> &str { "Meow?" }
+}
+
+fn print_noise<T: Noisy>(item: T) {
+    println!("", item.get_noise());
+}
+
+impl Noisy for u8 {
+    fn get_noise(&self) -> &str { "BYTE!" }
+}
+
+fn main() {
+    print_noise(5_u8); // prints "BYTE!"
+}
+```
