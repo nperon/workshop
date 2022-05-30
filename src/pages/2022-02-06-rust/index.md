@@ -33,6 +33,46 @@ A good tip to improve the code with idiomatic rust coding hints/warnings is to r
 cargo clippy
 ```
 
+## Strings
+
+String slices refered to as ```str``` 
+are almost always handled in the shape of borrowed string slices ```&str```.
+See also the Rust documentation on [references and borrowing](https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html).
+
+A string literal stated
+```let msg = "Hello 🌎";```
+is a borrowed string slice.
+
+The other string type is String.
+Data in a borrowed string slice cannot be modified
+while data in a String can be modified.
+
+A String can be obtained by applying the to_string() method on a 
+borrowed string slice:
+
+```
+let msg = "ab🎉".to_string();
+```
+
+or else by passing the borrowed string slice to String::from:
+
+```
+let msg = String::from("ab🎉");
+```
+
+Internally, a borrowed string slice is made up of a pointer to some byte and 
+a length. The length is the number of unicode characters in the string.
+
+Bytes can be extracted from a borrowed string slice with the bytes() method: ```word.bytes();```
+
+An iterator on unicode scalars can be built with ```word.chars();```
+
+Additionally, an iterator on graphemes can be retrieved using a package called unicode-segmentation with:
+
+```graphemes(my_string, true)```
+
+A given item in the grapheme can then be accessed with by appending a statement like```.nth(3)```
+
 ## Structs and Traits
 
 ```rust
