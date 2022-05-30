@@ -209,3 +209,24 @@ fn main() {
     }
 }
 ```
+
+### Ownership, references  & borrowing
+
+There are 3 rules to ownership:
+1) Each value has an owner
+2) There is only one owner of a value
+3) Value gets dropped if its owner goes out of scope
+
+```rust
+x: &mut i32
+*x // a mutable i32
+```
+
+```rust
+x: &i32
+*x: // an immutable i32
+```
+
+At any time, it is possible to have one mutable reference
+or any number of immutable references to a given value.
+
