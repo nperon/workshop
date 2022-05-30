@@ -6,7 +6,19 @@ tags: ["starport"]
 excerpt: ""
 ---
 
-- [Short documentation on starport](https://docs.starport.com/guide/hello.html)
+- [Starport tutorial](https://docs.starport.network/guide/)
 - [swagger view of the high-level blockchain API](http://localhost:1317/)
 
-Execute ```starport version``` to find out your installed starport version.
+Execute ```starport version``` to find out your installed starport version
+
+```bash
+starport scaffold chain github.com/cosmonaut/hello
+```
+
+```bash
+starport scaffold --help
+```
+
+```bash
+starport chain serve
+```
