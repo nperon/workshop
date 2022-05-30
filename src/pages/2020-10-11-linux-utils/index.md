@@ -21,6 +21,11 @@ standard input so that a second command viz more manages it like a file:
 echo 'toto' | more -
 ```
 
+### tree
+
+```bash
+tree --noreport .
+```
 
 ### vi
 
