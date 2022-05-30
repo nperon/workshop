@@ -73,6 +73,9 @@ Additionally, an iterator on graphemes can be retrieved using a package called u
 
 A given item in the graphemes can then be accessed with by appending a statement like```.nth(3)```
 
+All of the helper methods to manipulate String objects are documented 
+[here](https://www.udemy.com/course/ultimate-rust-crash-course/learn/lecture/17981895#overview).
+
 ## Structs and Traits
 
 ```rust
