@@ -71,7 +71,7 @@ Additionally, an iterator on graphemes can be retrieved using a package called u
 
 ```graphemes(my_string, true)```
 
-A given item in the grapheme can then be accessed with by appending a statement like```.nth(3)```
+A given item in the graphemes can then be accessed with by appending a statement like```.nth(3)```
 
 ## Structs and Traits
 
