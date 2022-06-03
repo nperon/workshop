@@ -230,3 +230,20 @@ x: &i32
 At any time, it is possible to have one mutable reference
 or any number of immutable references to a given value.
 
+A borrowed variable passed to a function can be dereferenced in two ways.
+The first way is automated deferencing:
+
+```rust
+fn do_stuff(s: &mut String) {
+    s.insert_str(0, "Hi, ");
+}
+```
+
+And the second way is manual:
+
+```rust
+fn do_stuff(s: &mut String) {
+    *s = String::from("Replacement")
+}
+```
+
