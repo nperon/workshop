@@ -76,6 +76,13 @@ A given item in the graphemes can then be accessed with by appending a statement
 All of the helper methods to manipulate String objects are documented 
 [here](https://doc.rust-lang.org/std/string/struct.String.html#method.bytes).
 
+## String literals
+
+```rust
+let rust = "\x52\x75\x73\x74";
+println!("{}", rust);
+```
+
 ## Structs and Traits
 
 ```rust
@@ -106,6 +113,18 @@ fn main() {
 }
 ```
 
+There are two other types of Struct. One is the tuple like Struct:
+
+```rust
+struct Coordinates(i32, i32, i32);
+```
+
+The other is the unit like Struct which is useful when combined with Traits:
+
+```rust
+struct UnitStruct;
+```
+
 ## Vectors
 
 ```rust
@@ -117,6 +136,27 @@ let x = v.pop();    // x is 6
 println("{}", v[1]);// prints "4"
 let mut u = vec![2, 4, 6];
 ```
+
+Other ways to instanciate vectors: 
+```rust
+let vect= Vec::<i32>::with_capacity(2);
+println!("{}", vect.capacity());
+
+let v: Vec<i32> = (0..5).collect();
+println!("{:?}", v);
+```
+
+## Slices
+
+```rust
+let v: Vec<i32> = (0..5).collect();
+println!("{:?}", v);
+
+let sv: &[i32] = &v[2..4];
+println!("{:?}", sv);
+```
+
+A slice is a fat pointer i.e. a non owning reference to a **range** of consecutive values.
 
 ## Hashmaps
 
