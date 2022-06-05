@@ -246,6 +246,20 @@ let item1 = Ammo(69);
 let item2 = Things("hat".to_string(), 7);
 ```
 
+```rust
+enum Pet {dog, cat, fish}
+
+impl Pet {
+    fn what_am_i(self) -> &'static str {
+        match self {
+            Pet::dog => "I am a dog",
+            Pet::cat => "I am a cat",
+            Pet::fish => "I am a fish",
+        }
+    }
+}
+```
+
 ### The rust predefined Option enum
 
 ```rust
@@ -260,6 +274,55 @@ x.is_some(); // true
 x.is_none(); false
 for i in x {
     println!("{}", i); // prints 5
+}
+```
+
+The match expression handles the case when we can have Some<T> or Node:
+
+```rust
+enum Pet {dog, cat, fish}
+
+fn main () {
+    let dog = Pet::dog;
+    println!("{}", dog.what_am_i());
+
+    let some_number = Some(5);
+    let some_string = Some("a string");
+    let nothing: Option<i32> = None;
+
+    let x: i32 = 5;
+    let y: Option<i32> = Some(5);
+
+    let sum = x + y;
+
+    let five = Some(5);
+    let six = plus_one(five);
+    let none = plus_one(None);
+
+    println!("{:?}", six);
+
+    let noneUnw = None.unwrap_or(7);
+    println!("unw: {:?}", noneUnw);
+
+    what_pet("dog");
+    what_pet("cat");
+    what_pet("cow");
+}
+
+fn plus_one(x: Option<i32>) -> Option<i32> {
+    match x {
+        None => None,
+        Some(i) => Some(i + 1),
+    }
+}
+
+fn what_pet(input: &str) {
+    match input {
+        "dog" => println!("I have a dog!"),
+        "fish" => println!("I have a fish!"),
+        "cat" => println!("I have a cat!"),
+        _ => println!("I have no clue what pet I have"),
+    }
 }
 ```
 
