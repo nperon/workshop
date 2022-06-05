@@ -316,6 +316,13 @@ fn plus_one(x: Option<i32>) -> Option<i32> {
     }
 }
 
+fn plus_one_unw(x: Option<i32>) -> i32 {
+    match x {
+        None => 0,
+        Some(i) => i + 1,
+    }
+}
+
 fn what_pet(input: &str) {
     match input {
         "dog" => println!("I have a dog!"),
