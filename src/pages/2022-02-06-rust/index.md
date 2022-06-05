@@ -83,7 +83,31 @@ let rust = "\x52\x75\x73\x74";
 println!("{}", rust);
 ```
 
-## Structs and Traits
+## Struct with impl
+
+
+```rust
+struct Square {
+    width: u32,
+    height: u32,
+}
+
+impl Square {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+
+    fn whats_my_width(&self) -> u32 {
+        self.width
+    }
+
+    fn change_width(&mut self, new_width: u32){
+        self.width = new_width;
+    }
+}
+```
+
+## Struct with Trait
 
 ```rust
 #[derive(Debug)]
@@ -124,6 +148,35 @@ The other is the unit like Struct which is useful when combined with Traits:
 ```rust
 struct UnitStruct;
 ```
+
+## Lifetimes
+
+Every reference has a Lifetime. Most of the time, Lifetimes are implicit and inferred.
+
+```rust
+fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
+    if x.len() > y.len() {
+        x
+    } else {
+        y
+    }
+}
+```
+
+Syntax for lifetime in a struct is as follows:
+
+```rust
+struct MyString<'a> {
+    text: &'a str
+}
+```
+
+Here is an example of a variable defined with a static lifetime:
+
+```rust
+let s: &'static str = "I have static lifetime";
+```
+
 
 ## Vectors
 
