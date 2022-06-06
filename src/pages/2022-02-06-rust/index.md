@@ -149,6 +149,48 @@ The other is the unit like Struct which is useful when combined with Traits:
 struct UnitStruct;
 ```
 
+## Utility Traits
+
+- The Drop Trait:
+
+```rust
+struct Course {
+    headline: String,
+    author: String,
+}
+
+impl Drop for Course {
+    fn drop(&mut self) {
+        println!("Dropping: {}", self.author);
+    }
+}
+
+fn main() {
+    let course1 = Course{ headline: String::from("Headline!"), author: String::from("Tyler"), };
+
+    drop(course1);
+}
+```
+
+- The Clone Trait which is for types that can make copies of themselves :
+
+```rust
+trait Clone: Sized {
+    fn clone(&self) -> Self;
+    fn clone_from(&mut self, source: &Self) {
+        *self = source.clone()
+    }
+}
+```
+
+- The Copy is a shallow Clone
+
+- From and Into, plus: TryFrom and TryInto
+
+```fn into(self) -> T```: take self and returns a value of type T.
+
+```fn from(T) -> Self```: take a value of type T and returns self.
+
 ## Lifetimes
 
 Every reference has a Lifetime. Most of the time, Lifetimes are implicit and inferred.
