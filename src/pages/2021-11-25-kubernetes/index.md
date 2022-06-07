@@ -186,6 +186,12 @@ kubectl delete pod busybox
 kubectl delete pod nodehelloworld.example.com
 ```
 
+You can also delete the service nodehelloworld-service with:
+
+```bash
+kubectl delete service nodehelloworld-service
+```
+
 ## Starting a cluster with an nginx container
 
 Create a file called ```deployment.yaml``` with the following content:
@@ -297,10 +303,16 @@ You can now pick the one you wish to delete from the displayed list
 kubectl delete service nginx-service
 ```
 
+Delete deployment nginx-deployment with:
+
+```bash
+delete deployment nginx-deployment
+```
+
 ## Minikube example 
 
 ```bash
-kubectl create deployment hello-node --image=k8s.gcr.io/echoserver:1.4
+kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.4
 ```
 
 ```bash
@@ -309,6 +321,10 @@ kubectl expose deployment hello-minikube --type=NodePort --port=8080
 
 ```bash
 minikube service hello-minikube
+```
+
+```bash
+kubectl delete deployment hello-minikube
 ```
 
 ```bash
