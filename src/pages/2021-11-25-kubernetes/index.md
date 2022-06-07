@@ -37,6 +37,12 @@ You can then check your minikube status with:
 minikube status
 ```
 
+It can be started if necessary with
+
+```bash
+minikube start
+```
+
 Install now kubectl following documentation on [this page](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/). 
 
 The [Optional kubectl configurations and plugins](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#optional-kubectl-configurations-and-plugins) can be skipped in a first stage.
@@ -171,6 +177,13 @@ Let us assume that the endpoint of our nodehelloworld-service displayed in its d
 ```bash
 ls
 telnet 172.17.0.2 3000
+```
+
+Pods can finally be deleted with:
+
+```bash
+kubectl delete pod busybox
+kubectl delete pod nodehelloworld.example.com
 ```
 
 ## Starting a cluster with an nginx container
