@@ -191,6 +191,37 @@ trait Clone: Sized {
 
 ```fn from(T) -> Self```: take a value of type T and returns self.
 
+- Arithmetics: the Add Trait
+
+```bash
+use std::ops::Add;
+
+#[derive(Debug)]
+struct Point<T> {
+    x: T,
+    y: T
+}
+
+fn main() {
+    let coord = Point{ x: 5.0, y: 5.0 };
+    let coord2 = Point{ x: 1.0, y: 2.0 };
+    let sum = coord + coord2;
+    println!("{:?}", sum);
+}
+
+impl<T> Add for Point<T>
+    where
+    T: Add<Output = T> {
+        type Output = Self;        
+        fn add(self, rhs: Self) -> Self {
+            Point {
+                x: self.x + rhs.x,
+                y: self.y + rhs.y,
+            }
+        }
+    }
+```
+
 ## Lifetimes
 
 Every reference has a Lifetime. Most of the time, Lifetimes are implicit and inferred.
