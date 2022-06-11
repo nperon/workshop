@@ -33,6 +33,20 @@ A good tip to improve the code with idiomatic rust coding hints/warnings is to r
 cargo clippy
 ```
 
+### Coding modules
+
+```bash
+cargo new todo --lib
+```
+
+Cargo modules is a useful tool to manage modules. It can be installed with:
+
+```bash
+cargo install cargo-modules
+```
+
+
+
 ## Strings
 
 String slices refered to as ```str``` 
