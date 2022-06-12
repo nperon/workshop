@@ -286,6 +286,52 @@ let v: Vec<i32> = (0..5).collect();
 println!("{:?}", v);
 ```
 
+Vector API examples:
+
+```rust
+    let mut nums: Vec<i32> = vec![];
+    nums.push(1);
+    nums.push(2);
+    nums.push(3);
+
+    let pop = nums.pop(); // returns Option<T>: None or Some(T)
+    println!("{:?}", pop);
+    let number = pop.unwrap();
+    println!("{}", number);
+
+    let two = nums[1]; // copy
+    // &nums[1], creates a reference if copy is not available 
+    // (here we get a copy since i32 is a primitive type)
+    println!("{}", two);
+
+    let one = nums.first(); // return an Option<T> 
+                            // so None if nums is empty, else Some<T>
+    println!("{:?}", one);
+
+    // .last
+    // .first_mut and .last_mut will borrow mutable references
+
+    println!("{}", nums.len()); // return a value of length
+    println!("{}", nums.is_empty()); // bool
+
+    nums.insert(0, 10);
+    nums.insert(3, 12);
+    nums.insert(2, 25);
+
+    nums.remove(3);
+
+    nums.sort();
+    println!("{:?}", nums);
+
+    nums.reverse();
+    println!("{:?}", nums);
+
+    nums.shuffle(&mut thread_rng());
+    println!("{:?}", nums);
+```
+
+
+
 ## Slices
 
 ```rust
@@ -307,7 +353,64 @@ h.insert(6, false);
 let have_five = h.remove(&5).unwrap();
 ```
 
+Hashmap API examples:
+
+```rust
+    let mut hm = HashMap::new();
+    hm.insert(1, 1);
+    hm.insert(5, 2);
+    hm.insert(30, 3);
+    let old = hm.insert(30, 4);
+    println!("{:?}", hm);
+    println!("{:?}", old);
+
+    println!("{:?}", hm.contains_key(&8));
+    println!("{:?}", hm.get(&5));
+
+    let one = hm.remove(&1);
+    println!("{:?}", one);
+
+    let removed = hm.remove_entry(&5);
+    println!("{:?}", removed);
+
+    hm.clear();
+    println!("{}", hm.is_empty());
+```
+
 Other collections: VecDeque, LinkedList, HashSet, BinaryHeap, BTreeMap, BTreeSet
+
+## HashSets
+
+```rust
+    let mut hs = HashSet::new();
+    hs.insert(1);
+    hs.insert(2);
+    hs.insert(3);
+    hs.insert(4);
+    hs.remove(&2);
+    for x in hs.iter() {
+        println!("inter: {}", x);
+    }
+
+    let mut hs2 = HashSet::new();
+    hs2.insert(1);
+    hs2.insert(3);
+    hs2.insert(5);
+    hs2.insert(7);
+    for x in hs.intersection(&hs2) {
+        println!("intersection: {}", x);
+    }
+
+    let intersection = &hs & &hs2;
+    for x in intersection {
+        println!("short hand way: {}", x);
+    }
+
+    let union = &hs | &hs2;
+    for x in union {
+        println!("union: {}", x);
+    }
+```
 
 ## Enums
 
@@ -496,4 +599,79 @@ fn do_stuff(s: &mut String) {
     *s = String::from("Replacement")
 }
 ```
+
+## Error handling
+
+Errors split into two categories: 
+- recoverable errors which rely on the result type
+- unrecoverable errors where the panic macro is used. It terminates the current thread.
+
+Example on how to catch an error at opening a file:
+
+```rust
+    let file = File::open("error.txt");
+    let file = match file {
+        Ok(file) => file,
+        Err(error) => match error.kind() {
+            ErrorKind::NotFound => match File::create("error.txt") {
+                Ok(file_created) => file_created,
+                Err(err) => panic!("Cannot create the file: {:?}", err),
+            },
+            _ => panic!("It was some other error kind"),
+        },
+    };
+```
+
+Here is a simple way to panic and get information on error with logs:
+
+```rust
+let file = File::open("error.txt").expect("Error opening the file!");
+```
+
+Finally, an error that occurs in a function can be propagated upwards to the calling
+context by adding a question mark to the calling statement like here:
+
+```rust
+fn open_file() -> Result<File, Error> {
+    let file = File::open("error.txt")?;
+    Ok(file)
+}
+```
+
+## Unit test
+
+```rust
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn it_works() {
+        let result = 2 + 2;
+        assert_ne!(result, 5);
+    }
+
+    #[test]
+    #[should_panic]
+    fn it_fails(){
+        panic!("Test failed!");
+    }
+
+    #[test]
+    fn call_simple_add(){
+        assert!(simple_add());
+    }
+
+}
+
+fn simple_add() -> bool {
+    if 2+2 == 4 {
+        true
+    } else {
+        false
+    }
+}
+```
+
+## Iterators
 
