@@ -363,6 +363,30 @@ Example 2:
 
 ```rust
 #[derive(Debug)]
+struct Item {
+    name: String,
+}
+
+fn check_inventory(items: Vec<Item>, product: String) -> Vec<Item> {
+    items.into_iter().filter(|i| i.name == product).collect()
+}
+
+fn main() {
+    let mut vec: Vec<Item> = Vec::new();
+    vec.push(Item { name: String::from("coat") });
+    vec.push(Item { name: String::from("shirt") });
+    vec.push(Item { name: String::from("shorts") });
+    vec.push(Item { name: String::from("shoes") });
+
+    let checked = check_inventory(vec, String::from("shirt"));
+    println!("{:?}", checked);
+}
+```
+
+Example 3:
+
+```rust
+#[derive(Debug)]
 struct Range {
     start: u32,
     end: u32,
@@ -388,30 +412,6 @@ fn main() {
 
     let vec: Vec<u32> = range.filter(|x| x % 2 == 0).collect();
     println!("{:?}",vec);
-}
-```
-
-Example 3:
-
-```rust
-#[derive(Debug)]
-struct Item {
-    name: String,
-}
-
-fn check_inventory(items: Vec<Item>, product: String) -> Vec<Item> {
-    items.into_iter().filter(|i| i.name == product).collect()
-}
-
-fn main() {
-    let mut vec: Vec<Item> = Vec::new();
-    vec.push(Item { name: String::from("coat") });
-    vec.push(Item { name: String::from("shirt") });
-    vec.push(Item { name: String::from("shorts") });
-    vec.push(Item { name: String::from("shoes") });
-
-    let checked = check_inventory(vec, String::from("shirt"));
-    println!("{:?}", checked);
 }
 ```
 
