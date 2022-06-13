@@ -197,7 +197,7 @@ trait Clone: Sized {
 }
 ```
 
-- The Copy is a shallow Clone
+- Copy is a shallow Clone
 
 - From and Into, plus: TryFrom and TryInto
 
@@ -235,6 +235,21 @@ impl<T> Add for Point<T>
         }
     }
 ```
+
+- Fn is a family of closures and functions that you can call multiple times without restrictions. It borrows values from the environment immutably. It includes all fn functions.
+
+- FnMut is a family of closures and functions that you can call multiple times if the closure itself is declared mut. It immutably borrows values.
+
+- FnOnce is a family of closures that can be called once if the caller owns the closure. The closure cannot take ownership of the same variables more than once.
+
+Therefore, every Fn meets the requirements for FnMut and every FnMut meets the requirements for FnOnce. It means that Fn is the most exclusive and the most powerful in this set of three Traits.
+
+Examples: 
+- || drop(v) FnOnce  ---> FnOnce
+- |args| v.contains(arg) ---> Fn
+- |args| v.push(arg)  ---> FnMut
+
+- Iterator
 
 ## Lifetimes
 
@@ -330,7 +345,75 @@ Vector API examples:
     println!("{:?}", nums);
 ```
 
+## Iterators
 
+Vec is an example of a standard object that implements the Iterator Trait.
+
+Example 1:
+
+```rust
+let vec2 = vec![1, 2, 3];
+let mut iter = (&vec2).into_iter();
+while let Some(v) = iter.next() {
+    println!("{}", v);
+}
+```
+
+Example 2:
+
+```rust
+#[derive(Debug)]
+struct Range {
+    start: u32,
+    end: u32,
+}
+
+impl Iterator for Range {
+    type Item = u32;
+    fn next(&mut self) -> Option<Self::Item> {
+        if self.start >= self.end {
+            return None;
+        }
+        let result = Some(self.start);
+        self.start += 1;
+        result
+    }
+}
+
+fn main() {
+    let mut range = Range {start: 0, end: 10};
+    // for r in range {
+    //     println!("{}", r);
+    // }
+
+    let vec: Vec<u32> = range.filter(|x| x % 2 == 0).collect();
+    println!("{:?}",vec);
+}
+```
+
+Example 3:
+
+```rust
+#[derive(Debug)]
+struct Item {
+    name: String,
+}
+
+fn check_inventory(items: Vec<Item>, product: String) -> Vec<Item> {
+    items.into_iter().filter(|i| i.name == product).collect()
+}
+
+fn main() {
+    let mut vec: Vec<Item> = Vec::new();
+    vec.push(Item { name: String::from("coat") });
+    vec.push(Item { name: String::from("shirt") });
+    vec.push(Item { name: String::from("shorts") });
+    vec.push(Item { name: String::from("shoes") });
+
+    let checked = check_inventory(vec, String::from("shirt"));
+    println!("{:?}", checked);
+}
+```
 
 ## Slices
 
