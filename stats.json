@@ -12,6 +12,10 @@
       "path---tags-kafka-cd8fb62a874138931cfa.js",
       "path---tags-kafka-cd8fb62a874138931cfa.js.map"
     ],
+    "path---go": [
+      "path---go-f4cd1b2947d2acc93231.js",
+      "path---go-f4cd1b2947d2acc93231.js.map"
+    ],
     "path---webpack": [
       "path---webpack-3f8ba061ecd10cb668a4.js",
       "path---webpack-3f8ba061ecd10cb668a4.js.map"
@@ -31,6 +35,10 @@
     "path---tags-searching": [
       "path---tags-searching-51a1eb971eaef0a4d65d.js",
       "path---tags-searching-51a1eb971eaef0a4d65d.js.map"
+    ],
+    "path---tags-go": [
+      "path---tags-go-a9df5e5d895c742449c8.js",
+      "path---tags-go-a9df5e5d895c742449c8.js.map"
     ],
     "path---tags-style": [
       "path---tags-style-b839a97176d5fd90311c.js",
@@ -60,10 +68,6 @@
       "path---bookmarks-f2c1ec29f667253109df.js",
       "path---bookmarks-f2c1ec29f667253109df.js.map"
     ],
-    "path---tags-markdown": [
-      "path---tags-markdown-1633c05b419121aecb63.js",
-      "path---tags-markdown-1633c05b419121aecb63.js.map"
-    ],
     "path---kafka": [
       "path---kafka-6eef6a5694ba508bbd42.js",
       "path---kafka-6eef6a5694ba508bbd42.js.map"
@@ -85,8 +89,8 @@
       "path---kubernetes-b91719d79cbf9fe74819.js.map"
     ],
     "path---tags": [
-      "path---tags-f90c216c5f1af31e7213.js",
-      "path---tags-f90c216c5f1af31e7213.js.map"
+      "path---tags-a693d462574a9cc7ace0.js",
+      "path---tags-a693d462574a9cc7ace0.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -95,10 +99,6 @@
     "path---tags-logstash": [
       "path---tags-logstash-364510a9451cb896a748.js",
       "path---tags-logstash-364510a9451cb896a748.js.map"
-    ],
-    "path---markdown": [
-      "path---markdown-7c53852598298469fbc1.js",
-      "path---markdown-7c53852598298469fbc1.js.map"
     ],
     "path---tags-javascript": [
       "path---tags-javascript-99b2437fc43ee6c157eb.js",
@@ -193,8 +193,8 @@
       "path---redis-88d7e5c36904f7c19de0.js.map"
     ],
     "path---index": [
-      "path---index-15e4d17dc3aa0394a483.js",
-      "path---index-15e4d17dc3aa0394a483.js.map"
+      "path---index-5a81709c6fb00d451b94.js",
+      "path---index-5a81709c6fb00d451b94.js.map"
     ],
     "path---tags-networks": [
       "path---tags-networks-3f5f33be09e5ff73b15b.js",
@@ -301,9 +301,9 @@
       "path---tags-find-699af97b534b8a08f163.js.map"
     ],
     "app": [
-      "app-3db9fe0689327bb80d13.js",
+      "app-ccb2919909c90556a114.js",
       "build-js-styles.css",
-      "app-3db9fe0689327bb80d13.js.map",
+      "app-ccb2919909c90556a114.js.map",
       "build-js-styles.css.map"
     ],
     "path---elk-useful-queries": [
