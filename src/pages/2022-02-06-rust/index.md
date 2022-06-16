@@ -756,5 +756,30 @@ fn simple_add() -> bool {
 }
 ```
 
-## Iterators
+## Pointers
+
+Box is a smart pointer that allows to allocate data on the heap
+in a straighforward way:
+
+```rust
+    let t = (12, "eggs"); // created on the stack
+    let b = Box::new(t); // created on the heap, but b was stored on the stack
+    println!("{:?}", b);
+
+    let x = 5;
+    let y = &x;
+    assert_eq!(5, x);
+    assert_eq!(5, *y);
+
+    let x = 5;
+    let y = Box::new(x);
+    assert_eq!(5, x);
+    assert_eq!(5, *y);
+
+    println!("{:?}", y);
+```
+
+Rc is a reference counter that handles and count multiple references to a value.
+
+
 
