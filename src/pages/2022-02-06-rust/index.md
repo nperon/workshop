@@ -465,34 +465,34 @@ Other collections: VecDeque, LinkedList, HashSet, BinaryHeap, BTreeMap, BTreeSet
 ## HashSets
 
 ```rust
-    let mut hs = HashSet::new();
-    hs.insert(1);
-    hs.insert(2);
-    hs.insert(3);
-    hs.insert(4);
-    hs.remove(&2);
-    for x in hs.iter() {
-        println!("inter: {}", x);
-    }
+let mut hs = HashSet::new();
+hs.insert(1);
+hs.insert(2);
+hs.insert(3);
+hs.insert(4);
+hs.remove(&2);
+for x in hs.iter() {
+    println!("inter: {}", x);
+}
 
-    let mut hs2 = HashSet::new();
-    hs2.insert(1);
-    hs2.insert(3);
-    hs2.insert(5);
-    hs2.insert(7);
-    for x in hs.intersection(&hs2) {
-        println!("intersection: {}", x);
-    }
+let mut hs2 = HashSet::new();
+hs2.insert(1);
+hs2.insert(3);
+hs2.insert(5);
+hs2.insert(7);
+for x in hs.intersection(&hs2) {
+    println!("intersection: {}", x);
+}
 
-    let intersection = &hs & &hs2;
-    for x in intersection {
-        println!("short hand way: {}", x);
-    }
+let intersection = &hs & &hs2;
+for x in intersection {
+    println!("short hand way: {}", x);
+}
 
-    let union = &hs | &hs2;
-    for x in union {
-        println!("union: {}", x);
-    }
+let union = &hs | &hs2;
+for x in union {
+    println!("union: {}", x);
+}
 ```
 
 ## Enums
@@ -692,17 +692,17 @@ Errors split into two categories:
 Example on how to catch an error at opening a file:
 
 ```rust
-    let file = File::open("error.txt");
-    let file = match file {
-        Ok(file) => file,
-        Err(error) => match error.kind() {
-            ErrorKind::NotFound => match File::create("error.txt") {
-                Ok(file_created) => file_created,
-                Err(err) => panic!("Cannot create the file: {:?}", err),
-            },
-            _ => panic!("It was some other error kind"),
+let file = File::open("error.txt");
+let file = match file {
+    Ok(file) => file,
+    Err(error) => match error.kind() {
+        ErrorKind::NotFound => match File::create("error.txt") {
+            Ok(file_created) => file_created,
+            Err(err) => panic!("Cannot create the file: {:?}", err),
         },
-    };
+        _ => panic!("It was some other error kind"),
+    },
+};
 ```
 
 Here is a simple way to panic and get information on error with logs:
@@ -812,7 +812,7 @@ println!("{}", mut_ref);
 
 ## Concurrency
 
-```bash
+```rust
 use std::thread;
 
 fn main() {
@@ -826,7 +826,7 @@ fn main() {
 }
 ```
 
-```bash
+```rust
 use std::thread;
 
 fn main() {
@@ -851,7 +851,7 @@ A channel has a transmitter and a receiver. A channel
 is considered closed when either the transmitter or the 
 receiver is dropped.
 
-```bash
+```rust
 use std::thread;
 use std::sync::mpsc; // multi producer single consumer
 
@@ -868,5 +868,19 @@ fn main() {
 }
 ```
 
+Types that implement Send are safe to pass by value to another thread. They can be moved accross threads. 
 
+Types that implement Sync are safe to pass by non mutable reference to another thread. They can be shared accross threads. 
+
+```rust
+use std::thread;
+use std::sync::Arc;
+
+fn main() {
+    let rc1 = Arc::new(String::from("test"));
+    let rc2 = rc1.clone();
+    thread::spawn(move || {
+        rc2;
+    });
+}```
 
