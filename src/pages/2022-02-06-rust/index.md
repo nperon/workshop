@@ -846,3 +846,27 @@ fn main() {
 }
 ```
 
+Threads can communicate between each other with channels. 
+A channel has a transmitter and a receiver. A channel 
+is considered closed when either the transmitter or the 
+receiver is dropped.
+
+```bash
+use std::thread;
+use std::sync::mpsc; // multi producer single consumer
+
+fn main() {
+    let (transmitter, receiver) = mpsc::channel();
+    
+    let val = String::from("Transmitting!");
+    thread::spawn(move || {
+        transmitter.send(val).unwrap();
+    });
+
+    let msg = receiver.recv().unwrap();
+    println!("{}", msg);
+}
+```
+
+
+
