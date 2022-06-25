@@ -810,3 +810,39 @@ let mut mut_ref = reference.borrow_mut();
 println!("{}", mut_ref);
 ```
 
+## Concurrency
+
+```bash
+use std::thread;
+
+fn main() {
+    let handle = thread::spawn(move || {
+        println!("Hello from a thread!")
+    });
+
+    handle.join().unwrap();
+    println!("Hello from main");
+
+}
+```
+
+```bash
+use std::thread;
+
+fn main() {
+    let v = vec![1, 2, 3];
+    let mut thread_handles = Vec::new();
+
+    for e in v {
+        // Here the move keyword is forcing the closure to take ownership:
+        thread_handles.push(thread::spawn(move || println!("{:?}", e)));
+    }
+
+    println!("Main thread!");
+    
+    for handle in thread_handles {
+        handle.join().unwrap();
+    }
+}
+```
+
