@@ -882,5 +882,32 @@ fn main() {
     thread::spawn(move || {
         rc2;
     });
-}```
+}
+```
 
+Mutexes allow to manage the access of a variable by several thread.
+
+```rust
+use std::thread;
+use std::sync::{Arc, Mutex};
+
+fn main() {
+    let counter = Arc::new(Mutex::new(0));
+    let mut handles = vec![];
+    
+    for _ in 0..8 {
+        let counter = Arc::clone(&counter);
+        let handle = thread::spawn(move || {
+            let mut num = counter.lock().unwrap();
+            *num += 1;
+        });
+        handles.push(handle);
+    }
+
+    for handle in handles {
+        handle.join().unwrap();
+    }
+    
+    println!("{}", counter.lock().unwrap());
+}
+```
