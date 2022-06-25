@@ -304,45 +304,45 @@ println!("{:?}", v);
 Vector API examples:
 
 ```rust
-    let mut nums: Vec<i32> = vec![];
-    nums.push(1);
-    nums.push(2);
-    nums.push(3);
+let mut nums: Vec<i32> = vec![];
+nums.push(1);
+nums.push(2);
+nums.push(3);
 
-    let pop = nums.pop(); // returns Option<T>: None or Some(T)
-    println!("{:?}", pop);
-    let number = pop.unwrap();
-    println!("{}", number);
+let pop = nums.pop(); // returns Option<T>: None or Some(T)
+println!("{:?}", pop);
+let number = pop.unwrap();
+println!("{}", number);
 
-    let two = nums[1]; // copy
-    // &nums[1], creates a reference if copy is not available 
-    // (here we get a copy since i32 is a primitive type)
-    println!("{}", two);
+let two = nums[1]; // copy
+// &nums[1], creates a reference if copy is not available 
+// (here we get a copy since i32 is a primitive type)
+println!("{}", two);
 
-    let one = nums.first(); // return an Option<T> 
-                            // so None if nums is empty, else Some<T>
-    println!("{:?}", one);
+let one = nums.first(); // return an Option<T> 
+                        // so None if nums is empty, else Some<T>
+println!("{:?}", one);
 
-    // .last
-    // .first_mut and .last_mut will borrow mutable references
+// .last
+// .first_mut and .last_mut will borrow mutable references
 
-    println!("{}", nums.len()); // return a value of length
-    println!("{}", nums.is_empty()); // bool
+println!("{}", nums.len()); // return a value of length
+println!("{}", nums.is_empty()); // bool
 
-    nums.insert(0, 10);
-    nums.insert(3, 12);
-    nums.insert(2, 25);
+nums.insert(0, 10);
+nums.insert(3, 12);
+nums.insert(2, 25);
 
-    nums.remove(3);
+nums.remove(3);
 
-    nums.sort();
-    println!("{:?}", nums);
+nums.sort();
+println!("{:?}", nums);
 
-    nums.reverse();
-    println!("{:?}", nums);
+nums.reverse();
+println!("{:?}", nums);
 
-    nums.shuffle(&mut thread_rng());
-    println!("{:?}", nums);
+nums.shuffle(&mut thread_rng());
+println!("{:?}", nums);
 ```
 
 ## Iterators
@@ -439,25 +439,25 @@ let have_five = h.remove(&5).unwrap();
 Hashmap API examples:
 
 ```rust
-    let mut hm = HashMap::new();
-    hm.insert(1, 1);
-    hm.insert(5, 2);
-    hm.insert(30, 3);
-    let old = hm.insert(30, 4);
-    println!("{:?}", hm);
-    println!("{:?}", old);
+let mut hm = HashMap::new();
+hm.insert(1, 1);
+hm.insert(5, 2);
+hm.insert(30, 3);
+let old = hm.insert(30, 4);
+println!("{:?}", hm);
+println!("{:?}", old);
 
-    println!("{:?}", hm.contains_key(&8));
-    println!("{:?}", hm.get(&5));
+println!("{:?}", hm.contains_key(&8));
+println!("{:?}", hm.get(&5));
 
-    let one = hm.remove(&1);
-    println!("{:?}", one);
+let one = hm.remove(&1);
+println!("{:?}", one);
 
-    let removed = hm.remove_entry(&5);
-    println!("{:?}", removed);
+let removed = hm.remove_entry(&5);
+println!("{:?}", removed);
 
-    hm.clear();
-    println!("{}", hm.is_empty());
+hm.clear();
+println!("{}", hm.is_empty());
 ```
 
 Other collections: VecDeque, LinkedList, HashSet, BinaryHeap, BTreeMap, BTreeSet
