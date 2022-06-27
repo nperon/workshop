@@ -120,6 +120,12 @@ Command to remove all unused images:
 docker image prune -a
 ```
 
+Command to check the size of each running container: 
+
+```bash
+docker ps --size
+```
+
 Command to delete all containers: 
 
 ```bash
