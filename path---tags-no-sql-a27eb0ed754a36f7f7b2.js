@@ -1,2 +1,0 @@
-webpackJsonp([0xf7fd4fbf1ab6],{465:function(o,t){o.exports={pathContext:{posts:[{html:"<h2>Links</h2>\n<h2>Example</h2>",id:"/home/nicolas/projects/workshop/src/pages/2021-10-20-mongo/index.md absPath of file >>> MarkdownRemark",frontmatter:{date:"2021-10-20T10:14:00.823Z",path:"/mogo",title:"Mongo",excerpt:"",tags:["NoSQL","mongo"]}}],tagName:"NoSQL"}}}});
-//# sourceMappingURL=path---tags-no-sql-a27eb0ed754a36f7f7b2.js.map
