@@ -32,8 +32,6 @@ excerpt: "My Communities"
 
 [facebook](https://www.facebook.com/profile.php?id=100012153432065)
 
-[twitter](https://twitter.com/NicolasPeron5)
-
 ### Trainings / Completed online courses
 
 [ via @udemy: Ionic 4 Crash Course](http://ude.my/UC-LTEODNLK)
@@ -55,3 +53,5 @@ excerpt: "My Communities"
 [ via @udemy: Hands-On Spring Security 5.x](https://www.udemy.com/certificate/UC-b54a41ff-a687-4fcb-9a0c-e60e1f4ac1f3/)
 
 [ via @udemy: GitLab CI: Pipelines, CI/CD and DevOps for Beginners](https://www.udemy.com/certificate/UC-ae1c9ef3-81c1-46fc-8145-d98464afc81f/)
+
+[ via @udemy: Rust Programming - The Complete Guide](https://www.udemy.com/share/105VVy3@BTXJTuCMjkJsB2_E-5TAMIS2uiD_PfwvPzo5wOD0LbN8GsRptvl4AU0itlgTnbh2/)

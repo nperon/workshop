@@ -35,6 +35,11 @@ cargo clippy
 
 ### Coding modules
 
+Crates are about code sharing between projects while modules are about
+code sharing within a project. 
+
+This can take place in a package library. This can be created with:
+
 ```bash
 cargo new todo --lib
 ```
@@ -44,6 +49,19 @@ Cargo modules is a useful tool to manage modules. It can be installed with:
 ```bash
 cargo install cargo-modules
 ```
+
+Then, project's modules tree can be displayed with:
+
+```bash
+cargo modules generate tree
+```
+
+The displayed tree can be refined with options:
+
+```bash
+cargo modules generate tree --with-types
+```
+
 
 
 
@@ -947,6 +965,7 @@ and enter a project name, e.g. wasm-game-of-life when prompted.
 cd wasm-game-of-life
 wasm-pack build
 npm init wasm-app www
+cd www
+npm start
 ```
-
 
