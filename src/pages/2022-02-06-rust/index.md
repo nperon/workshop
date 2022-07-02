@@ -90,6 +90,17 @@ A given item in the graphemes can then be accessed with by appending a statement
 All of the helper methods to manipulate String objects are documented 
 [here](https://doc.rust-lang.org/std/string/struct.String.html#method.bytes).
 
+A String can be converted into a &str with the ```.as_str()``` method. 
+It follows that string slices can manipulated in the shape of String objects
+and the latter can be converted back into string slices with ```as_str()```. 
+For instance two ```&str``` can be concatenated into a string c with:
+
+```bash
+let a = "Hello";
+let b = " World";
+let c = format!("{}{}", a, b);
+```
+
 ## String literals
 
 ```rust
@@ -911,3 +922,31 @@ fn main() {
     println!("{}", counter.lock().unwrap());
 }
 ```
+
+## Webassembly
+
+### Setting up of environment
+
+```bash
+rustup update
+rustc --version
+cargo install cargo-generate
+curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+nvm install 16.15.0
+```
+
+### Starting a project
+
+Run the command:
+```bash
+cargo generate --git https://github.com/rustwasm/wasm-pack-template
+```
+and enter a project name, e.g. wasm-game-of-life when prompted.
+
+```bash
+cd wasm-game-of-life
+wasm-pack build
+npm init wasm-app www
+```
+
+
