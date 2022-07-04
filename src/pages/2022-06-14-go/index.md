@@ -117,13 +117,48 @@ board[0][0] = "O"
 
 ## Ranges
 
+The range keyword creates an iterator.
+
 ```go
+slice := []string{"Hello", "world", "!"}
+for i, element := range slice {
+	fmt.Println(i, element, ":")
+	for _, ch := range element {
+		fmt.Printf("  %q\n", ch)
+	}
+}
 ```
 
 ## Maps
 
 ```go
+myMap1 := make(map[string]int)
+
+myMap2 := map[string]int{
+	"item 1": 1,
+	"item 2": 2,
+	"item 3": 3,
+}
+
+myMap1["favorite number"] = 5
+missing := myMap1["age"] // default value
+
+delete (myMap1, "favorite number")
+
+price, found := myMap1["price"]
+if !found {
+	fmt.Println("price not found")
+	return
+}
 ```
+
+Just like slices, maps can be iterated through using the range keyword:
+```go
+for key, value := range myMap2 {
+	// ...
+}
+```
+
 
 ## Pointers
 
