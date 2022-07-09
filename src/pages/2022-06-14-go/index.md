@@ -162,5 +162,70 @@ for key, value := range myMap2 {
 
 ## Pointers
 
+An asterisk (*) used with a type indicates the value is a pointer.
+An ampersand (&) creates a pointer from a variable.
+
 ```go
+value := 10
+var valuePtr *int // this declaration is often skipped
+valuePtr = &value // value address
 ```
+
+An asterisk (*) when used with a pointer will dereference the pointer
+
+```go
+func increment(x *int) {
+	*x += 1
+}
+
+i := 1
+increment(&i)
+```
+
+Example: 
+
+```go
+package main
+
+import "fmt"
+
+type SecurityTag struct {
+	state bool
+}
+
+func activate(tag *SecurityTag) {
+	tag.state = true
+}
+
+func deactivate(tag *SecurityTag) {
+	tag.state = false
+}
+
+func checkout(slice []*SecurityTag) {
+	for _, tag := range slice {
+		deactivate(tag)
+	}
+}
+
+func printSlice(slice []*SecurityTag) {
+	fmt.Printf("%t\n %t\n %t\n %t\n", slice[0].state, slice[1].state, slice[2].state, slice[3].state)
+}
+
+func main() {
+	item1 := SecurityTag{state: true}
+	item2 := SecurityTag{state: true}
+	item3 := SecurityTag{state: true}
+	item4 := SecurityTag{state: true}
+
+	items := []*SecurityTag{&item1, &item2, &item3, &item4}
+	printSlice(items)
+
+	deactivate(&item1)
+	printSlice(items)
+
+	checkout(items)
+	printSlice(items)
+
+}
+```
+

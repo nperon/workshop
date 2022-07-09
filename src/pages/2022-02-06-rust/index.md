@@ -33,6 +33,12 @@ A good tip to improve the code with idiomatic rust coding hints/warnings is to r
 cargo clippy
 ```
 
+Here is a command to view the standard library in the default browser:
+
+```bash
+rustup doc --std
+```
+
 ### Coding modules
 
 Crates are about code sharing between projects while modules are about
