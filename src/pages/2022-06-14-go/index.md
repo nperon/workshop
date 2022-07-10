@@ -20,24 +20,24 @@ package main
 import "fmt"
 
 type Passenger struct {
-	Name         string
-	TicketNumber int
-	Boarded      bool
+	name         string
+	ticketNumber int
+	boarded      bool
 }
 
 type Bus struct {
-	FrontSeat Passenger
+	FrontSeat passenger
 }
 
 func main() {
 	var (
-		bill = Passenger{Name: "Bill", TicketNumber: 2}
-		ella = Passenger{Name: "Ella", TicketNumber: 3}
+		bill = Passenger{name: "Bill", ticketNumber: 2}
+		ella = Passenger{name: "Ella", ticketNumber: 3}
 	)
 	fmt.Println(bill, ella)
 	var heidi Passenger
-	heidi.Name = "Heidi"
-	heidi.TicketNumber = 4
+	heidi.name = "Heidi"
+	heidi.ticketNumber = 4
 	fmt.Println(heidi)
 	var vehicle = Bus{FrontSeat: ella}
 	fmt.Println(vehicle)
@@ -228,4 +228,70 @@ func main() {
 
 }
 ```
+
+## Idiomatic Go &#8212; receiver functions
+
+Receiver functions privide the dot notation for structs. This allows to 
+create more convenient APIs.
+
+```go
+type Coordinate struct {
+	X, Y int
+}
+
+func (coord *Coordinate) shiftBy(x, y int) {
+	coord.X += x
+	coord.Y += y
+}
+
+coord := Coordinate{5, 5}
+coord.shiftBy(1, 1) // (6, 6)
+```
+
+## Idiomatic Go &#8212; iota
+
+The iota keyword can be used to assign integers to constants.
+The two following snippets define and initialize constant
+Online to 0, Offline to 1, Maintenance to 2 and Retired to 3.
+
+```go 
+// Short form
+const (
+	Online = iota
+	Offline
+	Maintenance
+	Retired
+)
+```
+
+```go
+// Long form:
+const (
+	Online = iota
+	Offline = iota
+	Maintenance = iota
+	Retired = iota
+)
+```
+
+Go allows to skip values as follows:
+```go
+const (
+	s0 = iota 	// 0
+	-			// 1
+	-			// 2
+	s3			// 3
+	s4			// 4
+)
+```
+
+It is possible to start at a different value:
+```go
+const (
+	i3 = iota + 3	// 3
+	i4				// 4
+	i5				// 5
+)
+```
+
 
