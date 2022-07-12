@@ -6,10 +6,46 @@ tags: ['go']
 excerpt: "Go"
 ---
 
-## Formatted printing
+## Formatted printing and string formatting with fmt package
+
+Package fmt provides 3 terminal printing functions: 
+- Printf &#8212; custom format
+- Print &#8212; simple print
+- Println &#8212; simple print with a newline
+
+and an F and an S variants of the above functions:
+- F prints to a data stream: Fprintf, Fprint, Fprintln
+- S prints to a new string: Sprintf, Sprint, Sprintln
+
+*verb*		*description*
+%v			default
+%t			"true" or "false"
+%c			character
+%X			Hex
+%U			Unicode format
+%e			Scientific notation
+
+*Escape Sequence*	*Description*
+\\					Backslash
+\'					Single quote
+\"					Double quote
+\n					Newline
+\u or \U			Unicode (2byee & 4byte)
+\x					Raw bytes (as hex digits)
+
 
 ```go
 fmt.Printf("%v\n", 8)
+fmt.Printf("This is a \"Quote\"\n")
+```
+
+```go
+func surround(msg string, left, right rune) string {
+	return fmt.Sprintf("%c%v%c", left, msg, right)
+}
+
+surrounded := surround("this message", '(', ')')
+fmt.Println(surrounded)
 ```
 
 ## Structures
@@ -292,6 +328,35 @@ const (
 	i4				// 4
 	i5				// 5
 )
+```
+
+## Idiomatic Go &#8212; variadics
+
+```go
+package main
+
+import "fmt"
+
+func sum(nums ...int) int {
+	sum := 0
+	for _, n := range nums {
+		sum += n
+	}
+	return sum
+}
+
+func main() {
+	a := []int{1, 2, 3}
+	a := []int{4, 5, 6}
+
+	all := append(a, b...)
+
+	answer := sum(all...)
+	fmt.Println(answer)
+
+	answer := sum(1, 2, 3, 4, 5, 6)
+	fmt.Println(answer)
+}
 ```
 
 
