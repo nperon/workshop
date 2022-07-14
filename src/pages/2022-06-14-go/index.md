@@ -359,4 +359,74 @@ func main() {
 }
 ```
 
+## Idiomatic Go &#8212; init function
+
+Each package can have it's own init() function. The init function 
+of each will run a single time even when the package is imported 
+several times.
+
+For instance an init function can initialize an object in file init.go:
+
+```go
+package main
+
+var EmailExpr *regexp.Regexp
+
+func init() {
+	compiled, ok := regexp.Compile(`.+@.+\..+`)
+	if ok != nil {
+		panic("failed to compile regular expression")
+	}
+	EmailExpr = compiled
+	fmt.Println("regular expression compiled successfully")
+}
+```
+
+The latter object can be used in the main.go like this:
+
+```go
+package main
+
+var EmailExpr *regexp.Regexp
+
+func IsValidEmail(addr string) bool {
+	return EmailExpr.Match([]byte(addr))
+}
+
+func main() {
+	fmt.Println(isValidEmail("invalid@example"))
+}
+```
+
+## Idiomatic Go &#8212; testing
+
+A unit test for the above main function can be coded in a file 
+called ```main_test.go```:
+
+```go
+package main
+
+import "testing"
+
+func TestIsValidEmail(t *testing.T) {
+	data := "email@example.com"
+	if !IsValidEmail(data) {
+		t.Errorf("IsValidEmail(%v)=false, want true", data)
+	}
+}
+```
+
+Test can be executed with
+
+```bash
+go test
+```
+
+Some functions available in the test package:
+
+- ```Fail()```: mark the test as failed
+- ```Errorf(string)```: fail & add a message
+- ```FailNow()```: mark the test as failed, abort current test
+- ```Fatalf(string)```: fail, abort and add a message
+- ```Logf()```: equivalent to Printf, but only when test fails
 
