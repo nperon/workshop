@@ -416,10 +416,16 @@ func TestIsValidEmail(t *testing.T) {
 }
 ```
 
-Test can be executed with
+Tests can be executed with
 
 ```bash
 go test
+```
+
+To execute tests in a specific file execute for instance: 
+
+```bash
+go test -v ./foo/foo_test.go
 ```
 
 Some functions available in the test package:
@@ -429,4 +435,7 @@ Some functions available in the test package:
 - ```FailNow()```: mark the test as failed, abort current test
 - ```Fatalf(string)```: fail, abort and add a message
 - ```Logf()```: equivalent to Printf, but only when test fails
+
+A [test table](https://yourbasic.org/golang/table-driven-unit-test/) can 
+be nicely coded to test a function with more than one set of data.
 
