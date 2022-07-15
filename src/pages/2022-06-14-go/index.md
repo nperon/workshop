@@ -491,3 +491,22 @@ func calculatePrice(
 		return subTotal - (subTotal * discountFn(subTotal))
 }
 ```
+
+## Using defer
+
+```go
+func one() {
+	fmt.Println("1")
+}
+
+func two() {
+	fmt.Println("2")
+}
+
+func sample() {
+	fmt.Println("Begin")
+	defer one()
+	defer two()
+	fmt.Println("End")
+}
+```
