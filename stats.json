@@ -89,8 +89,8 @@
       "path---kubernetes-b91719d79cbf9fe74819.js.map"
     ],
     "path---tags": [
-      "path---tags-a693d462574a9cc7ace0.js",
-      "path---tags-a693d462574a9cc7ace0.js.map"
+      "path---tags-cfe3a62579c7c160941f.js",
+      "path---tags-cfe3a62579c7c160941f.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -137,8 +137,8 @@
       "path---tags-cloud-06ee7ef0fa7a401f064b.js.map"
     ],
     "path---rust": [
-      "path---rust-050fe0f80e1fe7afda32.js",
-      "path---rust-050fe0f80e1fe7afda32.js.map"
+      "path---rust-eb0ecd4918b4d8924ac8.js",
+      "path---rust-eb0ecd4918b4d8924ac8.js.map"
     ],
     "path---tags-spring-5": [
       "path---tags-spring-5-3f2ce41d0f420ce1e21d.js",
@@ -193,8 +193,8 @@
       "path---redis-88d7e5c36904f7c19de0.js.map"
     ],
     "path---index": [
-      "path---index-69caa6a2cd9a800ecc10.js",
-      "path---index-69caa6a2cd9a800ecc10.js.map"
+      "path---index-1b23eeaadacb9b57e9a3.js",
+      "path---index-1b23eeaadacb9b57e9a3.js.map"
     ],
     "path---tags-networks": [
       "path---tags-networks-97b331c56d9f40e894e6.js",
@@ -301,9 +301,9 @@
       "path---tags-find-699af97b534b8a08f163.js.map"
     ],
     "app": [
-      "app-be6ec5524733140dafc4.js",
+      "app-25656fac8ee307051bcf.js",
       "build-js-styles.css",
-      "app-be6ec5524733140dafc4.js.map",
+      "app-25656fac8ee307051bcf.js.map",
       "build-js-styles.css.map"
     ],
     "path---elk-useful-queries": [
@@ -347,8 +347,12 @@
       "path---tags-functional-programming-0c1d204a3f3522ae292f.js.map"
     ],
     "path---tags-rust": [
-      "path---tags-rust-1edad0d3fc0663eb3a8c.js",
-      "path---tags-rust-1edad0d3fc0663eb3a8c.js.map"
+      "path---tags-rust-f00e73c351e44e83500d.js",
+      "path---tags-rust-f00e73c351e44e83500d.js.map"
+    ],
+    "path---tags-github": [
+      "path---tags-github-f7411381ca2aad5da442.js",
+      "path---tags-github-f7411381ca2aad5da442.js.map"
     ],
     "path---tags-system": [
       "path---tags-system-673d08e309e0ad16d809.js",
