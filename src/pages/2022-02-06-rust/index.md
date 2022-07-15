@@ -718,6 +718,77 @@ fn do_stuff(s: &mut String) {
 }
 ```
 
+## Raw Pointers
+
+[Programming Rust, 2nd Ed](https://www.oreilly.com/library/view/programming-rust-2nd/9781492052586/):
+
+*Rust also has the raw pointer types *mut T and *const T. Raw
+pointers really are just like pointers in C++. Using a raw
+pointer is unsafe, because Rust makes no eﬀort to track what
+it points to. For example, raw pointers may be null, or they
+may point to memory that has been freed or that now
+contains a value of a diﬀerent type.* 
+
+*All the classic pointer
+mistakes of C++ are oﬀered for your enjoyment.
+However, you may only dereference raw pointers within an
+unsafe block. An unsafe block is Rust’s opt-in mechanism for
+advanced language features whose safety is up to you.*
+
+## Smart Pointers
+
+Box is a smart pointer that allows to allocate data on the heap
+in a straighforward way:
+
+```rust
+let t = (12, "eggs"); // created on the stack
+let b = Box::new(t); // created on the heap, but b was stored on the stack
+println!("{:?}", b);
+
+let x = 5;
+let y = &x;
+assert_eq!(5, x);
+assert_eq!(5, *y);
+
+let x = 5;
+let y = Box::new(x);
+assert_eq!(5, x);
+assert_eq!(5, *y);
+
+println!("{:?}", y);
+```
+
+Rc is a reference counter that handles and count multiple references to a value.
+
+```rust
+let s1 = Rc::new(String::from("Pointer"));
+let s2 = s1.clone();
+let s3 = s2.clone();
+println!("{}, {},{}", s1.contains("Point"), s2, s3.contains("er"));
+```
+
+RefCell allows to mutate data hold in an object whose reference is immutable.
+
+```rust
+use std::rc::Rc;
+use std::cell::RefCell;
+
+struct Flagger {
+    is_true: RefCell<bool>,
+}
+
+let flag= Flagger { is_true: Rc::new(RefCell::new(true)) };
+// borrow returns Ref<T>
+// borrow_mut return RefMut<T>
+
+let reference = Rc::new(flag.is_true.clone());
+println!("{:?}", reference);
+
+let mut mut_ref = reference.borrow_mut();
+*mut_ref = false; // dereference first to access inside
+println!("{}", mut_ref);
+```
+
 ## Error handling
 
 Errors split into two categories: 
@@ -789,60 +860,6 @@ fn simple_add() -> bool {
         false
     }
 }
-```
-
-## Pointers
-
-Box is a smart pointer that allows to allocate data on the heap
-in a straighforward way:
-
-```rust
-let t = (12, "eggs"); // created on the stack
-let b = Box::new(t); // created on the heap, but b was stored on the stack
-println!("{:?}", b);
-
-let x = 5;
-let y = &x;
-assert_eq!(5, x);
-assert_eq!(5, *y);
-
-let x = 5;
-let y = Box::new(x);
-assert_eq!(5, x);
-assert_eq!(5, *y);
-
-println!("{:?}", y);
-```
-
-Rc is a reference counter that handles and count multiple references to a value.
-
-```rust
-let s1 = Rc::new(String::from("Pointer"));
-let s2 = s1.clone();
-let s3 = s2.clone();
-println!("{}, {},{}", s1.contains("Point"), s2, s3.contains("er"));
-```
-
-RefCell allows to mutate data hold in an object whose reference is immutable.
-
-```rust
-use std::rc::Rc;
-use std::cell::RefCell;
-
-struct Flagger {
-    is_true: RefCell<bool>,
-}
-
-let flag= Flagger { is_true: Rc::new(RefCell::new(true)) };
-// borrow returns Ref<T>
-// borrow_mut return RefMut<T>
-
-let reference = Rc::new(flag.is_true.clone());
-println!("{:?}", reference);
-
-let mut mut_ref = reference.borrow_mut();
-*mut_ref = false; // dereference first to access inside
-println!("{}", mut_ref);
 ```
 
 ## Concurrency
