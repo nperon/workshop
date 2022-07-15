@@ -1,5 +1,5 @@
 ---
-path: "/go"
+path: "/github"
 date: "2022-07-15T14:24:43.180Z"
 title: "Github"
 tags: ['github']
