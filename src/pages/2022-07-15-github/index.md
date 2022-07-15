@@ -10,11 +10,12 @@ excerpt: "Github"
 
 Documentation on [Debug logging](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/enabling-debug-logging)
 
-```ACTIONS_RUNNER_DEBUG```: boolean
-```ACTIONS_STEP_DEBUG```: boolean
+```ACTIONS_RUNNER_DEBUG```: boolean  
+```ACTIONS_STEP_DEBUG```: boolean  
 
 ## Environment variables available in github actions:
 
-```$GITHUB_SHA```
-```$GITHUB_REPOSITORY```
-```$GITHUB_WORKSPACE```
+```$GITHUB_SHA```  
+```$GITHUB_REPOSITORY```  
+```$GITHUB_WORKSPACE```  
+

@@ -17,21 +17,21 @@ and an F and an S variants of the above functions:
 - F prints to a data stream: Fprintf, Fprint, Fprintln
 - S prints to a new string: Sprintf, Sprint, Sprintln
 
-*verb*		*description*
-%v			default
-%t			"true" or "false"
-%c			character
-%X			Hex
-%U			Unicode format
-%e			Scientific notation
+*verb*		*description*  
+%v			default  
+%t			"true" or "false"  
+%c			character  
+%X			Hex  
+%U			Unicode format  
+%e			Scientific notation  
 
-*Escape Sequence*	*Description*
-\\					Backslash
-\'					Single quote
-\"					Double quote
-\n					Newline
-\u or \U			Unicode (2byee & 4byte)
-\x					Raw bytes (as hex digits)
+*Escape Sequence*	*Description*  
+\\					Backslash  
+\'					Single quote  
+\"					Double quote  
+\n					Newline  
+\u or \U			Unicode (2byee & 4byte)  
+\x					Raw bytes (as hex digits)  
 
 
 ```go
@@ -439,3 +439,55 @@ Some functions available in the test package:
 A [test table](https://yourbasic.org/golang/table-driven-unit-test/) can 
 be nicely coded to test a function with more than one set of data.
 
+## Function literals
+
+Function literals also known as anonymous function 
+are functions within a function. They can encapsulate data.
+
+```go
+func helloWorld() {
+	fmt.Printf("Hello, ");
+	world := func() {
+		fmt.Printf("World!\n")
+	}
+	world()
+	world()
+	world()
+}
+```
+
+A function literal can be passed as a parameter to a function: 
+
+```go
+func customMsg(fn func(m string), msg string) {
+	msg = strings.ToUpper(msg)
+	fn(msg)
+}
+
+func surround() func(msg string) {
+	return func(msg string) {
+		fmt.Printf("%.*s\n", len(msg), "------------"))
+		fmt.Println(msg)
+		fmt.Printf("%.*s\n", len(msg), "------------"))
+	}
+}
+
+customMsg(surround(), "hello")
+```
+
+Closures are function literals that access variables 
+defined outside of their scope.
+
+A type alias can be defined for a literal function so
+that is is simple to pass it as a parameter to a function: 
+
+```go
+type DiscountFunc func(subTotal float64) float64
+
+func calculatePrice(
+		subtotal float64,
+		discountFn DiscountFunc
+	) float64 {
+		return subTotal - (subTotal * discountFn(subTotal))
+}
+```
