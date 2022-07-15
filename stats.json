@@ -13,8 +13,8 @@
       "path---tags-kafka-cd8fb62a874138931cfa.js.map"
     ],
     "path---go": [
-      "path---go-abab96dc9f6e608a0909.js",
-      "path---go-abab96dc9f6e608a0909.js.map"
+      "path---go-993329c0829a3dd31675.js",
+      "path---go-993329c0829a3dd31675.js.map"
     ],
     "path---webpack": [
       "path---webpack-3f8ba061ecd10cb668a4.js",
@@ -37,8 +37,8 @@
       "path---tags-searching-51a1eb971eaef0a4d65d.js.map"
     ],
     "path---tags-go": [
-      "path---tags-go-b4814840b9bce2552f0c.js",
-      "path---tags-go-b4814840b9bce2552f0c.js.map"
+      "path---tags-go-8bf252ea807c090a812b.js",
+      "path---tags-go-8bf252ea807c090a812b.js.map"
     ],
     "path---tags-style": [
       "path---tags-style-b839a97176d5fd90311c.js",
@@ -93,8 +93,8 @@
       "path---kubernetes-b91719d79cbf9fe74819.js.map"
     ],
     "path---tags": [
-      "path---tags-cfe3a62579c7c160941f.js",
-      "path---tags-cfe3a62579c7c160941f.js.map"
+      "path---tags-5f92eb86aaf2807374b4.js",
+      "path---tags-5f92eb86aaf2807374b4.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -172,6 +172,10 @@
       "path---tags-linux-4f032363f0177558c2ed.js",
       "path---tags-linux-4f032363f0177558c2ed.js.map"
     ],
+    "path---idioms": [
+      "path---idioms-3234304f3255c3de7af1.js",
+      "path---idioms-3234304f3255c3de7af1.js.map"
+    ],
     "path---tags-mongo": [
       "path---tags-mongo-a32885694f0dff9f4945.js",
       "path---tags-mongo-a32885694f0dff9f4945.js.map"
@@ -197,8 +201,8 @@
       "path---redis-88d7e5c36904f7c19de0.js.map"
     ],
     "path---index": [
-      "path---index-fb988af1e012e47e3669.js",
-      "path---index-fb988af1e012e47e3669.js.map"
+      "path---index-7c20bb7b4c1eca3b5642.js",
+      "path---index-7c20bb7b4c1eca3b5642.js.map"
     ],
     "path---tags-networks": [
       "path---tags-networks-97b331c56d9f40e894e6.js",
@@ -207,6 +211,10 @@
     "path---tags-traefik": [
       "path---tags-traefik-06b1bdf433926e98928e.js",
       "path---tags-traefik-06b1bdf433926e98928e.js.map"
+    ],
+    "path---tags-idioms": [
+      "path---tags-idioms-2e83dfd687cee80cb920.js",
+      "path---tags-idioms-2e83dfd687cee80cb920.js.map"
     ],
     "path---tags-vi": [
       "path---tags-vi-14a5cf08b038da2904b2.js",
@@ -305,9 +313,9 @@
       "path---tags-find-699af97b534b8a08f163.js.map"
     ],
     "app": [
-      "app-c5ab26cba90dcd4d374f.js",
+      "app-85c00927b26d26e80b90.js",
       "build-js-styles.css",
-      "app-c5ab26cba90dcd4d374f.js.map",
+      "app-85c00927b26d26e80b90.js.map",
       "build-js-styles.css.map"
     ],
     "path---elk-useful-queries": [
