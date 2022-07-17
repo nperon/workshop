@@ -510,3 +510,31 @@ func sample() {
 	fmt.Println("End")
 }
 ```
+
+## Concurrency &#8212; goroutines
+
+```go
+func count(amount int) {
+	for i := 1; i <= amount; i++ {
+		time.Sleep(100 * time.Millisecond)
+		fmt.Println(i)
+	}
+}
+
+func main() {
+	go count(5)
+	fmt.Println("wait for goroutine")
+	time.Sleep(1000 * time.Millisescond)
+	fmt.Println("end program")
+}
+```
+
+Goroutines allow functions and closures to un concurrently.
+Use the go keyword to create a new goroutine.  
+
+The function that starts a goroutine will not wait for it to finish.
+Both the the calling function and goroutine will run to completion.  
+
+Closure captures are shared among all goroutines, making it easy
+to parallelize code.
+
