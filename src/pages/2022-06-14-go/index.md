@@ -538,3 +538,96 @@ Both the the calling function and goroutine will run to completion.
 Closure captures are shared among all goroutines, making it easy
 to parallelize code.
 
+## Concurrency &#8212; channels
+
+Channels are one-way communication pipes. They have
+a send/write end and a receive/read end.
+The ends can be duplicated across goroutines.
+Bidirectional communication can be accomplished by using 
+more channels.  
+
+Buffered channels are non-blocking, unbuffered channels
+will block.
+
+```go
+channel := make(chan int)
+
+// Send to channel
+go func() { channel <- 1 }()
+go func() { channel <- 2 }()
+go func() { channel <- 3 }()
+
+// Receive from channel
+first := <-channel
+second := <-channel
+third := <-channel
+
+fmt.Println(first, second, third)
+```
+
+The time package can be combined with select
+to create timeouts:
+
+```go
+one := make(chan int)
+two := make(chan int)
+
+for {
+	select {
+		case o := <-one:
+			fmt.Println("one:", o)
+		case t := <-two:
+			fmt.Println("two:", t)
+		case o := <-time.After(300 * time.Millisecond):
+			fmt.Println("timed out")
+			return
+	}
+}
+```
+
+## Concurrency &#8212; synchronization
+
+Managing data accross multiple goroutines 
+can become problematic and hard to debug because:  
+- multiple goroutines can change the same data leading 
+to unpredictable results  
+- using channels to communicate is not always ideal  
+
+Synchronization solves this issue:  
+- enables waiting for goroutines to finish  
+- prevents multiple goroutines from modifying data 
+simultaneously  
+
+A mutex provides a way to lock and unlock data. It 
+allows to work with multiple goroutines.
+
+```go
+import "sync"
+
+type SyncedData struct {
+	inner map[string] int
+	mutex sync.Mutex
+}
+
+func (d *SyncedData) Insert(k string, v int) {
+	d.mutex.Lock()
+	d.inner[k] = v
+	d.mutex.Unlock()
+}
+
+func (d *SyncedData) Get(k string) int {
+	d.mutex.Lock()
+	data := d.inner[k]
+	d.mutex.Unlock()
+	return data
+}
+
+func main() {
+	data := SyncedData{ inner: make(map[string]int) }
+	data.Insert("sample", 5)
+	data.Insert("test", 2)
+	fmt.Println(data.Get("sample"))
+	fmt.Println(data.Get("test"))
+}
+```
+
