@@ -611,15 +611,14 @@ type SyncedData struct {
 
 func (d *SyncedData) Insert(k string, v int) {
 	d.mutex.Lock()
+	defer d.mutex.Unlock()
 	d.inner[k] = v
-	d.mutex.Unlock()
 }
 
 func (d *SyncedData) Get(k string) int {
 	d.mutex.Lock()
-	data := d.inner[k]
-	d.mutex.Unlock()
-	return data
+	defer d.mutex.Unlock()
+	return d.inner[k]
 }
 
 func main() {
@@ -631,3 +630,23 @@ func main() {
 }
 ```
 
+Wait groups enable an application to wait for goroutines 
+to finish. They operate by incrementing a counter whenever
+a goroutine is added, and decrementing when it finishes.
+Waiting on the group will block execution until the
+counter is 0.
+
+```go
+var wg sync.WaitGroup
+sum := 0
+for i := 0; i < 20; i++ {
+	wg.Add(1)
+	value := i
+	go func() {
+		defer wg.Done()
+		sum += value
+	}()
+}
+wg.Wait()
+fmt.Println("sum = ", sum)
+```
