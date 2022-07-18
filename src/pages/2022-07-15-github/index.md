@@ -19,3 +19,5 @@ Documentation on [Debug logging](https://docs.github.com/en/actions/monitoring-a
 ```$GITHUB_REPOSITORY```  
 ```$GITHUB_WORKSPACE```  
 
+Exhaustive list of github actions environement variables is
+available at [this link](https://docs.github.com/en/actions/learn-github-actions/environment-variables)
