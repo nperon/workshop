@@ -89,8 +89,8 @@
       "path---tags-bootstrap-a257d1ac49c4485fbe23.js.map"
     ],
     "path---kubernetes": [
-      "path---kubernetes-b91719d79cbf9fe74819.js",
-      "path---kubernetes-b91719d79cbf9fe74819.js.map"
+      "path---kubernetes-a58ecb75776c48b00c32.js",
+      "path---kubernetes-a58ecb75776c48b00c32.js.map"
     ],
     "path---tags": [
       "path---tags-5f92eb86aaf2807374b4.js",
@@ -137,8 +137,8 @@
       "path---traefik-476d6d105e7af59ce951.js.map"
     ],
     "path---tags-cloud": [
-      "path---tags-cloud-06ee7ef0fa7a401f064b.js",
-      "path---tags-cloud-06ee7ef0fa7a401f064b.js.map"
+      "path---tags-cloud-9bbb202276a8f9190321.js",
+      "path---tags-cloud-9bbb202276a8f9190321.js.map"
     ],
     "path---rust": [
       "path---rust-eb0ecd4918b4d8924ac8.js",
@@ -201,8 +201,8 @@
       "path---redis-88d7e5c36904f7c19de0.js.map"
     ],
     "path---index": [
-      "path---index-c994d60c69ed24810504.js",
-      "path---index-c994d60c69ed24810504.js.map"
+      "path---index-4e8fba4a9f3889210d99.js",
+      "path---index-4e8fba4a9f3889210d99.js.map"
     ],
     "path---tags-networks": [
       "path---tags-networks-97b331c56d9f40e894e6.js",
@@ -273,8 +273,8 @@
       "path---oauth-2-in-spring-boot-0cf8ee627c645db7f9db.js.map"
     ],
     "path---tags-kubernetes": [
-      "path---tags-kubernetes-2719eacff3097f06fd05.js",
-      "path---tags-kubernetes-2719eacff3097f06fd05.js.map"
+      "path---tags-kubernetes-11275a7cf808422b9625.js",
+      "path---tags-kubernetes-11275a7cf808422b9625.js.map"
     ],
     "path---tags-docker": [
       "path---tags-docker-fc8969186072cc46119e.js",
@@ -293,8 +293,8 @@
       "path---tags-project-reactor-47315309a789dd9b65a0.js.map"
     ],
     "path---tags-devops": [
-      "path---tags-devops-dcea958423bad64f48b2.js",
-      "path---tags-devops-dcea958423bad64f48b2.js.map"
+      "path---tags-devops-df588b898132ff69ae26.js",
+      "path---tags-devops-df588b898132ff69ae26.js.map"
     ],
     "path---tags-keycloak": [
       "path---tags-keycloak-cb23cfedfe7b41e374c6.js",
@@ -313,9 +313,9 @@
       "path---tags-find-699af97b534b8a08f163.js.map"
     ],
     "app": [
-      "app-f45a034bc6765b91c51d.js",
+      "app-defed6c92def1b2b9399.js",
       "build-js-styles.css",
-      "app-f45a034bc6765b91c51d.js.map",
+      "app-defed6c92def1b2b9399.js.map",
       "build-js-styles.css.map"
     ],
     "path---elk-useful-queries": [
