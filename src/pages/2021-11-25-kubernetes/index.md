@@ -161,6 +161,12 @@ kubectl exec nodehelloworld.example.com -- touch /app/test.txt
 kubectl exec nodehelloworld.example.com -- ls /app
 ```
 
+To operate with a bash prompt in a pod use the following command: 
+
+```bash
+kubectl exec nodehelloworld.example.com -i -t -- /bin/bash
+```
+
 A description of the pod can be displayed with:
 
 ```bash
