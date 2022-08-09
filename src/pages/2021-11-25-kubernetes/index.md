@@ -90,7 +90,7 @@ execute a command on the pod
 ```kubectl label pods <pod> mylabel=awesome```  
 add a new label to a pod  
 
-```kubectl run -i --tty busybox --imagine=busybox --restart=Never -- sh```  
+```kubectl run -i --tty busybox --image=busybox --restart=Never -- sh```  
 run a shell in a pod  
 
 With the following example of a pod description 
