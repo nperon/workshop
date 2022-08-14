@@ -93,8 +93,8 @@
       "path---kubernetes-85b137fa0974fea76b9e.js.map"
     ],
     "path---tags": [
-      "path---tags-5f92eb86aaf2807374b4.js",
-      "path---tags-5f92eb86aaf2807374b4.js.map"
+      "path---tags-954aec5623b4670389f6.js",
+      "path---tags-954aec5623b4670389f6.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -137,8 +137,8 @@
       "path---traefik-476d6d105e7af59ce951.js.map"
     ],
     "path---tags-cloud": [
-      "path---tags-cloud-48351dbeb615c6b0c077.js",
-      "path---tags-cloud-48351dbeb615c6b0c077.js.map"
+      "path---tags-cloud-562c515d900e83e95adf.js",
+      "path---tags-cloud-562c515d900e83e95adf.js.map"
     ],
     "path---rust": [
       "path---rust-eb0ecd4918b4d8924ac8.js",
@@ -192,6 +192,10 @@
       "path---docker-recipes-e8d043c081ed7efc5f5d.js",
       "path---docker-recipes-e8d043c081ed7efc5f5d.js.map"
     ],
+    "path---argocd": [
+      "path---argocd-47ef4fd03145cecefde6.js",
+      "path---argocd-47ef4fd03145cecefde6.js.map"
+    ],
     "path---tags-redis": [
       "path---tags-redis-c063894afc5b77f512ad.js",
       "path---tags-redis-c063894afc5b77f512ad.js.map"
@@ -201,8 +205,8 @@
       "path---redis-88d7e5c36904f7c19de0.js.map"
     ],
     "path---index": [
-      "path---index-4e8fba4a9f3889210d99.js",
-      "path---index-4e8fba4a9f3889210d99.js.map"
+      "path---index-401e0d156a9ffcc2839b.js",
+      "path---index-401e0d156a9ffcc2839b.js.map"
     ],
     "path---tags-networks": [
       "path---tags-networks-97b331c56d9f40e894e6.js",
@@ -273,8 +277,8 @@
       "path---oauth-2-in-spring-boot-0cf8ee627c645db7f9db.js.map"
     ],
     "path---tags-kubernetes": [
-      "path---tags-kubernetes-d64a603330dfb317cbf0.js",
-      "path---tags-kubernetes-d64a603330dfb317cbf0.js.map"
+      "path---tags-kubernetes-311eacf055469428f801.js",
+      "path---tags-kubernetes-311eacf055469428f801.js.map"
     ],
     "path---tags-docker": [
       "path---tags-docker-fc8969186072cc46119e.js",
@@ -293,12 +297,16 @@
       "path---tags-project-reactor-47315309a789dd9b65a0.js.map"
     ],
     "path---tags-devops": [
-      "path---tags-devops-46ca848ce1d8a00602cf.js",
-      "path---tags-devops-46ca848ce1d8a00602cf.js.map"
+      "path---tags-devops-b83a898344efbfce95e8.js",
+      "path---tags-devops-b83a898344efbfce95e8.js.map"
     ],
     "path---tags-keycloak": [
       "path---tags-keycloak-cb23cfedfe7b41e374c6.js",
       "path---tags-keycloak-cb23cfedfe7b41e374c6.js.map"
+    ],
+    "path---tags-continuous-delivery": [
+      "path---tags-continuous-delivery-d0192bc9de41634d1812.js",
+      "path---tags-continuous-delivery-d0192bc9de41634d1812.js.map"
     ],
     "path---tags-container": [
       "path---tags-container-f8a50ac3ec9e4ac3a54b.js",
@@ -313,9 +321,9 @@
       "path---tags-find-699af97b534b8a08f163.js.map"
     ],
     "app": [
-      "app-defed6c92def1b2b9399.js",
+      "app-e0230629d4069827c011.js",
       "build-js-styles.css",
-      "app-defed6c92def1b2b9399.js.map",
+      "app-e0230629d4069827c011.js.map",
       "build-js-styles.css.map"
     ],
     "path---elk-useful-queries": [
@@ -353,6 +361,10 @@
     "path---tags-memoization": [
       "path---tags-memoization-431032fd3373461fbdfc.js",
       "path---tags-memoization-431032fd3373461fbdfc.js.map"
+    ],
+    "path---tags-gitops": [
+      "path---tags-gitops-ced4c15ccf5cb22386ec.js",
+      "path---tags-gitops-ced4c15ccf5cb22386ec.js.map"
     ],
     "path---tags-functional-programming": [
       "path---tags-functional-programming-0c1d204a3f3522ae292f.js",
@@ -401,6 +413,10 @@
     "path---linux-utils": [
       "path---linux-utils-5bc77eafd0bc99065b1c.js",
       "path---linux-utils-5bc77eafd0bc99065b1c.js.map"
+    ],
+    "path---tags-kustomize": [
+      "path---tags-kustomize-1bc05ef66bbace5e077b.js",
+      "path---tags-kustomize-1bc05ef66bbace5e077b.js.map"
     ]
   }
 }
