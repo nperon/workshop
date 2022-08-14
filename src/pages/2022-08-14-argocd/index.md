@@ -1,6 +1,6 @@
 ---
 path: "/argocd"
-date: "2022-08-25T10:17:00.823Z"
+date: "2022-08-14T22:51:00.823Z"
 title: "Argo CD"
 tags: ["continuous delivery", "cloud", "devops", "gitops", "kubernetes", "kustomize"]
 excerpt: ""
@@ -138,3 +138,47 @@ spec:
       - CreateNamespace=true
 ```
 
+Here are ArgoCD options which can be adjusted with kustomize:
+
+- Name prefix: appended to resources
+- Name suffix: appended to resources
+- Images: to override images
+- Common labels: set labels on all resources
+- Common annotations: set annotations on all resources
+- Version: explicitly set kustomize version
+
+The manifest below called for instance ```application_kustomize.yaml``` is an example of an kustomize argocd application. Two options are adjusted with kustomize: namePrefix
+and a commonLabel with a key of app and a value of demo. 
+
+```yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kustomize-app
+  namespace: argocd
+spec: 
+  destination:
+    namespace: kustomize-app
+    server: "https://kubernetes.default.svc"
+  project: default
+  source:
+    path: kustomize-guestbook
+    repoURL: "https://github.com/mabusaa/argocd-example-apps.git"
+    targetRevision: master
+    kustomize:
+      namePrefix: staging-
+      commonLabels:
+        app: demo
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+```
+
+Application can be started with:
+
+```zsh
+kubectl apply -f application_kustomize.yml
+```
+
+Note that Argo CD automatically detects that 
+it is a Kustomize application.
