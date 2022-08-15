@@ -182,3 +182,78 @@ kubectl apply -f application_kustomize.yml
 
 Note that Argo CD automatically detects that 
 it is a Kustomize application.
+
+## Projects
+
+Display info on by default project:
+
+```zsh
+kubectl get appproject -n argocd -o yaml
+```
+
+Now a project can be created by running 
+
+```zsh
+kubectl apply -f ./project.yaml
+```
+
+with a file called project.yaml: 
+
+```yaml
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: demo-project
+  namespace: argocd
+spec:
+  description: Demo Project
+  sourceRepos:
+  - '*'
+
+  destinations:
+  - namespace: '*'
+    server: '*'
+
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+
+  namespaceResourceWhitelist:
+  - group: '*'
+    kind: '*'
+```
+
+Display info on projects again with:
+
+```zsh
+kubectl get appproject -n argocd -o yaml
+```
+
+An application can be defined to start in the project thus created with:
+
+```zsh
+kubectl apply -f './application.yml'
+```
+
+with the following content for application.yml:
+
+```yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook-demo-project
+  namespace: argocd
+spec: 
+  destination:
+    namespace: guestbook-demo-project
+    server: "https://kubernetes.default.svc"
+  project: demo-project
+  source:
+    path: guestbook
+    repoURL: "https://github.com/mabusaa/argocd-example-apps.git"
+    targetRevision: master
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+```
+
