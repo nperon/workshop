@@ -82,7 +82,7 @@ Other app based on helm can be started the same way:
 kubectl apply -f application_helm_options.yml
 ```
 
-where application_helm_options.yml has a content like:
+where ```application_helm_options.yml``` has a content like:
 
 ```yaml
 apiVersion: argoproj.io/v1alpha1
