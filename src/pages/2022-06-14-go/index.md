@@ -664,6 +664,81 @@ if err != nil {
 }
 ```
 
+#### Language use case: Type Embedding
+
+Embedded interfaces allow to "embed" an interface into another interface.
+
+```go
+type Whisperer interface {
+	Whisper() string
+}
+
+
+type Yeller interface {
+	Yeller() string
+}
+
+type Talker interface {
+	Whisperer
+	Yeller
+}
+
+func talk(t Talker) {
+	fmt.Println(t.Yell())
+	fmt.Println(t.Whisper())
+} 
+```
+
+Embedded structs allow to "embed" a struct into another struct.
+The struct will have access to all receiver functions and data 
+of the embedded struct at the top level. This is called
+field and method promotion.
+
+```go
+type Account struct {
+	accountId int
+	balance int
+	name string
+}
+
+type ManagerAccount struct {
+	Account
+}
+
+mgrAcct := ManagerAccount{Account{2, 30, "Cassandra"}}
+```
+
+#### Language use case: Generics
+
+Generics are defined using interfaces, called constraints.
+Function parameters and return types are constrained to a 
+specific set of interfaces:
+
+```go
+func name[T contraint, U constraintA | constraintB](a T, b U) T {
+	// ...
+}
+```
+
+Example: 
+
+```go
+func IsEqual[T comparable](a, b T) bool {
+	return a == b
+}
+```
+
+Tilde can be used to specify that approximation on a type is allowed:
+
+```go
+type Integer32 interface {
+	~int32 | ~uint32
+}
+
+type MyInt int32
+```
+
+
 ## Using defer
 
 ```go
