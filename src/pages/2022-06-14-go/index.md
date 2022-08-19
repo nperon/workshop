@@ -347,7 +347,7 @@ func sum(nums ...int) int {
 
 func main() {
 	a := []int{1, 2, 3}
-	a := []int{4, 5, 6}
+	b := []int{4, 5, 6}
 
 	all := append(a, b...)
 
@@ -489,6 +489,178 @@ func calculatePrice(
 		discountFn DiscountFunc
 	) float64 {
 		return subTotal - (subTotal * discountFn(subTotal))
+}
+```
+
+## Interfaces
+
+Interfaces allow specifying the behavior of a type.
+
+```go
+type MyInterface interface {
+	Function1()
+	Function2(x int) int
+}
+
+type MyType int
+func (m MyType) Function1() {}
+func (m MyType) Function2(x int) int {
+	return x + x
+}
+
+func execute(i MyInterface) {
+	i.Function1()
+}
+```
+
+When a type has all receiver functions required by the
+interface, then it is considered implemented.
+
+#### Standard Library use case: errors
+
+The Error() string function of the errors interface
+from the standard library. The errors.New function returns
+an Error.
+
+```go
+import "errors"
+
+func divide(lhs, rhs int) (int, error) {
+	if rhs == 0 {
+		return 0, errors.New("cannot divide by zero")
+	} else {
+		return rhs / lhs, nil
+	}
+}
+```
+
+Here is the error interface:
+
+```go
+type error interface {
+	Error() string
+}
+```
+
+Always implement error as a receiver function:
+
+```go
+type DivError struct {
+	a, b int
+}
+
+func (d *DivError) Error() string {
+	return fmt.Sprintf("Cannot divide by zero: %d / %d", d.a, d.b)
+}
+
+func div(a, b int) (int, error) {
+	if b == 0 {
+		return 0, &DivError{a, b}
+	} else {
+		return a / b, nil
+	}
+}
+
+answer1, err := div(9, 0)
+
+if err != nil {
+	fmt.Println(err)
+	return
+}
+
+fmt.Println("The answer is: ", answer1)
+```
+
+Additional features from errors:
+- use errors.As() to retrieve and error
+- use errors.Is() to check the error type
+
+#### Standard Library use case: Reader & Writer
+
+Reader & Writer are interfaces that allow reading from and
+writing to I/O sources like: network sockets, files, arbitrary arrays.
+
+```go
+type Reader interface {
+	Read(p []byte) (n int, err error)
+}
+
+type Writer interface {
+	Write(p []byte) (n int, err error)
+}
+```
+
+Each call to Read() will fill the provided p buffer.
+The number of bytes read will be returned as n.
+When all bytes have been read, err will be io.EOF.
+
+Using Reader directly requires manually populating a buffer.
+The bufio stdlib package provides auto-buffered reads. In practice
+it is more usual to work with the bufio package instead of the 
+low level Reader directly as shown comparing the two following approaches:
+
+
+```go
+reader := strings.NewReader("SAMPLE")
+
+var newString strings.Builder
+buffer := make([]byte, 4)
+for {
+	numBytes, err := reader.Read(buffer)
+	chunk := buffer[:numBytes]
+	newString.Write(chunk)
+	fmt.Printf("Read %v bytes: %c\n", numBytes, chunk)
+	if err == io.EOF {
+		break
+	}
+}
+fmt.Printf("%v\n", newString.String())
+```
+
+```go
+source := strings.NewReader("SAMPLE")
+buffered := bufio.NewReader(source)
+// can also user buffered.ReadBytes here:
+newString, err := buffered.ReadString('\n')
+if err == io.EOF {
+	fmt.Println(newString)
+} else {
+	fmt.Println("something went wrong...")
+}
+```
+
+The bufio.Scanner provides more features. 
+It can automatically read and delimit inputs.
+
+```go
+// read lines from standard input
+scanner := bufio.NewScanner(os.Stdin)
+lines := make([]string, 0, 5)
+for scanner.Scan() {
+	lines = append(lines, scanner.Text())
+}
+if scanner.Err() != nil {
+	fmt.Println(scanner.Err())
+}
+fmt.Printf("Line count: %v\n", len(lines))
+for _, line := range lines {
+	fmt.Printf("Line: %v\n", line)
+}
+```
+
+```bash
+printf "these\nare\nsome\nwords" | go run ./scannercode.go
+```
+
+Writer is symmetrical with Reader:
+
+```go
+buffer := bytes.NewBufferString("")
+numBytes, err := buffer.WriteString("SAMPLE")
+if err != nil {
+	fmt.Println(err)
+} else {
+	fmt.Printf("Wrote %v bytes: %c\n", numBytes, buffer)
 }
 ```
 

@@ -257,3 +257,59 @@ spec:
       - CreateNamespace=true
 ```
 
+## Sync
+
+Automated syncing can be enabled by declaring a syncPolicy in the 
+manifest of the application. Or by adding a ```sync-policy automated```
+flag to a cli ```argocd app create``` command. There is also a 
+SYNC POLICY setting which can be set to Automatic in the Web UI.
+
+Example of an application manifest:
+
+```yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: auto-sync-app
+  namespace: argocd
+spec: 
+  destination:
+    namespace: auto-sync-app
+    server: "https://kubernetes.default.svc"
+  project: default
+  source:
+    path: guestbook-with-sub-directories
+    repoURL: "https://github.com/mabusaa/argocd-example-apps.git"
+    targetRevision: master
+    directory:
+      recurse: true
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
+```
+
+- Additional features: 
+  - automated pruning
+  - self healing
+
+- Sync Options with at the resource level with annotations or at the 
+  application level with syncOptions (in syncPolicy):
+  - Prune = false
+  - Validate = false
+
+- Selective syncing at the application level only with syncOptions:
+  ApplyOutOfSyncOnly=true
+
+- Argo waves with PruneLast=true at application or resource level.
+
+- Replacing resources: by default Argo CD uses ```kubectl apply``` to 
+  deploy resources changes
+  In some cases, you need to replace/recreate the resources. 
+  ArgoCD can do this by using replace=true. It can be done at application level 
+  with a Replace of true in syncOptions. It can be also done at resource level
+  with an annotation like ```argocd.argoproj.io/sync-options: Replace=true```
+
+- sync can be configured to fail if resource is found in other applications
+  by using FailOnSharedResource=true
+
