@@ -16,6 +16,10 @@
       "path---go-557b1fa57c3326cbfe73.js",
       "path---go-557b1fa57c3326cbfe73.js.map"
     ],
+    "path---git": [
+      "path---git-cf5ba4922d742bbeda3a.js",
+      "path---git-cf5ba4922d742bbeda3a.js.map"
+    ],
     "path---webpack": [
       "path---webpack-3f8ba061ecd10cb668a4.js",
       "path---webpack-3f8ba061ecd10cb668a4.js.map"
@@ -93,8 +97,8 @@
       "path---kubernetes-85b137fa0974fea76b9e.js.map"
     ],
     "path---tags": [
-      "path---tags-954aec5623b4670389f6.js",
-      "path---tags-954aec5623b4670389f6.js.map"
+      "path---tags-8c78818bfc4f9455a8e3.js",
+      "path---tags-8c78818bfc4f9455a8e3.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -205,8 +209,8 @@
       "path---redis-88d7e5c36904f7c19de0.js.map"
     ],
     "path---index": [
-      "path---index-f2c709394697407bc665.js",
-      "path---index-f2c709394697407bc665.js.map"
+      "path---index-1a7d47a11289bf24b702.js",
+      "path---index-1a7d47a11289bf24b702.js.map"
     ],
     "path---tags-networks": [
       "path---tags-networks-97b331c56d9f40e894e6.js",
@@ -297,8 +301,8 @@
       "path---tags-project-reactor-47315309a789dd9b65a0.js.map"
     ],
     "path---tags-devops": [
-      "path---tags-devops-88ee991b329c274679bd.js",
-      "path---tags-devops-88ee991b329c274679bd.js.map"
+      "path---tags-devops-2b368d554e04ed645bf7.js",
+      "path---tags-devops-2b368d554e04ed645bf7.js.map"
     ],
     "path---tags-keycloak": [
       "path---tags-keycloak-cb23cfedfe7b41e374c6.js",
@@ -320,10 +324,14 @@
       "path---tags-find-699af97b534b8a08f163.js",
       "path---tags-find-699af97b534b8a08f163.js.map"
     ],
+    "path---tags-git": [
+      "path---tags-git-53a00db94f10dd368557.js",
+      "path---tags-git-53a00db94f10dd368557.js.map"
+    ],
     "app": [
-      "app-b5d6c34c371a354a787e.js",
+      "app-5ae990ea1c435fcf6d86.js",
       "build-js-styles.css",
-      "app-b5d6c34c371a354a787e.js.map",
+      "app-5ae990ea1c435fcf6d86.js.map",
       "build-js-styles.css.map"
     ],
     "path---elk-useful-queries": [
