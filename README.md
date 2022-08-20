@@ -55,3 +55,5 @@ excerpt: "My Communities"
 [ via @udemy: GitLab CI: Pipelines, CI/CD and DevOps for Beginners](https://www.udemy.com/certificate/UC-ae1c9ef3-81c1-46fc-8145-d98464afc81f/)
 
 [ via @udemy: Rust Programming - The Complete Guide](https://www.udemy.com/certificate/UC-051ad734-2c07-43c6-a621-e4becf52dac5/)
+
+[ via @udemy: The Complete GitHub Actions & Workflows Guide](https://www.udemy.com/certificate/UC-cc788358-89cb-4101-86ee-4124dea35d60/)
