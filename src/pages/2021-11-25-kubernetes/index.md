@@ -345,3 +345,10 @@ minikube delete
 
 After this, Minikube will start from scratch the next time it is started.
 
+## Advanced topics
+
+### Service discovery
+
+```zsh
+kubectl run -i --tty busybox --image=busybox --restart=Never -- sh
+```

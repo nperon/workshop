@@ -897,3 +897,38 @@ for i := 0; i < 20; i++ {
 wg.Wait()
 fmt.Println("sum = ", sum)
 ```
+
+## Cross compiling and cgo
+
+When not cross compiling, cgo is enabled by default. This is 
+the case when executing a command like:
+
+```sh
+go build -o main main.go
+```
+
+Links pertaining to the compiled file can be displayed with:
+
+```sh
+ldd main
+```
+
+Compilation without cgo can be performed with:
+
+```sh
+CGO_ENABLED=0 go build -o main-nocgo main.go
+```
+
+Cross compilation for a given os/architecture combination say darwin/amd64 can be done 
+with:
+
+```sh
+GOOS=darwin ARCH=amd64 go build -o main-darwin64 main.go
+```
+
+Available combinations can be displayed with:
+
+```sh
+go tool dist list
+```
+
