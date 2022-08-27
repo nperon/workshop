@@ -347,8 +347,29 @@ After this, Minikube will start from scratch the next time it is started.
 
 ## Advanced topics
 
-### Service discovery
+#### Service discovery
 
 ```zsh
 kubectl run -i --tty busybox --image=busybox --restart=Never -- sh
 ```
+
+```sh
+cat /etc/resolv.conf
+```
+
+```zsh
+kubectl exec database -i -t -- mysql -u root -p
+```
+
+#### ConfigMap
+
+```sh
+kubectl create configmap app-config --fromfile=app.properties
+```
+
+#### Ingress Controller
+
+#### External DNS
+
+#### Volumes
+
