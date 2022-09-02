@@ -52,3 +52,20 @@ git rebase --interactive HEAD~3
 ```zsh
 git push --force origin feat/add-my-feature
 ```
+
+## Get back to older commit with several commits pushed to the remote
+
+Use ```git log``` and ```git reflog``` to identify the 
+commit to target and get its sha1, say COMMIT_HASH
+
+Get back to that commit with:
+
+```zsh
+git reset --hard COMMIT_HASH
+```
+
+Finally, push with:
+
+```zsh
+git push origin feat/opensearch_operator --force-with-lease
+```
