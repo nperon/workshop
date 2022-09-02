@@ -22,7 +22,7 @@ git push --force-with-lease
 
 In case there are conflict execute commands like ```git add ...``` and ```git rebase --continue```
 
-When relevant, it is possible to give priority to feature branch changes with:
+When relevant, priority can be given to feature branch changes with:
 
 ```zsh
 git rebase --main -Xtheirs
@@ -53,7 +53,7 @@ git rebase --interactive HEAD~3
 git push --force origin feat/add-my-feature
 ```
 
-## Get back to older commit with several commits pushed to the remote
+## Get back to older commit after several commits pushed to the remote
 
 Use ```git log``` and ```git reflog``` to identify the 
 commit to target and get its sha1, say COMMIT_HASH
