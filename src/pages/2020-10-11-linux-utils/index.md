@@ -201,3 +201,17 @@ sudo apt install bind9-host
 ```bash
 host -t NS google.com
 ```
+
+## Configuring mailutils on debian
+
+See parameters that may be configured with ```mail --config-help````
+
+Now to configure them, create a file ```/etc/mailutils.conf``` if it does not already exist.
+
+To configure for instance the domain name, complement ```/etc/mailutils.conf``` with
+
+```
+address {
+  email-domain somedomain.com;
+};
+```
