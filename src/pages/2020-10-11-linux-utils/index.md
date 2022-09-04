@@ -202,6 +202,19 @@ sudo apt install bind9-host
 host -t NS google.com
 ```
 
+## Configuring Postfix on a debian server
+
+First hostname has to be configured. Display current hostname with ```hostnamectl```. 
+Then configure new hostname with:
+
+```sh
+hostnamectl set-hostname muydomain.com
+```
+
+Verify it by running the ```hostnamectl``` command again.
+
+Here is the [link](https://wiki.debian.org/Postfix) to configure postfix.
+
 ## Configuring mailutils on debian
 
 See parameters that may be configured with ```mail --config-help````
