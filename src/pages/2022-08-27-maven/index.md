@@ -62,5 +62,5 @@ packaging are the following:
 - install (maven-install-plugin: install)
 - deploy (maven-deploy-plugin: deploy)
 
-## Maven configuration &#8212; ```settings.xml````
+## Maven configuration &#8212; ```settings.xml```
 
