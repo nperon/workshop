@@ -2,7 +2,7 @@
 path: "/maven"
 date: "2022-08-27T00:47:00.342Z"
 title: "Maven"
-tags: ["devops", "continuous integration", "java"]
+tags: ["maven", "devops", "continuous integration", "build", "java", "kotlin"]
 excerpt: ""
 ---
 
