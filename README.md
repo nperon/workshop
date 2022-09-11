@@ -57,3 +57,5 @@ excerpt: "My Communities"
 [ via @udemy: Rust Programming - The Complete Guide](https://www.udemy.com/certificate/UC-051ad734-2c07-43c6-a621-e4becf52dac5/)
 
 [ via @udemy: The Complete GitHub Actions & Workflows Guide](https://www.udemy.com/certificate/UC-cc788358-89cb-4101-86ee-4124dea35d60/)
+
+[ via @udemy: Modern Gradle Fundamentals](https://www.udemy.com/certificate/UC-caa61ec7-7ea4-4294-9c0b-47cabdb822ed/)

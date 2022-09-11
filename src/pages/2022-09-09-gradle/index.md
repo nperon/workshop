@@ -65,6 +65,20 @@ Verifying that archive is signed:
 jarsigner -verify lib/build/libs/lib.jar
 ```
 
+### Displaying the tasks sequence
+
+```zsh
+./gradlew test --console=plain
+```
+
+###  The dependencies task
+
+```zsh
+./gradlew :app:dependencies --configuration runtimeClasspath
+```
+
+This shows dependencies of a given classpath, e. g. runtime.
+
 ### Generating sources JAR:
 
 ```kts
