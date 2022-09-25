@@ -373,3 +373,36 @@ kubectl create configmap app-config --fromfile=app.properties
 
 #### Volumes
 
+#### K9S
+
+```sh
+k9s help
+```
+
+```sh
+k9s -n my-namespace
+```
+
+The : mode --- typing : followed with a kubernetes concept:
+
+```sh
+:ns
+:pod
+:svc
+:deploy
+:ing
+:crd
+:pulse
+:popeye
+:xray
+```
+
+```popeye```  displays score card for the cluster. Takes one to the sanitizer.
+
+```xray pod default``` brings up windows like file explorer for folder structure navigation
+
+The / mode for filtering --- example:
+
+``` / followed with -l version=v2``` filters by labels version of v2
+
+Killing a pod can be done with ctrl + d
