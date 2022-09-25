@@ -97,8 +97,8 @@
       "path---tags-prometheus-28a162e5c6f4ff1740d6.js.map"
     ],
     "path---kubernetes": [
-      "path---kubernetes-03f6a4fbbad292e85d2f.js",
-      "path---kubernetes-03f6a4fbbad292e85d2f.js.map"
+      "path---kubernetes-9ea96b5ef767019e21f2.js",
+      "path---kubernetes-9ea96b5ef767019e21f2.js.map"
     ],
     "path---tags": [
       "path---tags-5b2e6920ed6d3e397e5a.js",
@@ -145,8 +145,8 @@
       "path---traefik-103bc995ab4afc7a7c34.js.map"
     ],
     "path---tags-cloud": [
-      "path---tags-cloud-9ca31af7491b9b63aeec.js",
-      "path---tags-cloud-9ca31af7491b9b63aeec.js.map"
+      "path---tags-cloud-5fb5acec48e5d00e7d16.js",
+      "path---tags-cloud-5fb5acec48e5d00e7d16.js.map"
     ],
     "path---tags-gradle": [
       "path---tags-gradle-e7a272ed60b6911b7b11.js",
@@ -221,8 +221,8 @@
       "path---redis-2796fdbd1ec81fdcad2c.js.map"
     ],
     "path---index": [
-      "path---index-508d85b7f2f4c7a22b6a.js",
-      "path---index-508d85b7f2f4c7a22b6a.js.map"
+      "path---index-e20904af169871a9d6ba.js",
+      "path---index-e20904af169871a9d6ba.js.map"
     ],
     "path---tags-networks": [
       "path---tags-networks-99c27d04351670e5fe9a.js",
@@ -305,8 +305,8 @@
       "path---oauth-2-in-spring-boot-5b7b28c8274fc9a2be53.js.map"
     ],
     "path---tags-kubernetes": [
-      "path---tags-kubernetes-96c7bf26dad20107daaf.js",
-      "path---tags-kubernetes-96c7bf26dad20107daaf.js.map"
+      "path---tags-kubernetes-a5f399f9c16aa36daba1.js",
+      "path---tags-kubernetes-a5f399f9c16aa36daba1.js.map"
     ],
     "path---tags-docker": [
       "path---tags-docker-a0b73f70f515cef4f60e.js",
@@ -337,8 +337,8 @@
       "path---tags-project-reactor-635fcc9ef720b63f082d.js.map"
     ],
     "path---tags-devops": [
-      "path---tags-devops-801d540249213585c849.js",
-      "path---tags-devops-801d540249213585c849.js.map"
+      "path---tags-devops-449a7a4a79652027257b.js",
+      "path---tags-devops-449a7a4a79652027257b.js.map"
     ],
     "path---tags-keycloak": [
       "path---tags-keycloak-6274b4d5e8b9d3837248.js",
@@ -365,9 +365,9 @@
       "path---tags-git-f9e6889825e6fb668995.js.map"
     ],
     "app": [
-      "app-fcd3bd8846658287ca1d.js",
+      "app-4d7d53393a814aad3fbe.js",
       "build-js-styles.css",
-      "app-fcd3bd8846658287ca1d.js.map",
+      "app-4d7d53393a814aad3fbe.js.map",
       "build-js-styles.css.map"
     ],
     "path---elk-useful-queries": [
