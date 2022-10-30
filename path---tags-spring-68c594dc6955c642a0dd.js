@@ -1,0 +1,2 @@
+webpackJsonp([73951219910528],{530:function(t,s){t.exports={pathContext:{posts:[{html:"",id:"/Users/nicolas/repos/github.com/nperon/workshop/src/pages/2022-10-30-spring/index.md absPath of file >>> MarkdownRemark",frontmatter:{date:"2022-10-30T14:02:00.438Z",path:"/spring",title:"Spring",excerpt:"",tags:["java","spring"]}}],tagName:"spring"}}}});
+//# sourceMappingURL=path---tags-spring-68c594dc6955c642a0dd.js.map
