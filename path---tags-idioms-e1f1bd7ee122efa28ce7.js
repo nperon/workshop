@@ -1,2 +1,0 @@
-webpackJsonp([0x89450e35ee2d],{502:function(e,i){e.exports={pathContext:{posts:[{html:"",id:"C:/Users/nicolas.peron/github.com/nperon/workshop/src/pages/2022-07-15-english-idioms/index.md absPath of file >>> MarkdownRemark",frontmatter:{date:"2022-07-15T20:24:43.180Z",path:"/idioms",title:"English idioms",excerpt:"",tags:["idioms"]}}],tagName:"idioms"}}}});
-//# sourceMappingURL=path---tags-idioms-e1f1bd7ee122efa28ce7.js.map

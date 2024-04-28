@@ -1,2 +1,0 @@
-webpackJsonp([52082389606136],{527:function(e,t){e.exports={pathContext:{posts:[{html:"<h2>PromQL</h2>",id:"C:/Users/nicolas.peron/github.com/nperon/workshop/src/pages/2022-09-03-prometheus/index.md absPath of file >>> MarkdownRemark",frontmatter:{date:"2022-09-03T14:02:00.438Z",path:"/prometheus",title:"Prometheus",excerpt:"",tags:["devops","monitoring","alerting","telemetry","prometheus"]}}],tagName:"prometheus"}}}});
-//# sourceMappingURL=path---tags-prometheus-e711e283655fc22035a8.js.map
