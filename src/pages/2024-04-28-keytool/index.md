@@ -20,7 +20,7 @@ keytool -h
 Command to generate a key pair:
 
 ```bash
-keytool -genkeypair -alias myalias -keyalg RSA -keysize 2048 -validity 730 -keystore myjavakeystore.jks
+keytool -genkeypair -alias myalias -keyalg RSA -keysize 2048 -validity 730 -keystore ownjavakeystore.jks
 ```
 
 ```bash
