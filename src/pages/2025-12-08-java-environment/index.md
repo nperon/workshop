@@ -1,5 +1,5 @@
 ---
-path: "/java-arrays"
+path: "/java-environment"
 date: "2025-12-08T23:18:00.000Z"
 title: "Java Environment"
 tags: ["java", "environment"]
