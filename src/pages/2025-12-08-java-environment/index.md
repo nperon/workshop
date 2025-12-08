@@ -14,4 +14,4 @@ Command to import a private PKI root chain certificate of an artifactory registr
 ```cmd
 keytool -importcert -alias artifactory2025 -file "C:\Users\myusername\Downloads\artifactory.example.com.crt" -cacerts -storepass changeit
 ```
-It is assumed that the root chain certificate "artifactory.example.com.crt" of the registry server has been imported into "C:\Users\myusername\Downloads".
+It is assumed that the root chain certificate "artifactory.example.com.crt" of the registry server has been downloaded into "C:\Users\myusername\Downloads".
