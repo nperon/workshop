@@ -121,8 +121,8 @@
       "path---tags-ssl-c4667d016296667a0e05.js.map"
     ],
     "path---tags": [
-      "path---tags-ad54d48bf07a42d1f3b7.js",
-      "path---tags-ad54d48bf07a42d1f3b7.js.map"
+      "path---tags-76ac32c49257bc26f528.js",
+      "path---tags-76ac32c49257bc26f528.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -143,6 +143,10 @@
     "path---oauth-2": [
       "path---oauth-2-902337f36b48ca06d092.js",
       "path---oauth-2-902337f36b48ca06d092.js.map"
+    ],
+    "path---java-performance-and-memory": [
+      "path---java-performance-and-memory-59579e61c99a4c1b93a5.js",
+      "path---java-performance-and-memory-59579e61c99a4c1b93a5.js.map"
     ],
     "path---tags-spring": [
       "path---tags-spring-8fedb55a01b0a9ea5caa.js",
@@ -168,6 +172,10 @@
       "path---keycloak-8f0f1e5041021a0a0e28.js",
       "path---keycloak-8f0f1e5041021a0a0e28.js.map"
     ],
+    "path---tags-performance": [
+      "path---tags-performance-cf848f3d8624089093eb.js",
+      "path---tags-performance-cf848f3d8624089093eb.js.map"
+    ],
     "path---traefik": [
       "path---traefik-42035f71aa4f409a5680.js",
       "path---traefik-42035f71aa4f409a5680.js.map"
@@ -187,6 +195,10 @@
     "path---tags-spring-5": [
       "path---tags-spring-5-40b5d0d9ec964a80baab.js",
       "path---tags-spring-5-40b5d0d9ec964a80baab.js.map"
+    ],
+    "path---tags-memory": [
+      "path---tags-memory-76a10a092bf36299cf8a.js",
+      "path---tags-memory-76a10a092bf36299cf8a.js.map"
     ],
     "path---tags-aggregations": [
       "path---tags-aggregations-38b9c15cd0b93834e6de.js",
@@ -249,8 +261,8 @@
       "path---redis-6ac51dd2ac034ae2e193.js.map"
     ],
     "path---index": [
-      "path---index-c41f8dbe3347033d7100.js",
-      "path---index-c41f8dbe3347033d7100.js.map"
+      "path---index-169d0a0a880eed694713.js",
+      "path---index-169d0a0a880eed694713.js.map"
     ],
     "path---tags-networks": [
       "path---tags-networks-97b331c56d9f40e894e6.js",
@@ -273,8 +285,8 @@
       "path---tags-vi-b5a2ae3396c18b05dbc2.js.map"
     ],
     "path---tags-java": [
-      "path---tags-java-d0dc860682dffc607a70.js",
-      "path---tags-java-d0dc860682dffc607a70.js.map"
+      "path---tags-java-eb6bfd2643785694516e.js",
+      "path---tags-java-eb6bfd2643785694516e.js.map"
     ],
     "path---java-arrays": [
       "path---java-arrays-8be512a2c4ae72da0ef5.js",
@@ -405,9 +417,9 @@
       "path---tags-git-5c85a7109119dae45eac.js.map"
     ],
     "app": [
-      "app-d7ce26134490661873e4.js",
+      "app-6a11e7b1bba873d3676f.js",
       "build-js-styles.css",
-      "app-d7ce26134490661873e4.js.map",
+      "app-6a11e7b1bba873d3676f.js.map",
       "build-js-styles.css.map"
     ],
     "path---elk-useful-queries": [
