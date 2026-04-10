@@ -85,3 +85,62 @@ This is how to save the public key in a file:
 ```bash
 openssl ec -in ecc-key.pem -pubout -out ecc-pub.pem
 ```
+
+## Creating a root certificate
+
+A root certificate and the associated private key can be created with:
+
+```bash
+openssl req -x509 -sha256 -days 365 -key ecc-key.pem -out ecc-cert.pem
+```
+
+and then displayed with:
+
+```bash
+openssl x509 -in ecc-cert.pem -text -noout
+```
+
+Here is how to create a certificate using a configuration file called certificate.conf
+(and we use the private key nicolas-rsa.pem):
+
+```bash
+openssl req -x509 -days 365 -key nicolas-rsa.pem -config certificate.conf -out cert-config.pem
+```
+
+```bash
+openssl x509 -in cert-config.pem -text -noout
+```
+
+The same certificate can be created without any prompting using a conf file stating ```prompt = no```:
+
+```
+countryName = US
+stateOrProvinceName = California
+localityName = San Francisco
+organizationName = Nicolas Ltd
+organizationalUnitName = Information Department
+commonName = nicolas-ltd.com
+emailAddress = info@nicolas-ltd.com
+
+[ v3_extensions ]
+subjectKeyIdentifier = hash
+# copies the subject key identifier (or if it fails then it uses the issuer and serial number)
+authorityKeyIdentifier = keyid, issuer
+# whether the certificate is a root or not
+basicConstraints = critical, CA:true, pathlen:2
+# key usage- use the certificate for signing or key encipherment
+keyUsage = digitalSignature, keyEncipherment
+```
+
+Here is the command to create the certificate:
+
+```bash
+openssl req -x509 -days 365 -key nicolas-rsa.pem -config certificate_no_prompt.conf -out cert-config.pem
+```
+
+and here is how to display the certificate thus created:
+
+```bash
+openssl x509 -in cert-config.pem -text -noout
+```
+
