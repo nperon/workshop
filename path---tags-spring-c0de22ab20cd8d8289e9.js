@@ -1,2 +1,2 @@
-webpackJsonp([73951219910528],{556:function(t,e){t.exports={pathContext:{posts:[{html:"",id:"C:/Users/nperon/github.com/nperon/workshop/src/pages/2022-10-30-spring/index.md absPath of file >>> MarkdownRemark",frontmatter:{date:"2022-10-30T14:02:00.438Z",path:"/spring",title:"Spring",excerpt:"",tags:["java","spring"]}}],tagName:"spring"}}}});
+webpackJsonp([73951219910528],{553:function(t,e){t.exports={pathContext:{posts:[{html:"",id:"C:/Users/nperon/github.com/nperon/workshop/src/pages/2022-10-30-spring/index.md absPath of file >>> MarkdownRemark",frontmatter:{date:"2022-10-30T14:02:00.438Z",path:"/spring",title:"Spring",excerpt:"",tags:["java","spring"]}}],tagName:"spring"}}}});
 //# sourceMappingURL=path---tags-spring-c0de22ab20cd8d8289e9.js.map
